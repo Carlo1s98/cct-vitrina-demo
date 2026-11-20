@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0E2470">
+<script>try{if(localStorage.getItem('cct-tema')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <title>Vitrina Cámara Temuco</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,7 @@
   --ink:#16191F; --txt:#3D434D; --mute:#6E7480; --line:#E2E0DA; --paper:#FAF8F4; --cream:#F1ECE2; --white:#fff;
   --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
   --ease:cubic-bezier(.2,.7,.1,1); --r:14px; --hh:76px;
+  --card:#fff; --thbg:#F6F3EC; --inv:#16191F; --invfg:#fff; --hdrbg:rgba(250,248,244,.9); --inpbd:#D8D3C8;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -70,9 +72,9 @@ body.home main{margin-top:calc(-1 * var(--hh))}
 .btn:active{transform:scale(.97)}
 .btn.v{background:var(--verde);color:#fff}.btn.v:hover{background:var(--verde-osc)}
 .btn.n{background:var(--navy);color:#fff}.btn.n:hover{background:var(--azul)}
-.btn.w{background:#fff;color:var(--navy)}.btn.w:hover{box-shadow:0 8px 24px rgba(0,0,0,.18)}
-.btn.o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}.btn.o:hover{background:var(--ink);color:#fff}
-.btn.ow{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}.btn.ow:hover{background:#fff;color:var(--navy)}
+.btn.w{background:var(--card);color:var(--navy)}.btn.w:hover{box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.btn.o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}.btn.o:hover{background:var(--inv);color:var(--invfg)}
+.btn.ow{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}.btn.ow:hover{background:var(--card);color:var(--navy)}
 .btn.g{background:#ECE8DF;color:var(--ink)}.btn.g:hover{background:#E2DDD1}
 .btn.sm{padding:9px 16px;font-size:13px}
 .btn.full{width:100%;justify-content:center}
@@ -80,7 +82,7 @@ body.home main{margin-top:calc(-1 * var(--hh))}
 .lnk .ar{transition:transform .35s var(--ease)}
 .lnk:hover .ar{transform:translateX(4px)}
 .lnk:hover{color:var(--verde-osc)}
-.ibtn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;display:inline-grid;place-items:center;cursor:pointer;color:var(--ink);transition:transform .2s,border-color .2s}
+.ibtn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:inline-grid;place-items:center;cursor:pointer;color:var(--ink);transition:transform .2s,border-color .2s}
 .ibtn:hover{border-color:var(--ink)}
 .ibtn.fav.on{color:#D22D5A;border-color:#F3C3D0}.ibtn.fav.on svg{fill:#D22D5A}
 
@@ -106,7 +108,7 @@ body.home main{margin-top:calc(-1 * var(--hh))}
 .ht h1{color:#fff;font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.2vw,80px);letter-spacing:-1.5px;line-height:1.02;max-width:880px;margin-top:14px}
 .ht h1 em{font-style:italic;color:#9BE58C;font-weight:300}
 .ht p{font-size:17.5px;color:rgba(255,255,255,.86);max-width:540px;margin:18px 0 0}
-.hsearch{display:flex;align-items:center;gap:10px;margin-top:30px;background:#fff;border-radius:16px;padding:8px 8px 8px 20px;max-width:640px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+.hsearch{display:flex;align-items:center;gap:10px;margin-top:30px;background:var(--card);border-radius:16px;padding:8px 8px 8px 20px;max-width:640px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
 .hsearch svg{color:var(--mute)}
 .hsearch input{flex:1;border:0;outline:0;font-size:16px;color:var(--ink);min-width:0;background:transparent;padding:10px 0}
 .quick{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:14px;font-size:13.5px;color:rgba(255,255,255,.8)}
@@ -118,7 +120,7 @@ body.home main{margin-top:calc(-1 * var(--hh))}
 .stats div span{font-size:12.5px;color:rgba(255,255,255,.7)}
 .prog{display:flex;gap:8px;align-items:center}
 .prog button{width:56px;height:3px;border:0;padding:0;background:rgba(255,255,255,.3);border-radius:3px;overflow:hidden;cursor:pointer;position:relative}
-.prog button i{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
+.prog button i{position:absolute;inset:0;background:var(--card);transform:scaleX(0);transform-origin:left}
 .prog button.on i{animation:pg 8s linear forwards}
 .prog button.done i{transform:scaleX(1)}
 @keyframes pg{to{transform:scaleX(1)}}
@@ -161,7 +163,7 @@ section.s{padding:96px 0 0}
 .bc.t-azul{background:var(--azul-2);color:#fff}
 .bc.t-verde{background:var(--verde-bg)}
 .bc.t-cream{background:var(--cream)}
-.bc.t-white{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.bc.t-white{background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
 .bc .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;position:relative;z-index:2}
 .bc .rub{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;font-weight:600;opacity:.75}
 .bc .go{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;opacity:.4;transition:opacity .3s,transform .45s var(--ease),background .3s}
@@ -178,17 +180,17 @@ section.s{padding:96px 0 0}
 .bc .flyer img{width:100%;height:100%;object-fit:cover}
 .mono{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;background:rgba(0,0,0,.08);overflow:hidden}
 .t-navy .mono,.t-azul .mono{background:rgba(255,255,255,.14);color:#fff}
-.mono img{width:100%;height:100%;object-fit:contain;background:#fff;padding:2px}
+.mono img{width:100%;height:100%;object-fit:contain;background:var(--card);padding:2px}
 
 /* rail empresas */
 .rail{display:grid;grid-auto-flow:column;grid-auto-columns:300px;gap:16px;overflow-x:auto;padding:4px 24px 18px;margin:0 -24px;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
 .rail::-webkit-scrollbar{display:none}
 .rail.drag{cursor:grabbing;scroll-snap-type:none}
 .rail>*{scroll-snap-align:start}
-.ec{display:flex;flex-direction:column;gap:18px;background:#fff;border-radius:20px;padding:22px;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .3s,transform .45s var(--ease);user-select:none}
+.ec{display:flex;flex-direction:column;gap:18px;background:var(--card);border-radius:20px;padding:22px;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .3s,transform .45s var(--ease);user-select:none}
 .ec:hover{box-shadow:inset 0 0 0 1.5px var(--ink);transform:translateY(-3px)}
 .ec .av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:22px;color:#fff;overflow:hidden}
-.ec .av img{width:100%;height:100%;object-fit:contain;background:#fff;padding:4px}
+.ec .av img{width:100%;height:100%;object-fit:contain;background:var(--card);padding:4px}
 .ec h3{font-size:17px;font-weight:600}
 .ec .meta{font-size:13px;color:var(--mute)}
 .ec .ft{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:13px}
@@ -197,7 +199,7 @@ section.s{padding:96px 0 0}
 
 .wl{display:flex;align-items:center;justify-content:flex-start;height:56px}
 .wl img{max-height:56px;max-width:150px;width:auto;height:auto;object-fit:contain;border-radius:6px}
-.wl.big{height:112px;background:#fff;border-radius:20px;padding:14px 18px;box-shadow:inset 0 0 0 1px var(--line);justify-content:center;min-width:112px}
+.wl.big{height:112px;background:var(--card);border-radius:20px;padding:14px 18px;box-shadow:inset 0 0 0 1px var(--line);justify-content:center;min-width:112px}
 .wl.big img{max-height:84px;max-width:220px}
 @media (max-width:860px){.wl.big{height:84px;padding:10px 14px}.wl.big img{max-height:62px;max-width:160px}}
 /* servicios: lista + imagen */
@@ -230,7 +232,7 @@ section.s{padding:96px 0 0}
 .tag.dot::before{content:"";width:6px;height:6px;border-radius:50%;background:#E0A400}
 .tag.v{color:var(--verde-osc)}.tag.v.dot::before{background:var(--verde)}
 .tag.r{color:#B42318}.tag.r.dot::before{background:#D92D20}
-.pc{background:#fff;border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column}
+.pc{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column}
 .pc .tone{height:150px;display:grid;place-items:center;color:var(--azul)}
 .pc .tone svg.i{width:46px;height:46px;stroke-width:1.1}
 .pc .bd{padding:18px 20px 20px}
@@ -253,7 +255,7 @@ section.s{padding:96px 0 0}
 .news h3{font-family:var(--serif);font-weight:400;font-size:30px;letter-spacing:-.5px}
 .news p{margin:6px 0 0;color:var(--mute)}
 .news form{display:flex;gap:10px;min-width:420px}
-.inp{width:100%;border:1px solid #D8D3C8;border-radius:12px;padding:13px 16px;background:#fff;outline:0;font-size:15px;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.inp{width:100%;border:1px solid var(--inpbd);border-radius:12px;padding:13px 16px;background:var(--card);outline:0;font-size:15px;color:var(--ink);transition:border-color .2s,box-shadow .2s}
 .inp:focus{border-color:var(--azul-2);box-shadow:0 0 0 4px rgba(34,66,174,.12)}
 textarea.inp{min-height:100px;resize:vertical}
 label.l{display:block;font-size:13px;font-weight:600;color:var(--ink);margin:14px 0 6px}
@@ -271,7 +273,7 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 .flogos{display:flex;gap:18px;margin-top:20px;align-items:flex-end}
 .flogos span{display:flex;flex-direction:column;gap:6px;font-size:11px;color:rgba(255,255,255,.65)}
 .flogos img{height:50px;width:auto}
-.flogos img.wbg{background:#fff;border-radius:8px;padding:3px 8px}
+.flogos img.wbg{background:var(--card);border-radius:8px;padding:3px 8px}
 .fsub{border-top:1px solid rgba(255,255,255,.14);padding:20px 0 28px;font-size:12px;color:rgba(255,255,255,.6);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .fsub span{max-width:620px}
 .fsub a{text-decoration:underline;text-underline-offset:3px}
@@ -289,29 +291,29 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
 .cgrid{grid-auto-rows:236px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
-.chip{border:1px solid #D8D3C8;background:transparent;border-radius:999px;padding:8px 16px;font-size:13.5px;cursor:pointer;font-weight:500;color:var(--ink);transition:all .25s var(--ease)}
+.chip{border:1px solid var(--inpbd);background:transparent;border-radius:999px;padding:8px 16px;font-size:13.5px;cursor:pointer;font-weight:500;color:var(--ink);transition:all .25s var(--ease)}
 .chip:hover{border-color:var(--ink)}
 .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .muted{color:var(--mute)}
 .empty{text-align:center;padding:60px 16px;color:var(--mute)}
 .empty svg.i{width:44px;height:44px;stroke-width:1.2;color:#B8B2A6}
 .empty h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:12px 0 6px}
-.panel{background:#fff;border-radius:20px;padding:24px;box-shadow:inset 0 0 0 1px var(--line)}
+.panel{background:var(--card);border-radius:20px;padding:24px;box-shadow:inset 0 0 0 1px var(--line)}
 .ex{display:grid;grid-template-columns:250px 1fr;gap:36px}
 .filters{position:sticky;top:90px;align-self:start}
 .filters h4{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mute);margin:22px 0 8px;font-weight:600}
 .filters h4:first-child{margin-top:0}
 .opt{display:flex;justify-content:space-between;align-items:center;width:100%;border:0;background:transparent;text-align:left;padding:8px 10px;border-radius:10px;cursor:pointer;font-size:14.5px;color:var(--txt);transition:background .2s}
 .opt:hover{background:#EFEBE3}
-.opt.on{background:var(--ink);color:#fff}
+.opt.on{background:var(--inv);color:var(--invfg)}
 .opt.on small{color:#fff}
 .opt small{color:var(--mute)}
 .seg{display:flex;background:#EFEBE3;border-radius:12px;padding:4px;gap:4px}
 .seg button{flex:1;border:0;background:transparent;padding:8px 6px;border-radius:9px;font-size:13px;cursor:pointer;font-weight:500;transition:all .25s}
-.seg button.on{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);color:var(--ink);font-weight:600}
+.seg button.on{background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.08);color:var(--ink);font-weight:600}
 .exh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
-.exh select{border:1px solid #D8D3C8;background:#fff;border-radius:10px;padding:9px 12px}
-.achip{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:#fff;border-radius:999px;padding:6px 8px 6px 14px;font-size:13px}
+.exh select{border:1px solid var(--inpbd);background:var(--card);border-radius:10px;padding:9px 12px}
+.achip{display:inline-flex;align-items:center;gap:6px;background:var(--inv);color:var(--invfg);border-radius:999px;padding:6px 8px 6px 14px;font-size:13px}
 .achip button{border:0;background:rgba(255,255,255,.18);color:#fff;width:20px;height:20px;border-radius:50%;cursor:pointer;display:grid;place-items:center;padding:0}
 .achip svg.i{width:12px;height:12px}
 /* detalle beneficio */
@@ -332,7 +334,7 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 /* empresa */
 .eh{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding-bottom:34px;border-bottom:1px solid var(--line);margin-bottom:40px}
 .eh .av{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:42px;color:#fff;overflow:hidden}
-.eh .av img{width:100%;height:100%;object-fit:contain;background:#fff;padding:8px}
+.eh .av img{width:100%;height:100%;object-fit:contain;background:var(--card);padding:8px}
 .eh h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,52px);letter-spacing:-1px}
 /* credencial */
 .cred{max-width:430px;border-radius:24px;overflow:hidden;color:#fff;background:var(--navy);position:relative;box-shadow:0 30px 60px -20px rgba(14,36,112,.5)}
@@ -341,7 +343,7 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 .cred .t2{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 0}
 .cred .t2 img{height:34px}
 .cred .bd{padding:22px;display:flex;gap:18px;align-items:center}
-.cred .qr{background:#fff;padding:9px;border-radius:12px;flex:none}
+.cred .qr{background:var(--card);padding:9px;border-radius:12px;flex:none}
 .cred .qr img,.cred .qr canvas{width:112px!important;height:112px!important}
 .cred h3{color:#fff;font-family:var(--serif);font-weight:400;font-size:22px}
 .cred small{opacity:.8;display:block;font-size:12.5px}
@@ -349,12 +351,12 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 .cred .stt::before{content:"";width:7px;height:7px;border-radius:50%;background:#9BE58C;box-shadow:0 0 0 4px rgba(155,229,140,.25)}
 /* admin / comercio */
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:30px}
-.kpi{background:#fff;border-radius:20px;padding:20px 22px;box-shadow:inset 0 0 0 1px var(--line)}
+.kpi{background:var(--card);border-radius:20px;padding:20px 22px;box-shadow:inset 0 0 0 1px var(--line)}
 .kpi b{display:block;font-family:var(--serif);font-weight:300;font-size:44px;line-height:1;color:var(--ink);letter-spacing:-1.5px}
 .kpi span{font-size:13px;color:var(--mute)}
-.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.tbl{width:100%;border-collapse:collapse;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
 .tbl th,.tbl td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
-.tbl th{font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--mute);font-weight:600;background:#F6F3EC}
+.tbl th{font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--mute);font-weight:600;background:var(--thbg)}
 .tbl tr:last-child td{border-bottom:0}
 .tbl .acts{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
 .tabs{display:flex;gap:26px;border-bottom:1px solid var(--line);margin-bottom:22px}
@@ -365,7 +367,7 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 .sw{position:relative;width:42px;height:24px;display:inline-block}
 .sw input{opacity:0;width:0;height:0}
 .sw span{position:absolute;inset:0;background:#CFCAC0;border-radius:999px;transition:.3s var(--ease);cursor:pointer}
-.sw span::before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.3s var(--ease)}
+.sw span::before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:var(--card);border-radius:50%;transition:.3s var(--ease)}
 .sw input:checked+span{background:var(--verde)}
 .sw input:checked+span::before{transform:translateX(18px)}
 
@@ -376,19 +378,19 @@ nav.bn a.on{color:#fff;background:rgba(255,255,255,.1)}
 nav.bn a.on svg{color:#9BE58C}
 .ov{position:fixed;inset:0;background:rgba(10,14,25,.45);backdrop-filter:blur(3px);z-index:80;opacity:0;pointer-events:none;transition:opacity .3s}
 .ov.on{opacity:1;pointer-events:auto}
-.sheet{position:fixed;z-index:90;background:#fff;left:50%;top:50%;width:min(540px,calc(100vw - 32px));max-height:86vh;overflow:auto;border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,.3);opacity:0;pointer-events:none;transform:translate(-50%,-46%) scale(.98);transition:opacity .3s var(--ease),transform .4s var(--ease)}
+.sheet{position:fixed;z-index:90;background:var(--card);left:50%;top:50%;width:min(540px,calc(100vw - 32px));max-height:86vh;overflow:auto;border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,.3);opacity:0;pointer-events:none;transform:translate(-50%,-46%) scale(.98);transition:opacity .3s var(--ease),transform .4s var(--ease)}
 .sheet.on{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
-.sheet .hd{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 12px;position:sticky;top:0;background:#fff}
+.sheet .hd{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 12px;position:sticky;top:0;background:var(--card)}
 .sheet .hd h3{font-family:var(--serif);font-weight:400;font-size:24px}
 .sheet .bd{padding:6px 22px 18px}
-.sheet .ft{padding:14px 22px 20px;display:flex;gap:10px;justify-content:flex-end;position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line)}
-.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:13px 18px;border-radius:14px;z-index:100;display:flex;gap:10px;align-items:center;font-size:14px;box-shadow:0 16px 40px rgba(0,0,0,.25);animation:tin .45s var(--ease)}
+.sheet .ft{padding:14px 22px 20px;display:flex;gap:10px;justify-content:flex-end;position:sticky;bottom:0;background:var(--card);border-top:1px solid var(--line)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--inv);color:var(--invfg);padding:13px 18px;border-radius:14px;z-index:100;display:flex;gap:10px;align-items:center;font-size:14px;box-shadow:0 16px 40px rgba(0,0,0,.25);animation:tin .45s var(--ease)}
 .toast svg{color:#9BE58C}
 @keyframes tin{from{opacity:0;transform:translate(-50%,12px)}}
 .appframe{position:fixed;inset:0;z-index:95;background:rgba(10,14,25,.7);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;padding:20px}
 .appframe.on{display:flex}
 .phone{width:390px;height:min(820px,calc(100vh - 40px));border-radius:50px;background:#0B0D12;padding:12px;box-shadow:0 40px 100px rgba(0,0,0,.5)}
-.phone iframe{width:100%;height:100%;border:0;border-radius:40px;background:#fff}
+.phone iframe{width:100%;height:100%;border:0;border-radius:40px;background:var(--card)}
 .appframe .side{color:#fff;max-width:300px}
 .appframe .side h3{color:#fff;font-family:var(--serif);font-weight:400;font-size:30px;margin-bottom:10px}
 body.app .demobar{display:none}
@@ -487,7 +489,7 @@ body.app .demobar{display:none}
 }
 
 /* indicadores económicos */
-.ind{background:#fff;border-bottom:1px solid var(--line)}
+.ind{background:var(--card);border-bottom:1px solid var(--line)}
 .indh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:22px;flex-wrap:wrap}
 .indh .kick{margin:0}
 .indd{font-size:13px;color:var(--mute)}
@@ -505,14 +507,14 @@ body.app .demobar{display:none}
 
 /* ===== header de 2 niveles + megamenú (despliegue y animación de la Moderna, identidad Editorial) ===== */
 :root{--hh:125px}
-.hx{position:sticky;top:0;z-index:70;background:rgba(250,248,244,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.07);transition:background .35s var(--ease),box-shadow .35s}
+.hx{position:sticky;top:0;z-index:70;background:var(--hdrbg);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.07);transition:background .35s var(--ease),box-shadow .35s}
 .hx1 .wrap{display:flex;align-items:center;gap:26px;height:72px;transition:height .35s var(--ease)}
 .hx.sc .hx1 .wrap{height:58px}
 .hx1 .lg{flex:none;position:relative;height:46px;transition:height .35s var(--ease)}
 .hx1 .lg img{height:100%;width:auto;transition:opacity .3s}
 .hx1 .lg .lw{position:absolute;inset:0;opacity:0}
 .hx.sc .hx1 .lg{height:38px}
-.hxs{flex:1;max-width:380px;display:flex;align-items:center;border:1px solid #D8D3C8;border-radius:999px;height:42px;padding:0 6px 0 18px;background:#fff;transition:border-color .2s,box-shadow .2s,background .3s}
+.hxs{flex:1;max-width:380px;display:flex;align-items:center;border:1px solid var(--inpbd);border-radius:999px;height:42px;padding:0 6px 0 18px;background:var(--card);transition:border-color .2s,box-shadow .2s,background .3s}
 .hxs:focus-within{border-color:var(--azul-2);box-shadow:0 0 0 4px rgba(34,66,174,.12)}
 .hxs input{border:0;outline:0;flex:1;min-width:0;font-size:14px;background:transparent;color:var(--ink)}
 .hxs input::placeholder{color:var(--mute)}
@@ -522,7 +524,7 @@ body.app .demobar{display:none}
 .cb:hover{background:rgba(0,0,0,.05)}
 .hbg{display:none;flex-direction:column;gap:4px;align-content:center}.hbg i{display:block;width:18px;height:1.7px;background:currentColor;border-radius:2px}
 .only-mm{display:none}
-.btn.gr{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}.btn.gr:hover{background:var(--ink);color:#fff}
+.btn.gr{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}.btn.gr:hover{background:var(--inv);color:var(--invfg)}
 .hx2{position:relative;border-top:1px solid var(--line)}
 .hx2>.wrap{position:relative}
 .mnav{display:flex;list-style:none;margin:0;padding:0;gap:4px}
@@ -552,14 +554,14 @@ body.app .demobar{display:none}
 .mmb .cols{columns:2;column-gap:36px;font-size:14.5px;color:var(--txt)}
 .mmb .cols p{margin:0 0 10px;break-inside:avoid}
 .mmb .dot::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--verde);margin-right:8px;vertical-align:2px}
-.mmf{display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:inset 0 0 0 1px var(--line);margin-top:18px;min-height:190px}
+.mmf{display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);margin-top:18px;min-height:190px}
 .mmf .t{padding:24px 26px}
 .mmf h4{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.3px;margin-bottom:6px}
 .mmf p{margin:0 0 16px;font-size:14px;color:var(--mute)}
 .mmf .im{background-size:cover;background-position:center;transition:transform 1.2s var(--ease)}
 .mm.open .mmf .im{animation:kb2 6s var(--ease) both}
 @keyframes kb2{from{transform:scale(1.08)}to{transform:scale(1)}}
-.mmx{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.mmx{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer;display:grid;place-items:center;color:var(--ink)}
 .mmx svg.i{width:16px;height:16px}
 .mm-ov{position:fixed;inset:0;background:rgba(10,14,25,.35);backdrop-filter:blur(2px);z-index:60;opacity:0;pointer-events:none;transition:opacity .25s ease}
 .mm-ov.on{opacity:1;pointer-events:auto}
@@ -572,7 +574,7 @@ body.app .demobar{display:none}
 .acc>button{width:100%;display:flex;justify-content:space-between;align-items:center;border:0;background:transparent;padding:16px 20px;font:400 21px var(--serif);color:var(--ink);border-bottom:1px solid var(--line);cursor:pointer}
 .acc>button svg.i{transform:rotate(90deg);transition:transform .3s var(--ease);opacity:.6}
 .acc.open>button svg.i{transform:rotate(-90deg)}
-.acc .sub{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease);background:#fff}
+.acc .sub{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease);background:var(--card)}
 .acc.open .sub{grid-template-rows:1fr}
 .acc .sub>div{overflow:hidden}
 .acc .sub a{display:flex;justify-content:space-between;align-items:center;padding:12px 26px;font-size:15px;color:var(--txt);border-bottom:1px solid var(--line)}
@@ -591,7 +593,7 @@ body.edh.home .hx:not(.sc):not(.mo) .hxs input{color:#fff}
 body.edh.home .hx:not(.sc):not(.mo) .hxs input::placeholder{color:rgba(255,255,255,.75)}
 body.edh.home .hx:not(.sc):not(.mo) .btn.gr{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
 body.edh.home .hx:not(.sc):not(.mo) .btn.gr:hover{background:#fff;color:var(--navy)}
-body.edh.home .hx:not(.sc):not(.mo) .btn.n{background:#fff;color:var(--navy)}
+body.edh.home .hx:not(.sc):not(.mo) .btn.n{background:#fff;color:#0E2470}
 @media (max-width:1180px){.mnav button{font-size:13.5px;gap:5px}}
 @media (max-width:1089px){
   :root{--hh:64px}
@@ -603,14 +605,14 @@ body.edh.home .hx:not(.sc):not(.mo) .btn.n{background:#fff;color:var(--navy)}
 @media (max-width:860px){:root{--hh:62px}.hx1 .wrap{height:62px}.hx1 .lg{height:36px}}
 @media (prefers-reduced-motion:reduce){.mm,.mmp.cur,.drw,.mm-ind{transition:none!important;animation:none!important}}
 /* ===== ideas 20-11: volver, dirección + Maps, novedades, cuota, mi vitrina ===== */
-.back{display:inline-flex;align-items:center;gap:4px;border:0;background:#fff;box-shadow:inset 0 0 0 1px var(--line);border-radius:999px;padding:7px 14px 7px 8px;margin:0 0 14px;font-weight:600;font-size:13.5px;color:var(--ink);cursor:pointer;transition:box-shadow .2s,transform .2s}
+.back{display:inline-flex;align-items:center;gap:4px;border:0;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);border-radius:999px;padding:7px 14px 7px 8px;margin:0 0 14px;font-weight:600;font-size:13.5px;color:var(--ink);cursor:pointer;transition:box-shadow .2s,transform .2s}
 .back:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}.back:active{transform:scale(.96)}
 .back svg.i{width:18px;height:18px}
 .eadr{display:flex;align-items:flex-start;gap:5px;font-size:13px;color:var(--txt);margin-top:6px;line-height:1.35}
 .eadr svg.i{width:15px;height:15px;color:var(--verde-osc);margin-top:1px}
 .ehadr{display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--ink);text-decoration:underline;text-decoration-color:var(--verde);text-underline-offset:4px}
 .ehadr svg.i{width:16px;height:16px;color:var(--verde-osc)}
-.dcard{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:#fff;border-radius:22px;box-shadow:inset 0 0 0 1px var(--line);margin:-10px 0 48px;overflow:hidden}
+.dcard{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:var(--card);border-radius:22px;box-shadow:inset 0 0 0 1px var(--line);margin:-10px 0 48px;overflow:hidden}
 .dmain{padding:26px 28px;background:linear-gradient(135deg,var(--verde-bg),#fff 70%)}
 .dadr{display:flex;gap:14px;align-items:center;color:var(--ink)}
 .dadr .dpin{width:56px;height:56px;border-radius:16px;background:var(--navy);color:#9BE58C;display:grid;place-items:center;flex:none}
@@ -629,9 +631,9 @@ a.dadr:hover b{color:var(--azul);text-decoration:underline;text-underline-offset
 .ntabs{display:flex;gap:6px;background:#EFEBE3;border-radius:999px;padding:4px;width:max-content;max-width:100%;overflow-x:auto;margin-bottom:18px;scrollbar-width:none}
 .ntabs::-webkit-scrollbar{display:none}
 .ntabs button{border:0;background:transparent;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:600;color:var(--mute);cursor:pointer;white-space:nowrap;transition:background .25s,color .25s}
-.ntabs button.on{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.ntabs button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.08)}
 .nrail{grid-auto-columns:290px;transition:opacity .16s}
-.nv{display:flex;flex-direction:column;background:#fff;border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);transition:transform .45s var(--ease),box-shadow .3s;user-select:none;min-height:100%}
+.nv{display:flex;flex-direction:column;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);transition:transform .45s var(--ease),box-shadow .3s;user-select:none;min-height:100%}
 .nv:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1.5px var(--ink)}
 .nvi{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--cream)}
 .nvi img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
@@ -646,7 +648,7 @@ a.dadr:hover b{color:var(--azul);text-decoration:underline;text-underline-offset
 .nv h3{font-family:var(--serif);font-weight:400;font-size:19px;letter-spacing:-.2px;line-height:1.2}
 .nv .bn{font-size:12.5px;font-weight:600;color:var(--verde-osc)}
 .nva{background:var(--paper);min-height:220px}
-.nva.nvai{background:#fff}
+.nva.nvai{background:var(--card)}
 .nva .nvd{padding:18px}
 .nvsrc{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--azul);letter-spacing:.2px}
 .nvsrc svg.i{width:16px;height:16px}
@@ -659,7 +661,7 @@ a.dadr:hover b{color:var(--azul);text-decoration:underline;text-underline-offset
 .cum b{color:var(--ink);font-size:15px}
 .cuota .actions .btn{flex:1;justify-content:center}
 .bk{display:grid;gap:6px}
-.bkr{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border:0;background:#F6F3EC;border-radius:12px;padding:10px 14px;cursor:pointer;color:var(--mute);transition:background .2s}
+.bkr{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border:0;background:var(--thbg);border-radius:12px;padding:10px 14px;cursor:pointer;color:var(--mute);transition:background .2s}
 .bkr:hover{background:#EFEBE3}.bkr:active{transform:scale(.99)}
 .bkr small{display:block;font-size:11.5px;color:var(--mute)}.bkr b{display:block;font-size:14.5px;color:var(--ink);font-weight:600}
 .mvit{display:grid;grid-template-columns:1.1fr 1fr;gap:20px 28px;margin-bottom:30px;align-items:end}
@@ -692,12 +694,80 @@ a.dadr:hover b{color:var(--azul);text-decoration:underline;text-underline-offset
   .rtrack{animation:none}
 }
 
+/* ================= 23-11: tema oscuro, header que se oculta, admin móvil, login, validador, directorio, soporte ================= */
+html[data-theme=dark]{--ink:#ECEEF3;--txt:#C4C9D2;--mute:#9AA1AD;--line:#2A303A;--paper:#0E1217;--cream:#171C23;--card:#151A21;--thbg:#1B2029;--inv:#E9ECF1;--invfg:#10141A;--hdrbg:rgba(14,18,23,.92);--inpbd:#353C48;--azul:#8AA2F5;--azul-2:#9DB1F7;--verde-bg:#15301A;color-scheme:dark}
+html[data-theme=dark] .hx .lc,html[data-theme=dark] .drw-h img,html[data-theme=dark] .lgn .lg img{filter:brightness(0) invert(1)}
+html[data-theme=dark] .demobar{background:#05070A}
+html[data-theme=dark] .tag{background:var(--cream)}
+html[data-theme=dark] .btn.g{background:#232A35;color:var(--ink)}
+html[data-theme=dark] .btn.o{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+html[data-theme=dark] img.wbg,html[data-theme=dark] .lt img,html[data-theme=dark] .lw-box{background:#fff;border-radius:8px}
+.cb.tema svg{transition:transform .4s var(--ease)}.cb.tema:active svg{transform:rotate(40deg)}
+/* D1: en móvil el header se esconde al bajar y vuelve al subir */
+@media (max-width:1089px){.hx{transition:transform .3s var(--ease),background .35s,box-shadow .35s}body.hdr-up .hx{transform:translateY(-105%)}}
+/* D4: admin y Mi empresa en pantallas chicas */
+@media (max-width:700px){
+  .kpis{gap:10px;margin-bottom:20px}.kpi{padding:14px 16px;border-radius:16px}.kpi b{font-size:30px;letter-spacing:-1px}.kpi span{font-size:12px;line-height:1.3;display:block;margin-top:4px}
+  .tabs{gap:20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}.tabs::-webkit-scrollbar{display:none}.tabs button{flex:none}
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}.tbl thead{display:none}
+  .tbl tr{padding:14px 16px;border-bottom:1px solid var(--line)}.tbl tr:last-child{border-bottom:0}
+  .tbl td{border:0!important;padding:2px 0;font-size:13.5px}.tbl td:first-child{font-size:14.5px;margin-bottom:4px}
+  .tbl td:nth-child(3){display:block!important}.tbl td{text-align:left}.tbl td .sw,.tbl td input[type=checkbox]{margin-left:0}.tbl .acts{justify-content:flex-start;margin-top:10px}
+  .pg h1{overflow-wrap:anywhere}
+}
+html,body{overflow-x:clip}
+/* D3: login */
+.lgn{max-width:440px;margin:0 auto}
+.lgn .lg{display:flex;justify-content:center;margin-bottom:6px}.lgn .lg img{height:46px;width:auto}
+.lgn h2{font-family:var(--serif);font-weight:400;font-size:32px;text-align:center;margin:6px 0 4px}
+.lgn .sub{text-align:center;color:var(--mute);margin:0 0 20px;font-size:14.5px}
+.lgn label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin:14px 0 6px}
+.lgn .pw{position:relative}.lgn .pw button{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:var(--mute);font-size:12.5px;font-weight:600;cursor:pointer;padding:6px}
+.lgn .row{display:flex;justify-content:space-between;align-items:center;margin:12px 0 18px;font-size:13.5px}
+.lgn .row a{color:var(--azul);font-weight:600}
+.lgn .sep{display:flex;align-items:center;gap:12px;color:var(--mute);font-size:12.5px;margin:22px 0 14px}.lgn .sep::before,.lgn .sep::after{content:"";flex:1;height:1px;background:var(--line)}
+.lgn .demo{font-size:12.5px;color:var(--mute);text-align:center;margin:16px 0 0}
+/* D6: directorio (mesa directiva) */
+.dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.dir .p{background:var(--card);border-radius:18px;padding:20px;box-shadow:inset 0 0 0 1px var(--line);display:flex;gap:14px;align-items:center}
+.dir .av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--cream);color:var(--mute)}
+.dir .c{font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--verde-osc);font-weight:700}
+html[data-theme=dark] .dir .c{color:var(--verde)}
+.dir b{display:block;color:var(--ink);font-size:15.5px;margin-top:2px}.dir small{color:var(--mute)}
+/* D7: soporte */
+.sop{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:26px}
+.sop .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--verde-bg);color:var(--verde-osc);flex:none}
+.sop .t{flex:1;min-width:200px}.sop .t b{display:block;color:var(--ink);font-size:16px}.sop .t small{color:var(--mute);font-size:13px}
+.sop .actions{margin:0}
+/* D8: validar socio */
+.vscan{position:relative;aspect-ratio:1;max-width:320px;margin:6px auto 18px;border-radius:24px;background:#0B0F16;overflow:hidden;display:grid;place-items:center}
+.vscan::before{content:"";position:absolute;inset:16%;border-radius:18px;background:
+ linear-gradient(var(--verde),var(--verde)) top left/34px 4px,linear-gradient(var(--verde),var(--verde)) top left/4px 34px,
+ linear-gradient(var(--verde),var(--verde)) top right/34px 4px,linear-gradient(var(--verde),var(--verde)) top right/4px 34px,
+ linear-gradient(var(--verde),var(--verde)) bottom left/34px 4px,linear-gradient(var(--verde),var(--verde)) bottom left/4px 34px,
+ linear-gradient(var(--verde),var(--verde)) bottom right/34px 4px,linear-gradient(var(--verde),var(--verde)) bottom right/4px 34px;background-repeat:no-repeat}
+.vscan i{position:absolute;left:18%;right:18%;height:2px;background:var(--verde);box-shadow:0 0 14px var(--verde);animation:vline 2.2s ease-in-out infinite alternate}
+@keyframes vline{from{top:20%}to{top:80%}}
+.vscan span{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:rgba(255,255,255,.75);font-size:12.5px}
+.vres{border-radius:20px;overflow:hidden;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);margin-bottom:14px}
+.vres .st{display:flex;gap:10px;align-items:center;padding:14px 18px;color:#fff;font-weight:700;font-size:16px}
+.vres .st.ok{background:var(--verde-osc)}.vres .st.no{background:#B42318}
+.vres .st small{font-weight:500;opacity:.85;margin-left:auto;font-size:12.5px}
+.vres dl{margin:0;padding:6px 18px 4px;display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px}
+.vres dt{color:var(--mute)}.vres dd{margin:0;color:var(--ink);font-weight:600}
+.vres .actions{padding:10px 18px 18px;margin:0}
+.vres p{padding:14px 18px;margin:0}
+.bsearch{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.bsearch .inp{flex:1;min-width:220px}
+
 /* ================= APP: Mi espacio de socio (misma identidad del estilo) ================= */
 #hdr,header.h,.hx,footer.f,.demobar,nav.bn,.mm-ov,.drw,.drw-ov,.appframe{display:none!important}
 body{padding:calc(70px + env(safe-area-inset-top)) 0 calc(100px + env(safe-area-inset-bottom))!important}
 body.home main,main{margin-top:0!important}
-.apbar{position:fixed;top:0;left:0;right:0;z-index:70;height:calc(58px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0 16px;display:flex;align-items:center;gap:6px;background:color-mix(in srgb,var(--paper,#fff) 88%,transparent);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.apbar{position:fixed;top:0;left:0;right:0;z-index:70;height:calc(58px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0 16px;display:flex;align-items:center;gap:6px;background:var(--paper,#fff);transition:transform .3s cubic-bezier(.2,.7,.1,1);box-shadow:0 1px 0 rgba(0,0,0,.06)}
 .apbar img{height:34px;width:auto}
+body.hdr-up .apbar{transform:translateY(-105%)}
+html[data-theme=dark] .apbar img{filter:brightness(0) invert(1)}
+html[data-theme=dark] .tabbar a.fab span.b{background:linear-gradient(140deg,#2242AE,#0E2470)}
 .apbar #apB{display:none;margin-left:-6px}
 body.sub .apbar #apB{display:grid}
 body.sub .apbar img{height:28px}
@@ -706,16 +776,16 @@ body.sub .apbar img{height:28px}
 .apbar .sp{flex:1}
 .apbar button{width:40px;height:40px;border-radius:50%;border:0;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;position:relative}
 .apbar button:active{transform:scale(.9)}
-.apbar .dot{position:absolute;top:8px;right:9px;width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 2px #fff}
-.tabbar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:70;height:66px;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;background:#fff;border-radius:22px;box-shadow:0 12px 34px -10px rgba(14,36,112,.35),0 0 0 1px rgba(14,36,112,.05)}
+.apbar .dot{position:absolute;top:8px;right:9px;width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 2px var(--paper,#fff)}
+.tabbar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:70;height:66px;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;background:var(--card,#fff);border-radius:22px;box-shadow:0 12px 34px -10px rgba(14,36,112,.35),0 0 0 1px rgba(14,36,112,.05)}
 .tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:600;color:var(--mute);transition:color .2s,transform .2s}
 .tabbar a:active{transform:scale(.92)}
 .tabbar a.on{color:var(--azul)}
 .tabbar a.on svg{color:var(--verde)}
 .tabbar a.fab{position:relative;top:-18px}
-.tabbar a.fab span.b{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(140deg,var(--azul-2,var(--azul)),var(--navy));box-shadow:0 10px 22px -6px rgba(14,36,112,.55),0 0 0 5px #fff}
+.tabbar a.fab span.b{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(140deg,var(--azul-2,var(--azul)),var(--navy));box-shadow:0 10px 22px -6px rgba(14,36,112,.55),0 0 0 5px var(--card,#fff)}
 .tabbar a.fab svg.i{width:28px;height:28px}
-.app{padding-top:8px!important}
+div.app{padding-top:8px!important}
 .hi{display:flex;flex-direction:column;gap:2px;margin:4px 0 14px}
 .hi small{color:var(--mute);font-size:14px}
 .hi h1{font-size:24px!important;margin:0}
@@ -723,10 +793,10 @@ body.sub .apbar img{height:28px}
 .app .cred:active{transform:scale(.985)}
 .credhint{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mute);margin:8px 2px 0}
 .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 6px}
-.qt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:14px 6px;background:#fff;border-radius:var(--rc,16px);box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -10px rgba(14,36,112,.3);font-size:12.5px;font-weight:600;color:var(--ink);cursor:pointer;border:0}
+.qt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:14px 6px;background:var(--card,#fff);border-radius:var(--rc,16px);box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -10px rgba(14,36,112,.3);font-size:12.5px;font-weight:600;color:var(--ink);cursor:pointer;border:0}
 .qt:active{transform:scale(.95)}
-.qt .ic{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--azul) 10%,#fff);color:var(--azul)}
-.qt .ic.v{background:color-mix(in srgb,var(--verde) 14%,#fff);color:var(--verde-osc,var(--verde))}
+.qt .ic{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--azul) 10%,var(--card,#fff));color:var(--azul)}
+.qt .ic.v{background:color-mix(in srgb,var(--verde) 14%,var(--card,#fff));color:var(--verde-osc,var(--verde))}
 .ash{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:26px 0 10px}
 .ash h2{font-size:19px!important;margin:0}
 .ash a{font-size:13px;font-weight:600;color:var(--azul)}
@@ -737,19 +807,19 @@ body.sub .apbar img{height:28px}
 .hrow.pubs{grid-auto-columns:80%}
 .app .ev{grid-template-columns:70px 1fr}
 .miniind{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.miniind div{background:#fff;border-radius:var(--rc,14px);padding:10px 12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -12px rgba(14,36,112,.3)}
+.miniind div{background:var(--card,#fff);border-radius:var(--rc,14px);padding:10px 12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -12px rgba(14,36,112,.3)}
 .miniind span{display:block;font-size:11px;color:var(--mute);font-weight:600}
 .miniind b{font-size:15px;color:var(--ink)}
 .menu{display:grid;gap:8px}
-.menu a,.menu button{display:flex;align-items:center;gap:14px;width:100%;padding:14px 14px;background:#fff;border:0;border-radius:var(--rc,14px);box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -12px rgba(14,36,112,.3);font:inherit;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left}
-.menu .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--azul) 10%,#fff);color:var(--azul);flex:none}
+.menu a,.menu button{display:flex;align-items:center;gap:14px;width:100%;padding:14px 14px;background:var(--card,#fff);border:0;border-radius:var(--rc,14px);box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -12px rgba(14,36,112,.3);font:inherit;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left}
+.menu .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--azul) 10%,var(--card,#fff));color:var(--azul);flex:none}
 .menu small{display:block;font-weight:400;color:var(--mute);font-size:12.5px}
 .menu .ch{margin-left:auto;color:var(--mute)}
 .qrpage{text-align:left}
 .qrpage .cred .qr img,.qrpage .cred .qr canvas{width:150px!important;height:150px!important}
 .ntf{display:grid;gap:10px}
 .ntf div{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:14px;background:var(--cream,#F4F6FA)}
-.ntf .ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#fff;color:var(--azul);flex:none}
+.ntf .ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--card,#fff);color:var(--azul);flex:none}
 .ntf b{display:block;color:var(--ink);font-size:14.5px}.ntf small{color:var(--mute)}
 @media (min-width:700px){.app{max-width:640px;margin:0 auto}.tabbar{max-width:560px;margin:0 auto}}
 </style>
@@ -771,6 +841,7 @@ body.sub .apbar img{height:28px}
     <form class="hxs" role="search" onsubmit="event.preventDefault();UI.f={...UI.f,q:this.q.value,rub:''};go('#/explorar');render(true)"><input name="q" placeholder="Escribe tu búsqueda" aria-label="Buscar"><button aria-label="Buscar" id="hxsb"></button></form>
     <div class="hxr">
       <button class="cb only-mm" id="hSearch" aria-label="Buscar"></button>
+      <button class="cb tema" id="hTema" onclick="toggleTema()" aria-label="Cambiar tema claro u oscuro" title="Tema claro / oscuro"></button>
       <button class="cb" id="mRol" aria-label="Cambiar rol de la demo" title="Ver la demo como…"></button>
       <a class="btn n sm hx-cta" href="#/hazte-socio">Hazte socio</a>
       <a class="btn gr sm hx-cta" href="#/cuenta">Portal socios</a>
@@ -846,6 +917,14 @@ const P={
  bank:'<path d="M3 10h18L12 4z"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>', link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
  news:'<path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 17h3"/>', chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'
 };
+Object.assign(P,{
+ sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+ moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
+ scan:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M7 12h10"/>',
+ help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.3c-.6.3-.9.8-.9 1.4V14M12 17.5v.01"/>',
+ lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+ users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 20a6.5 6.5 0 0 0-2.5-5.1"/>'
+});
 const I=k=>`<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${P[k]}</svg>`;
 const AR=`<span class="ar">${I('arr')}</span>`;
 
@@ -870,7 +949,7 @@ const EMP={
  madonna:{n:'Restaurante Madonna',r:'Gastronomía',slug:'madonna-pizza',logo:'img/l_madonna.jpg'},
  pampa:{n:'Restaurante La Pampa',r:'Gastronomía',slug:'madonna-pizza'},
  corralero:{n:'El Corralero',r:'Gastronomía',slug:'el-corralero',logo:'img/l_corralero.jpg'},
- ejemplo:{n:'Empresa de Ejemplo SpA',r:'Servicios',slug:'',ejemplo:true},
+ ejemplo:{n:'Cámara de Comercio Temuco',r:'Servicios',slug:'',ejemplo:true,dir:'Vicuña Mackenna 396',tel:'+56452210818'},
  ej_resto:{n:'Restaurante de Ejemplo',r:'Gastronomía',slug:'',ejemplo:true},
  ej_tur:{n:'Turismo de Ejemplo',r:'Hotelería y turismo',slug:'',ejemplo:true}
 };
@@ -1078,7 +1157,7 @@ function vInicio(){
   </div></section>
 
   <section class="s"><div class="wrap">
-    <div class="sh" data-r><div><div class="kick">Empresas socias</div><h2>Con el sello <em>de la Cámara</em></h2></div><a class="lnk" href="#/empresas">Directorio completo ${AR}</a></div>
+    <div class="sh" data-r><div><div class="kick">Empresas socias</div><h2>Con el sello <em>de la Cámara</em></h2></div><a class="lnk" href="#/empresas">Ver todas las empresas ${AR}</a></div>
     <div class="rail" id="rail">${EK().map(ec).join('')}</div>
   </div></section>
 
@@ -1228,10 +1307,11 @@ function vEmpresas(){
   ${ks.length?`<div class="grid g3">${ks.map(ec).join('')}</div>`:`<div class="empty">${I('build')}<h3>Sin coincidencias</h3></div>`}</div>`;
 }
 function vBeneficios(){
-  const r=UI.br||'',list=CV().filter(c=>!r||EMP[c.e].r===r);
+  const r=UI.br||'',q=norm(UI.bq||''),list=CV().filter(c=>(!r||EMP[c.e].r===r)&&(!q||norm(EMP[c.e].n+' '+c.d+' '+EMP[c.e].r).includes(q)));
   return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Beneficios</span></nav>${ph('Beneficios <em>para socios</em>',`${CV().length} convenios registrados por la Cámara · presenta tu credencial digital en el local · vigencia por confirmar`)}
+  <div class="bsearch"><input class="inp" placeholder="Buscar empresa o beneficio" value="${esc(UI.bq||'')}" oninput="UI.bq=this.value;clearTimeout(UI.t);UI.t=setTimeout(()=>{render(true);const i=document.querySelector('#view .bsearch input');i.focus();i.setSelectionRange(i.value.length,i.value.length)},250)" aria-label="Buscar empresa o beneficio"><a class="btn o" href="#/empresas">${I('build')} Empresas socias</a></div>
   <div class="chips"><button class="chip ${!r?'on':''}" onclick="UI.br='';render(true)">Todos</button>${[...new Set(CV().map(c=>EMP[c.e].r))].map(x=>`<button class="chip ${r===x?'on':''}" onclick="UI.br='${x}';render(true)">${esc(x)}</button>`).join('')}</div>
-  <div class="grid g4 cgrid">${list.map((c,i)=>bc(c,TONES[i%TONES.length])).join('')}</div></div>`;
+  <div class="grid g4 cgrid">${list.map((c,i)=>bc(c,TONES[i%TONES.length])).join('')}</div>${list.length?'':`<div class="empty">${I('search')}<h3>Sin coincidencias</h3><p>Prueba con otra palabra o revisa las <a class="lnk" href="#/empresas">empresas socias</a>.</p></div>`}</div>`;
 }
 function vServicios(){
   return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Servicios Cámara</span></nav>${ph('Servicios <em>de la Cámara</em>','Información y contratación en camaratemuco.cl')}
@@ -1275,15 +1355,62 @@ function vHazteSocio(){
 function vAyuda(){
   return `<div class="wrap pg" style="max-width:860px"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Ayuda</span></nav>${ph('Cómo funciona <em>la vitrina</em>')}
   <div class="panel"><ol class="steps"><li>Cualquier persona navega la vitrina sin registrarse.</li><li>El contacto con cada empresa es directo (WhatsApp, teléfono o sitio web).</li><li>Los socios usan sus beneficios mostrando la credencial digital en el comercio.</li><li>Cada empresa socia publica desde “Mi empresa”; la Cámara revisa y aprueba antes de publicar.</li></ol></div>
-  <p class="muted" style="font-size:13.5px;margin-top:18px">Privacidad: la vitrina muestra solo información comercial pública de cada empresa. No se publican RUT, direcciones particulares ni datos de representantes.</p></div>`;
+  <p class="muted" style="font-size:13.5px;margin-top:18px">Privacidad: la vitrina muestra solo información comercial pública de cada empresa. No se publican RUT, direcciones particulares ni datos de representantes.</p>${soporteHTML()}</div>`;
+}
+
+/* ===================== 23-11: tema, login, directorio, soporte, validar socio ===================== */
+function temaActual(){return document.documentElement.dataset.theme==='dark'?'dark':'light'}
+function pintarTema(){const d=temaActual()==='dark';['#hTema','#apT'].forEach(id=>{const b=$(id);if(b){b.innerHTML=I(d?'sun':'moon');b.setAttribute('aria-label',d?'Cambiar a tema claro':'Cambiar a tema oscuro')}});const mt=document.querySelector('meta[name=theme-color]');if(mt)mt.content=d?'#0E1217':'#0E2470'}
+function toggleTema(){const t=temaActual()==='dark'?'light':'dark';if(t==='dark')document.documentElement.dataset.theme='dark';else delete document.documentElement.dataset.theme;try{localStorage.setItem('cct-tema',t)}catch(_){}pintarTema();toast(t==='dark'?'Tema oscuro':'Tema claro')}
+let _sy=scrollY;addEventListener('scroll',()=>{const y=scrollY;if(Math.abs(y-_sy)<8)return;document.body.classList.toggle('hdr-up',y>_sy&&y>90&&!(typeof MM!=='undefined'&&MM.cur));_sy=y},{passive:true});
+function vLogin(){
+  return `<div class="wrap pg"><div class="panel lgn" data-r style="padding:30px 26px">
+   <div class="lg"><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio Temuco"></div>
+   <h2>Ingreso <em style="color:var(--azul)">socios</em></h2><p class="sub">Tu credencial digital, tus beneficios y la vitrina de tu empresa.</p>
+   <form onsubmit="event.preventDefault();setRol('socio')" autocomplete="off">
+    <label for="lg1">Correo electrónico</label><input id="lg1" class="inp" type="email" inputmode="email" placeholder="nombre@empresa.cl">
+    <label for="lg2">Contraseña</label><div class="pw"><input id="lg2" class="inp" type="password" placeholder="••••••••" style="padding-right:74px"><button type="button" onclick="const i=$('#lg2');i.type=i.type==='password'?'text':'password';this.textContent=i.type==='password'?'Mostrar':'Ocultar'">Mostrar</button></div>
+    <div class="row" style="justify-content:flex-end"><a href="#" onclick="event.preventDefault();olvideClave()">¿Olvidaste tu contraseña?</a></div>
+    <button class="btn v full" style="width:100%;justify-content:center">Ingresar</button>
+   </form>
+   <p class="muted" style="font-size:13px;text-align:center;margin:14px 0 0">¿Primera vez? Activa tu cuenta con el correo que registraste en la Cámara. <a class="lnk" href="#/hazte-socio">¿Aún no eres socio?</a></p>
+   <div class="sep">Administración</div>
+   <button class="btn g" style="width:100%;justify-content:center" onclick="setRol('camara')">${I('cog')} Acceso funcionarios de la Cámara</button>
+   <p class="demo">Demo: el ingreso es simulado y entra con cualquier dato. No escribas tu contraseña real.</p>
+  </div></div>`;
+}
+function olvideClave(){sheet('Recuperar contraseña',`<form id="oc" onsubmit="event.preventDefault();closeSheet();toast('Si el correo está registrado, te llegará un enlace')">
+  <p class="muted" style="margin-top:0">Te enviaremos un <b>enlace de un solo uso</b> que vence en 30 minutos. Con él creas una contraseña nueva. Nunca enviamos contraseñas por correo.</p>
+  <label class="l" for="oc1">Correo electrónico</label><input id="oc1" class="inp" type="email" placeholder="nombre@empresa.cl"></form>`,
+  `<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn v" onclick="document.getElementById('oc').requestSubmit()">Enviar enlace</button>`)}
+const DIRECTIVA=[['Presidente'],['Primer vicepresidente'],['Segundo vicepresidente'],['Secretario'],['Tesorero'],['Director'],['Director'],['Director']];
+function vDirectorio(){
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Directorio</span></nav>${ph('Directorio <em>de la Cámara</em>','Mesa directiva de la Cámara de Comercio, Servicios y Turismo de Temuco A.G.')}
+   <div class="dir">${DIRECTIVA.map(([c,n])=>`<div class="p" data-r><span class="av">${I('user')}</span><span><span class="c">${c}</span><b>${n||'Nombre Apellido'}</b><small>${n?'':'Empresa socia'}</small> ${n?'':'<span class="tag dot">Ejemplo</span>'}</span></div>`).join('')}</div>
+   <p class="muted" style="font-size:13px;margin-top:18px">Nombres, cargos y fotos los carga la Cámara desde su panel. Las empresas socias están en <a class="lnk" href="#/empresas">Empresas socias</a> y en la búsqueda de <a class="lnk" href="#/beneficios">Beneficios</a>.</p>
+   ${soporteHTML()}</div>`;
+}
+function soporteHTML(){return `<div class="panel sop"><span class="ic">${I('help')}</span><span class="t"><b>¿Necesitas ayuda?</b><small>Escríbenos o llámanos. Atención de lunes a viernes, 09:00 a 14:00 y 15:00 a 16:30 hrs.</small></span>
+  <div class="actions"><a class="btn n sm" href="mailto:administracion@camaratemuco.cl?subject=Soporte%20app%20de%20socios">${I('mail')} Escribir</a><a class="btn o sm" href="tel:+56452210818">${I('phone')} Llamar</a></div></div>`}
+/* Validar socio: el QR lleva un token; el servidor responde activo/inactivo + ficha comercial. RUT solo de empresas (persona jurídica, incluida EIRL) */
+const VAL_OK={k:'ej_resto',rut:'76.123.456-7',dir:'Av. Alemania 0671',tel:'+56 45 200 0000'};
+function vValidar(){
+  if(S.rol==='visitante'){const f=typeof ingresar==='function'?ingresar():vLogin();return typeof ingresar==='function'?`<div class="wrap pg app">${f}</div>`:f}
+  const r=UI.val,E=EMP[VAL_OK.k],hora=new Date().toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit'});
+  const res=!r?'':r==='ok'?`<div class="vres" data-r><div class="st ok">${I('check')} Socio activo<small>Validado ${hora}</small></div>
+    <dl><dt>Empresa</dt><dd>${esc(E.n)} <span class="tag dot">Ejemplo</span></dd><dt>Rubro</dt><dd>${esc(E.r)}</dd><dt>RUT empresa</dt><dd>${VAL_OK.rut}</dd><dt>Dirección</dt><dd>${VAL_OK.dir}, Temuco</dd><dt>Teléfono</dt><dd>${VAL_OK.tel}</dd><dt>Credencial</dt><dd>Vigente hasta 31-12-2026</dd></dl>
+    <div class="actions"><button class="btn v sm" onclick="contacto('wa','${VAL_OK.k}')">${I('wa')} WhatsApp</button><a class="btn o sm" href="tel:+56452000000">${I('phone')} Llamar</a><a class="btn g sm" href="https://maps.google.com/?q=${encodeURIComponent(VAL_OK.dir+', Temuco')}" target="_blank" rel="noopener">${I('pin')} Cómo llegar</a></div></div>`
+   :`<div class="vres" data-r><div class="st no">${I('x')} QR no válido<small>${hora}</small></div><p>La credencial no existe, fue revocada o el socio no está activo. <b>No apliques el beneficio.</b></p></div>`;
+  return `<div class="wrap pg app" style="max-width:640px"><div class="hi"><small>${S.rol==='camara'?'Cámara de Comercio':'Mi espacio de socio'}</small><h1>Validar socio</h1></div>
+   ${r?res:`<div class="vscan" aria-hidden="true"><i></i><span>Apunta al QR de la credencial</span></div>`}
+   <div class="actions" style="justify-content:center"><button class="btn v" onclick="UI.val='ok';render(true)">${I('scan')} ${r?'Escanear otro':'Simular escaneo'}</button><button class="btn g" onclick="UI.val='no';render(true)">Simular QR no válido</button>${r?`<button class="btn o" onclick="UI.val=null;render(true)">Volver a la cámara</button>`:''}</div>
+   <p class="muted" style="font-size:12.5px;margin-top:16px">Sirve para confirmar que otro socio está activo antes de aplicar un descuento entre socios. El QR lleva un código único que la Cámara puede revocar. Se muestra el RUT solo de empresas, nunca el de una persona natural.</p></div>`;
 }
 
 /* ===================== Cuenta / roles ===================== */
 function vCuenta(force){
   if(S.rol==='camara')return vAdmin();
-  if(S.rol!=='socio')return `<div class="wrap pg" style="max-width:700px"><div class="panel" style="text-align:center;padding:44px 28px">
-    <span style="color:var(--azul);display:inline-grid">${I('user')}</span><h2 style="font-family:var(--serif);font-weight:400;font-size:36px;margin:10px 0">Ingreso <em style="color:var(--azul)">socios</em></h2><p class="muted">Espacio privado para empresas socias: credencial digital, beneficios y la vitrina de tu empresa. La Cámara administra socios, convenios y publicaciones. En esta demo el ingreso es simulado.</p>
-    <div class="actions" style="justify-content:center;margin-top:20px"><button class="btn v" onclick="setRol('socio')">Entrar como socio</button><button class="btn g" onclick="setRol('camara')">Entrar como Cámara</button></div></div></div>`;
+  if(S.rol!=='socio')return vLogin();
   const tab=force||(HQ().t==='emp'?'emp':'cred');
   const tabs=`<div class="tabs">${[['cred','Mi credencial'],['emp','Mi empresa']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="go('#/cuenta?t=${v}')">${l}</button>`).join('')}</div>`;
   const head=`<nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Mi espacio</span></nav>${ph('Mi <em>espacio de socio</em>','Credencial, beneficios y la vitrina de tu empresa.')}${tabs}`;
@@ -1292,7 +1419,7 @@ function vCuenta(force){
   return `<div class="wrap pg">${head}
   <div class="two"><div>
     <div class="cred" data-r><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
-      <div class="bd"><div class="qr" id="qr"></div><div><h3>Empresa de Ejemplo SpA</h3><small>Socio N° 0000 · desde 2019</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>
+      <div class="bd"><div class="qr" id="qr"></div><div><h3>Cámara de Comercio Temuco</h3><small>Socio N° 0001 · perfil de demostración</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>
     <p class="muted" style="font-size:13px;max-width:430px;margin-top:14px">Muéstrala en el comercio para obtener tu beneficio; el QR permite verificar que el socio está activo. Datos de ejemplo.</p>
     ${cuotaHTML()}</div>
   <div><div class="kick" style="margin-top:12px">Beneficios usados</div>
@@ -1315,7 +1442,7 @@ function vMiEmpresa(head){
   const est={publicada:'<span class="tag v dot">Publicada</span>',revision:'<span class="tag dot">En revisión</span>',rechazada:'<span class="tag r dot">Rechazada</span>'};
   const mine=S.pubs.filter(p=>(p.emp||'ejemplo')==='ejemplo');
   return `<div class="wrap pg">${head}
-  <div class="eh"><span class="av" style="background:var(--verde)">EE</span><div><div class="kick">Servicios · Temuco · perfil comercial</div><h1>Empresa de Ejemplo SpA</h1><p style="margin:8px 0 0">${S.fichaPend?'<span class="tag dot">Cambios de ficha en revisión</span>':'<span class="tag v dot">Ficha aprobada</span>'} <a class="lnk" href="#/e/ejemplo" style="margin-left:10px;font-size:13px">Ver mi ficha pública ${AR}</a></p></div>
+  <div class="eh"><span class="av" style="background:var(--navy)">CC</span><div><div class="kick">Servicios · Temuco · perfil comercial</div><h1>Cámara de Comercio Temuco</h1><p style="margin:8px 0 0">${S.fichaPend?'<span class="tag dot">Cambios de ficha en revisión</span>':'<span class="tag v dot">Ficha aprobada</span>'} <a class="lnk" href="#/e/ejemplo" style="margin-left:10px;font-size:13px">Ver mi ficha pública ${AR}</a></p></div>
     <div class="actions"><button class="btn v" onclick="nuevaPub()">Nueva publicación ${AR}</button><button class="btn o" onclick="editarFicha()">Editar perfil</button></div></div>
   <div class="kpis"><div class="kpi"><b>${mine.filter(p=>p.est==='publicada').length}</b><span>Publicadas</span></div><div class="kpi"><b>${mine.filter(p=>p.est==='revision').length}</b><span>En revisión</span></div><div class="kpi"><b>${mine.filter(p=>p.est==='rechazada').length}</b><span>Rechazadas</span></div><div class="kpi"><b>${CV().length}</b><span>Beneficios disponibles para ti</span></div></div>
   ${miVitrina()}
@@ -1334,7 +1461,7 @@ function miVitrina(){
     <div class="mvk">${K.map(([l,v,ic])=>`<div><span class="mvl">${I(ic)} ${l}</span><b>${v.toLocaleString('es-CL')}</b></div>`).join('')}</div>
     <figure class="mvc" aria-label="Visitas a tu ficha por semana, últimas 8 semanas"><figcaption>Visitas a tu ficha por semana</figcaption>
       <div class="bars">${W.map((v,i)=>`<div class="bw" title="${i===7?'Esta semana':'Hace '+(7-i)+' sem.'}: ${v} visitas"><span class="bv">${i===7?v:''}</span><i style="height:${Math.round(v/mx*100)}%"></i><span class="bl">${lab[i]}</span></div>`).join('')}</div></figure>
-    <p class="muted" style="font-size:12.5px;margin:12px 0 0;grid-column:1/-1">Datos de ejemplo. En la demo, entrar a la ficha de la Empresa de Ejemplo o tocar sus botones suma aquí. Se cuenta el toque, nunca quién lo hizo.</p>
+    <p class="muted" style="font-size:12.5px;margin:12px 0 0;grid-column:1/-1">Datos de ejemplo. En la demo, entrar a tu ficha o tocar sus botones suma aquí. Se cuenta el toque, nunca quién lo hizo.</p>
   </div>`;
 }
 function nuevaPub(){
@@ -1354,23 +1481,23 @@ function guardarPub(f){
 function leerFoto(inp){const fl=inp.files&&inp.files[0];if(!fl)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const mx=800,k=Math.min(1,mx/Math.max(im.width,im.height)),cv=document.createElement('canvas');cv.width=Math.round(im.width*k);cv.height=Math.round(im.height*k);cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height);const u=cv.toDataURL('image/jpeg',.8);$('#npfv').value=u;const pv=$('#npprev');pv.src=u;pv.style.display='block'};im.src=r.result};r.readAsDataURL(fl)}
 function editarFicha(){
   sheet('Editar perfil comercial',`<form id="ef" onsubmit="event.preventDefault();S.fichaPend=true;save();closeSheet();render(true);toast('Cambios enviados a revisión')">
-   <label class="l">Nombre comercial</label><input class="inp" value="Empresa de Ejemplo SpA">
+   <label class="l">Nombre comercial</label><input class="inp" value="Cámara de Comercio Temuco">
    <label class="l">Rubro</label><select class="inp">${RUB.map(r=>`<option ${r==='Servicios'?'selected':''}>${r}</option>`).join('')}</select>
-   <label class="l">Descripción</label><textarea class="inp">Empresa de ejemplo para la demostración de la vitrina.</textarea>
-   <label class="l">WhatsApp / teléfono de contacto</label><input class="inp" value="+56 9 0000 0000">
-   <label class="l">Sitio web o redes</label><input class="inp" value="https://ejemplo.cl"></form>`,
+   <label class="l">Descripción</label><textarea class="inp">Cámara de Comercio, Servicios y Turismo de Temuco A.G. Más de 100 años impulsando el comercio de La Araucanía.</textarea>
+   <label class="l">WhatsApp / teléfono de contacto</label><input class="inp" value="+56 45 221 0818">
+   <label class="l">Sitio web o redes</label><input class="inp" value="https://www.camaratemuco.cl"></form>`,
    `<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn v" onclick="document.getElementById('ef').requestSubmit()">Enviar a revisión</button>`);
 }
 function vAdmin(){
   if(S.rol!=='camara')return `<div class="wrap pg"><div class="panel" style="text-align:center"><h2 style="font-family:var(--serif);font-weight:400">Administración</h2><p class="muted">Solo para la Cámara.</p><button class="btn n" onclick="setRol('camara')">Ver como Cámara</button></div></div>`;
   const pend=S.pubs.filter(p=>p.est==='revision');
-  const cola=[...(S.fichaPend?[{k:'ficha',t:'Cambios en el perfil de Empresa de Ejemplo SpA',tipo:'Perfil'}]:[]),...pend.map(p=>({k:p.id,t:p.t,tipo:p.tipo,foto:p.foto}))];
+  const cola=[...(S.fichaPend?[{k:'ficha',t:'Cambios en el perfil de Cámara de Comercio Temuco',tipo:'Perfil'}]:[]),...pend.map(p=>({k:p.id,t:p.t,tipo:p.tipo,foto:p.foto}))];
   const tab=['cola','soc','conv','dest','ban'].includes(HQ().t)?HQ().t:'cola';
   const keys=Object.keys(EMP).sort((a,b)=>EMP[a].n.localeCompare(EMP[b].n));
   return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Administración</span></nav>${ph('Panel <em>de la Cámara</em>','Socios, convenios, publicaciones y contenido de la vitrina')}
   <div class="kpis"><div class="kpi"><b>${EK().length}</b><span>Socios visibles en la vitrina</span></div><div class="kpi"><b>${CV().length}</b><span>Convenios activos</span></div><div class="kpi"><b style="color:${cola.length?'#B7791F':'var(--verde-osc)'}">${cola.length}</b><span>Por revisar</span></div><div class="kpi"><b>${(S.susp||[]).length}</b><span>Socios suspendidos</span></div></div>
   <div class="tabs">${[['cola',`Por revisar (${cola.length})`],['soc','Socios'],['conv','Convenios'],['dest','Destacados'],['ban','Portadas']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="go((location.hash||'#/').split('?')[0]+'?t=${v}')">${l}</button>`).join('')}</div>
-  ${tab==='cola'?(cola.length?`<table class="tbl"><thead><tr><th>Solicitud</th><th>Tipo</th><th>Empresa</th><th></th></tr></thead><tbody>${cola.map(c=>`<tr><td>${c.foto?`<img src="${c.foto}" alt="" style="width:54px;height:40px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:8px">`:''}<b style="color:var(--ink)">${esc(c.t)}</b></td><td><span class="tag">${esc(c.tipo)}</span></td><td>Empresa de Ejemplo SpA</td><td><div class="acts"><button class="btn v sm" onclick="aprobar('${c.k}')">${I('check')} Aprobar</button><button class="btn g sm" onclick="rechazar('${c.k}')">Rechazar</button></div></td></tr>`).join('')}</tbody></table>`
+  ${tab==='cola'?(cola.length?`<table class="tbl"><thead><tr><th>Solicitud</th><th>Tipo</th><th>Empresa</th><th></th></tr></thead><tbody>${cola.map(c=>`<tr><td>${c.foto?`<img src="${c.foto}" alt="" style="width:54px;height:40px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:8px">`:''}<b style="color:var(--ink)">${esc(c.t)}</b></td><td><span class="tag">${esc(c.tipo)}</span></td><td>Cámara de Comercio Temuco</td><td><div class="acts"><button class="btn v sm" onclick="aprobar('${c.k}')">${I('check')} Aprobar</button><button class="btn g sm" onclick="rechazar('${c.k}')">Rechazar</button></div></td></tr>`).join('')}</tbody></table>`
      :`<div class="empty panel">${I('check')}<h3>Todo revisado</h3><p>Entra como Socio → Mi empresa, crea una publicación y vuelve aquí para aprobarla.</p></div>`):''}
   ${tab==='soc'?`<div class="actions" style="margin:0 0 16px"><button class="btn n sm" onclick="socioForm()">+ Nuevo socio</button><span class="muted" style="font-size:13px">Al suspender un socio desaparece de la vitrina junto con sus convenios. En la versión final: importación de correos por planilla.</span></div>
     <table class="tbl"><thead><tr><th>Empresa</th><th>Rubro</th><th>Convenios</th><th style="text-align:right">Activo</th><th></th></tr></thead><tbody>${keys.map(k=>`<tr><td><span style="display:flex;gap:10px;align-items:center">${mono(k)}<b style="color:var(--ink)">${esc(EMP[k].n)}</b>${EMP[k].ejemplo||EMP[k].nuevo?'<span class="tag dot">'+(EMP[k].nuevo?'Nuevo':'Ejemplo')+'</span>':''}</span></td><td>${esc(EMP[k].r)}</td><td>${CONV.filter(c=>c.e===k).length}</td><td style="text-align:right"><label class="sw" aria-label="Activo"><input type="checkbox" ${vis(k)?'checked':''} onchange="toggleSoc('${k}',this.checked)"><span></span></label></td><td style="text-align:right"><button class="btn g sm" onclick="socioForm('${k}')">Editar</button></td></tr>`).join('')}</tbody></table>`:''}
@@ -1483,10 +1610,10 @@ if(new URLSearchParams(location.search).get('app')==='1')document.body.classList
 
 const MODS=[
  {k:'socios',t:'Socios',h:'Ser socio de la Cámara',p:['Las empresas socias acceden a convenios y descuentos, a la vitrina comercial con sello de empresa verificada y a los servicios de la Cámara con condiciones preferentes.','Tu credencial digital acredita la membresía en el comercio, y desde tu espacio de socio administras el perfil comercial y las publicaciones de tu empresa.'],
-  items:[['Hazte socio','#/hazte-socio'],['Beneficios para socios','#/beneficios'],['Directorio de socios','#/empresas'],['Mi credencial','#/cuenta',"setRol('socio','cred')"],['Publicar en la vitrina','#/cuenta?t=emp',"setRol('socio','emp')"],['Pagar mi cuota','#/cuenta',"setRol('socio','cred')"]],
+  items:[['Hazte socio','#/hazte-socio'],['Beneficios para socios','#/beneficios'],['Empresas socias','#/empresas'],['Directorio de la Cámara','#/directorio'],['Mi credencial','#/cuenta',"setRol('socio','cred')"],['Publicar en la vitrina','#/cuenta?t=emp',"setRol('socio','emp')"],['Pagar mi cuota','#/cuenta',"setRol('socio','cred')"]],
   f:['¿Quieres ser parte de la Cámara?','Súmate y accede a beneficios, vitrina y servicios para tu empresa.','Hazte socio','#/hazte-socio','img/p_band.jpg']},
  {k:'camara',t:'La Cámara',h:'Más de 100 años impulsando el comercio',p:['La Cámara de Comercio, Servicios y Turismo de La Araucanía reúne a empresas de la región para promover su desarrollo y representar al comercio local.','Es miembro de la Cámara Nacional de Comercio y articula servicios, capacitación y vinculación entre sus socios y la comunidad.'],
-  items:[['Nosotros','https://www.camaratemuco.cl/'],['Directorio','https://www.camaratemuco.cl/'],['Capacitación','https://www.camaratemuco.cl/capacitacion/'],['Info técnica','https://www.camaratemuco.cl/'],['Contacto','https://www.camaratemuco.cl/']],
+  items:[['Nosotros','https://www.camaratemuco.cl/'],['Directorio','#/directorio'],['Capacitación','https://www.camaratemuco.cl/capacitacion/'],['Info técnica','https://www.camaratemuco.cl/'],['Contacto','https://www.camaratemuco.cl/']],
   f:['Conoce a la Cámara','Historia, directorio y equipo de la institución.','Conócenos','https://www.camaratemuco.cl/','img/p_centenario.jpg']},
  {k:'servicios',t:'Servicios',svc:true},
  {k:'beneficios',t:'Beneficios',h:'Beneficios para socios',p:['Convenios con descuentos en comercios de Temuco, agrupados por rubro. Se usan mostrando la credencial digital de socio.','La vigencia y condiciones de cada convenio las administra la Cámara desde su panel.'],
@@ -1536,7 +1663,7 @@ function openMM(k,focus){const i=MODS.findIndex(m=>m.k===k),dir=MM.idx<0||i>=MM.
 function closeMM(ret){if(!MM.cur)return;const k=MM.cur;$('#mm').classList.remove('open');$('#hdr').classList.remove('mo');$('#mmov').classList.remove('on');document.querySelectorAll('#mnav li').forEach(li=>{li.classList.remove('on');li.querySelector('button').setAttribute('aria-expanded','false')});MM.cur=null;MM.idx=-1;const r=curMod();r?moveInd(r):$('#mmind').classList.remove('on');if(ret){const b=document.querySelector(`#mnav li[data-k="${k}"] button`);b&&b.focus()}}
 function drw(on){$('#drw').classList.toggle('open',on);$('#drwov').classList.toggle('on',on);$('#drw').setAttribute('aria-hidden',!on);$('#hbg').setAttribute('aria-expanded',on);document.body.style.overflow=on?'hidden':'';if(on)setTimeout(()=>$('#drwx').focus(),80);else if(document.activeElement&&$('#drw').contains(document.activeElement))$('#hbg').focus()}
 function accT(b){const a=b.parentNode,on=!a.classList.contains('open');document.querySelectorAll('.acc').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});a.classList.toggle('open',on);b.setAttribute('aria-expanded',on)}
-function curMod(){const r=(location.hash||'#/').split('?')[0];if(/^#\/(empresas|promociones|explorar|favoritos|e\/)/.test(r))return'vitrina';if(/^#\/(beneficios|b\/)/.test(r))return'beneficios';if(/^#\/servicios/.test(r))return'servicios';if(/^#\/eventos/.test(r))return'noticias';if(/^#\/(hazte-socio|cuenta)/.test(r))return'socios';return null}
+function curMod(){const r=(location.hash||'#/').split('?')[0];if(/^#\/directorio/.test(r))return'camara';if(/^#\/(empresas|promociones|explorar|favoritos|e\/)/.test(r))return'vitrina';if(/^#\/(beneficios|b\/)/.test(r))return'beneficios';if(/^#\/servicios/.test(r))return'servicios';if(/^#\/eventos/.test(r))return'noticias';if(/^#\/(hazte-socio|cuenta)/.test(r))return'socios';return null}
 function paintNav(){
   const r=(location.hash||'#/').split('?')[0],cm=curMod();
   document.querySelectorAll('#mnav li').forEach(li=>li.classList.toggle('cur',li.dataset.k===cm));
@@ -1546,7 +1673,7 @@ function paintNav(){
 }
 function draw(){
   const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
-  const routes={'':vInicio,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
+  const routes={'':vInicio,ingresar:vLogin,directorio:vDirectorio,validar:vValidar,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
   document.body.classList.toggle('home',!seg[0]);
   $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(routes[seg[0]||'']||notFound)();addBack(seg);
   closeMM();paintNav();onScroll();animateIn();dragRail();paintInd();
@@ -1560,13 +1687,14 @@ function render(local){
 addEventListener('hashchange',()=>render(false));
 addEventListener('resize',()=>{clearTimeout(UI.rt);UI.rt=setTimeout(()=>{if(/explorar/.test(location.hash))render(true)},200)});
 $('#rolSel').value=S.rol;
-buildMM();$('#hxsb').innerHTML=I('search');$('#drwx').innerHTML=I('x');document.querySelector('.mmx').innerHTML=I('x');
+buildMM();pintarTema();$('#hxsb').innerHTML=I('search');$('#drwx').innerHTML=I('x');document.querySelector('.mmx').innerHTML=I('x');
 draw();
 loadInd();
 document.querySelectorAll('footer [data-r]').forEach(e=>e.classList.add('in'));
 </script>
 
 <header class="apbar" aria-label="Barra de la app"><button aria-label="Volver" onclick="goBack()" id="apB"></button><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio Temuco"><span class="sp"></span>
+  <button aria-label="Tema claro u oscuro" onclick="toggleTema()" id="apT"></button>
   <button aria-label="Buscar" onclick="go('#/explorar')" id="apS"></button>
   <button aria-label="Notificaciones" onclick="notifs()" id="apN"></button>
   <button aria-label="Ver la demo como" onclick="$('#mRol').click()" id="apR"></button></header>
@@ -1575,30 +1703,31 @@ document.querySelectorAll('footer [data-r]').forEach(e=>e.classList.add('in'));
 /* ===== APP: estructura centrada en "Mi espacio de socio" ===== */
 $('#apS').innerHTML=I('search');$('#apN').innerHTML=I('cal').replace('<path','<path')+'';
 $('#apN').innerHTML='<svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><span class="dot"></span>';
-$('#apR').innerHTML=I('swap');$('#apB').innerHTML=I('back');
+$('#apR').innerHTML=I('swap');pintarTema();$('#apB').innerHTML=I('back');
 function credHTML(){return `<div class="cred" data-r onclick="go('#/qr')" role="button" aria-label="Ver mi credencial"><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
-  <div class="bd"><div class="qr" id="qr"></div><div><h3>Empresa de Ejemplo SpA</h3><small>Socio N° 0000 · desde 2019</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>`}
+  <div class="bd"><div class="qr" id="qr"></div><div><h3>Cámara de Comercio Temuco</h3><small>Socio N° 0001 · perfil de demostración</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>`}
 const usados=()=>[[16,'12 nov'],[13,'28 oct']].map(([id,f])=>{const c=C(id);return `<a class="ev" href="#/b/${id}" style="grid-template-columns:62px 1fr auto;align-items:center"><span class="dt"><b style="font-size:34px">${c.pct}<small style="font-size:.45em">%</small></b></span><span><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b><br><span class="muted" style="font-size:13px">${esc(c.d)} · ${f}</span> <span class="tag dot" style="margin-left:4px">Ejemplo</span></span>${I('chev')}</a>`}).join('');
-function ingresar(){return `<div class="panel" data-r style="text-align:center;padding:26px 20px"><span style="color:var(--azul);display:inline-grid">${I('qr')}</span><h2 style="font-size:22px;margin:8px 0 6px">Mi espacio de socio</h2><p class="muted" style="margin:0 0 16px">Tu credencial digital, tus beneficios y la vitrina de tu empresa, en un solo lugar.</p><div class="actions" style="justify-content:center"><button class="btn v" onclick="setRol('socio');go('#/')">Ingresar como socio</button><a class="btn o" href="#/hazte-socio">Hazte socio</a></div></div>`}
+function ingresar(){return `<div class="panel" data-r style="text-align:center;padding:26px 20px"><span style="color:var(--azul);display:inline-grid">${I('qr')}</span><h2 style="font-size:22px;margin:8px 0 6px">Mi espacio de socio</h2><p class="muted" style="margin:0 0 16px">Tu credencial digital, tus beneficios y la vitrina de tu empresa, en un solo lugar.</p><div class="actions" style="justify-content:center"><button class="btn v" onclick="go('#/ingresar')">Ingresar como socio</button><a class="btn o" href="#/hazte-socio">Hazte socio</a></div></div>`}
 function vAppHome(){
   if(S.rol==='camara')return vAdmin();
   const socio=S.rol==='socio';
   const dest=[...S.dest.map(C).filter(c=>c&&CV().includes(c)),...CV().filter(c=>!S.dest.includes(c.id)).sort((a,b)=>b.pct-a.pct)].slice(0,8);
   const pubs=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')).slice(0,6);
   if(socio)setTimeout(drawQR,0);
-  const Q=[[ 'qr','Mostrar credencial',"go('#/qr')",''],['card','Beneficios',"go('#/beneficios')",'v'],['store','Mi empresa',"go('#/cuenta?t=emp')",''],['camera','Publicar',"go('#/cuenta?t=emp');setTimeout(nuevaPub,350)",'v'],['bank','Pagar cuota',"pagarCuota()",''],['build','Directorio',"go('#/empresas')",'v'],['cal','Agenda',"go('#/eventos')",'']];
+  const Q=[[ 'qr','Mostrar credencial',"go('#/qr')",''],['card','Beneficios',"go('#/beneficios')",'v'],['store','Mi empresa',"go('#/cuenta?t=emp')",''],['camera','Publicar',"go('#/cuenta?t=emp');setTimeout(nuevaPub,350)",'v'],['bank','Pagar cuota',"pagarCuota()",''],['users','Directorio',"go('#/directorio')",'v'],['cal','Agenda',"go('#/eventos')",'']];
   const ind=(IND||IND_FALLBACK).v;
   return `<div class="wrap pg app">
-   ${socio?`<div class="hi" data-r><small>Hola,</small><h1>Empresa de Ejemplo SpA</h1></div>${credHTML()}<div class="credhint">${I('qr')} Toca la credencial para mostrar tu QR en el comercio</div>`:ingresar()}
+   ${socio?`<div class="hi" data-r><small>Hola,</small><h1>Cámara de Comercio Temuco</h1></div>${credHTML()}<div class="credhint">${I('qr')} Toca la credencial para mostrar tu QR en el comercio</div>`:ingresar()}
    <div class="qgrid">${Q.filter(q=>socio?q[1]!=='Agenda':!['Mi empresa','Publicar','Mostrar credencial','Pagar cuota'].includes(q[1])).map(([ic,t,on,cl])=>`<button class="qt" data-r onclick="${on}"><span class="ic ${cl}">${I(ic)}</span>${t}</button>`).join('')}</div>
    <div class="ash"><h2>Beneficios para ti</h2><a href="#/beneficios">Ver los ${CV().length}</a></div>
    <div class="hrow">${dest.map((c,i)=>bc(c,i?TONES[i%TONES.length]:'t-navy',false)).join('')}</div>
    <div class="ash"><h2>Novedades</h2><a href="#/promociones">Ver todas</a></div>
    ${novBlock()}
-   ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Directorio</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
+   ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Ver todas</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
    <div class="ash"><h2>Próximo evento</h2><a href="#/eventos">Agenda</a></div>${evRow(EVT[0])}
    <div class="ash"><h2>Indicadores</h2><a href="https://mindicador.cl" target="_blank" rel="noopener">mindicador.cl</a></div>
    <div class="miniind"><div><span>UF</span><b>$${nf(ind.uf[0],2)}</b></div><div><span>Dólar</span><b>$${nf(ind.dolar[0],2)}</b></div><div><span>UTM</span><b>$${nf(ind.utm[0],0)}</b></div></div>
+   ${soporteHTML()}
   </div>`;
 }
 function vQR(){
@@ -1611,11 +1740,13 @@ function vQR(){
 function vMas(){
   const it=(ic,t,s,on)=>`<a href="#" onclick="event.preventDefault();${on}"><span class="ic">${I(ic)}</span><span>${t}<small>${s}</small></span><span class="ch">${I('chev')}</span></a>`;
   const socio=S.rol==='socio',cam=S.rol==='camara';
-  return `<div class="wrap pg app"><div class="hi"><small>${socio?'Empresa de Ejemplo SpA':cam?'Cámara de Comercio':'Visitante'}</small><h1>Más</h1></div><div class="menu">
+  return `<div class="wrap pg app"><div class="hi"><small>${socio?'Cámara de Comercio Temuco':cam?'Cámara de Comercio':'Visitante'}</small><h1>Más</h1></div><div class="menu">
    ${socio?it('store','Mi empresa','Perfil, publicaciones y estadísticas',"go('#/cuenta?t=emp')")+it('qr','Mi credencial','Tu QR de socio',"go('#/qr')")+it('bank','Pagar cuota','Link de pago o transferencia',"pagarCuota()"):''}
    ${cam?it('cog','Panel de la Cámara','Socios, convenios y publicaciones',"go('#/admin')"):''}
    ${it('search','Explorar','Buscar empresas y beneficios',"go('#/explorar')")}
-   ${it('build','Directorio de empresas','Empresas socias por rubro',"go('#/empresas')")}
+   ${it('build','Empresas socias','Buscar por nombre o rubro',"go('#/empresas')")}
+   ${it('users','Directorio de la Cámara','Mesa directiva',"go('#/directorio')")}
+   ${socio||cam?it('scan','Validar socio','Escanear la credencial de otro socio',"go('#/validar')"):''}
    ${it('heart','Favoritos','Guardados en este teléfono',"go('#/favoritos')")}
    ${it('folder','Servicios de la Cámara','Boletín, OTEC, Auditorium y más',"go('#/servicios')")}
    ${it('cal','Noticias y agenda','Actividades de la Cámara',"go('#/eventos')")}
@@ -1623,7 +1754,7 @@ function vMas(){
    ${it('swap','Ver la demo como…','Visitante, Socio o Cámara',"$('#mRol').click()")}
    ${it('sliders','Cambiar estilo','Editorial o Moderna',"location.href='index.html?elegir=1'")}
    ${S.rol!=='visitante'?it('x','Salir','Volver a visitante',"setRol('visitante');go('#/')"):''}
-  </div></div>`;
+  </div>${soporteHTML()}</div>`;
 }
 function pagarCuota(){sheet('Cuota de socio',cuotaHTML().replace('panel cuota','cuota').replace(' data-r',''),`<button class="btn g" onclick="closeSheet()">Cerrar</button>`)}
 function notifs(){sheet('Notificaciones',`<div class="ntf">
@@ -1632,12 +1763,12 @@ function notifs(){sheet('Notificaciones',`<div class="ntf">
   <div><span class="ic">${I('cal')}</span><span><b>Desayuno empresarial de socios</b><small>3 de diciembre · Sede Cámara · Ejemplo</small></span></div></div>`,`<button class="btn n" onclick="closeSheet()">Entendido</button>`)}
 paintNav=function(){
   const r=(location.hash||'#/').split('?')[0],cam=S.rol==='camara';
-  const T=[['#/',cam?'Admin':'Mi espacio',cam?'cog':'home'],['#/beneficios','Beneficios','card'],['#/qr','','qr'],['#/promociones','Promos','store'],['#/mas','Más','grid']];
-  $('#tabbar').innerHTML=T.map(([u,l,ic],i)=>i===2?`<a href="${u}" class="fab ${r===u?'on':''}" aria-label="Mi credencial"><span class="b">${I(ic)}</span></a>`:`<a href="${u}" class="${r===u||(u==='#/'&&/^#\/(cuenta|admin)$/.test(r))?'on':''}">${I(ic)}<span>${l}</span></a>`).join('');
+  const T=[['#/',cam?'Admin':'Mi espacio',cam?'cog':'home'],['#/beneficios','Beneficios','card'],['#/validar','','scan'],['#/promociones','Promos','store'],['#/mas','Más','grid']];
+  $('#tabbar').innerHTML=T.map(([u,l,ic],i)=>i===2?`<a href="${u}" class="fab ${r===u?'on':''}" aria-label="Validar socio"><span class="b">${I(ic)}</span></a>`:`<a href="${u}" class="${r===u||(u==='#/'&&/^#\/(cuenta|admin)$/.test(r))?'on':''}">${I(ic)}<span>${l}</span></a>`).join('');
 };
 draw=function(){
   const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
-  const R={'':vAppHome,qr:vQR,mas:vMas,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
+  const R={'':vAppHome,ingresar:vLogin,directorio:vDirectorio,validar:vValidar,qr:vQR,mas:vMas,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
   document.body.classList.remove('home');document.body.classList.toggle('sub',!!seg[0]);
   $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(R[seg[0]||'']||notFound)();
   paintNav();animateIn();if(typeof dragRail==='function')dragRail();paintInd();
