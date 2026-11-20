@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E2470">
+<title>Vitrina Cámara Temuco</title>
+<script>
+/* Si ya se eligió un estilo, entra directo a Mi espacio (credencial) */
+(function(){
+  var q=new URLSearchParams(location.search);
+  if(q.has('elegir'))return;
+  try{var e=localStorage.getItem('cct-estilo');if(e==='editorial'||e==='moderna')location.replace(e+'.html?app=1#/')}catch(_){}
+})();
+</script>
+<style>
+:root{--navy:#0E2470;--azul:#2242AE;--verde:#3DAE2B;--ink:#16191F;--mute:#6B7280;--bg:#F4F6FA}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;padding:calc(20px + env(safe-area-inset-top)) 18px calc(24px + env(safe-area-inset-bottom))}
+.top{text-align:center;margin-bottom:18px}
+.top img{height:64px}
+h1{font-size:22px;margin:12px 0 4px;color:var(--navy)}
+.top p{margin:0;color:var(--mute);font-size:14.5px}
+.op{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto}
+button.st{border:0;background:#fff;border-radius:18px;padding:10px 10px 14px;box-shadow:0 2px 6px rgba(15,21,36,.06),0 12px 28px -12px rgba(15,21,36,.25);cursor:pointer;text-align:left;font:inherit;color:inherit;transition:transform .2s}
+button.st:active{transform:scale(.97)}
+.st img{width:100%;aspect-ratio:420/818;object-fit:cover;object-position:top;border-radius:12px;display:block}
+.st b{display:block;font-size:16px;margin:10px 4px 2px;color:var(--navy)}
+.st span{display:block;font-size:12.5px;color:var(--mute);margin:0 4px}
+.nota{max-width:520px;margin:18px auto 0;font-size:12.5px;color:var(--mute);text-align:center;line-height:1.45}
+.tag{display:inline-block;background:#FFF1C2;color:#6B5000;border-radius:999px;padding:3px 10px;font-size:11.5px;font-weight:700;margin-bottom:8px}
+</style>
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="top">
+  <img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio, Servicios y Turismo de La Araucanía">
+  <h1>Vitrina de socios</h1>
+  <p>Elige el estilo para ver la demo</p>
+</div>
+<div class="op">
+  <button class="st" onclick="abrir('editorial')"><img src="prev_editorial.jpg" alt=""><b>Editorial</b><span>Fotografía a sangre, tipografía con carácter</span></button>
+  <button class="st" onclick="abrir('moderna')"><img src="prev_moderna.jpg" alt=""><b>Moderna</b><span>Menú por módulos, tarjetas suaves</span></button>
+</div>
+<p class="nota"><span class="tag">MAQUETA DE DEMOSTRACIÓN</span><br>Convenios y empresas reales publicados por la Cámara; lo marcado “Ejemplo” es ficticio. Sin compras ni pagos. Puedes cambiar el estilo desde el botón ⇄ dentro de la app.</p>
+<script>
+function abrir(e){
+  try{
+    localStorage.setItem('cct-estilo',e);
+    if(!localStorage.getItem('cct-vitrina-ed'))localStorage.setItem('cct-vitrina-ed',JSON.stringify({rol:'socio'}));
+  }catch(_){}
+  location.href=e+'.html?app=1#/';
+}
+</script>
+<script>if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+</body>
+</html>

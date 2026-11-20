@@ -1,0 +1,1624 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E2470">
+<title>Vitrina Cámara Temuco · Moderna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<script src="qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0E2470; --azul:#133095; --azul-2:#2242AE; --azul-3:#003DA6;
+  --verde:#3DAE2B; --verde-osc:#2B7F1E; --verde-bg:#E7F3E3;
+  --ink:#16191F; --txt:#3D434D; --mute:#6E7480; --line:#E2E0DA; --paper:#FAF8F4; --cream:#F1ECE2; --white:#fff;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1); --r:14px; --hh:76px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0}
+body{font-family:var(--sans);color:var(--txt);background:var(--paper);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4{margin:0;color:var(--ink);font-weight:600;line-height:1.1}
+.serif{font-family:var(--serif);font-optical-sizing:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+::selection{background:var(--verde);color:#fff}
+
+/* ---------- demo bar ---------- */
+.demobar{background:var(--ink);color:#C9CDD5;font-size:12px}
+.demobar .wrap{display:flex;gap:14px;align-items:center;justify-content:space-between;min-height:34px;flex-wrap:wrap}
+.demobar b{color:#fff;font-weight:600;letter-spacing:.4px}
+.demobar select{background:#262B35;color:#fff;border:1px solid #3A404C;border-radius:6px;padding:3px 8px;font-size:12px}
+.demobar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- header ---------- */
+header.h{position:sticky;top:0;z-index:50;height:var(--hh);transition:background .35s var(--ease),box-shadow .35s,height .35s var(--ease),backdrop-filter .35s}
+header.h .wrap{height:100%;display:flex;align-items:center;gap:28px}
+.logo{flex:none;position:relative;height:44px;transition:height .35s var(--ease)}
+.logo img{height:100%;width:auto;transition:opacity .3s}
+.logo .lw{position:absolute;inset:0}
+nav.dn{display:flex;gap:4px;margin-left:auto}
+nav.dn a{position:relative;font-size:14px;font-weight:500;padding:8px 12px;color:var(--ink);transition:color .2s}
+nav.dn a::after{content:"";position:absolute;left:12px;right:12px;bottom:3px;height:1.5px;background:var(--verde);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+nav.dn a:hover::after,nav.dn a.on::after{transform:scaleX(1)}
+.hact{display:flex;gap:8px;align-items:center}
+.hb{width:40px;height:40px;border-radius:50%;border:1px solid transparent;background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:background .2s,border-color .2s}
+.hb:hover{background:rgba(0,0,0,.05)}
+/* header sobre hero */
+body.home header.h:not(.sc){background:transparent}
+body.home header.h:not(.sc) nav.dn a,body.home header.h:not(.sc) .hb{color:#fff}
+body.home header.h:not(.sc) .hb:hover{background:rgba(255,255,255,.12)}
+body.home header.h:not(.sc) .logo .lc{opacity:0}
+body.home header.h.sc .logo .lw, body:not(.home) .logo .lw{opacity:0}
+header.h.sc, body:not(.home) header.h{background:rgba(250,248,244,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.07)}
+header.h.sc{height:62px}
+header.h.sc .logo{height:36px}
+body.home main{margin-top:calc(-1 * var(--hh))}
+
+/* ---------- botones ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;cursor:pointer;white-space:nowrap;transition:background .25s,color .25s,transform .2s var(--ease),box-shadow .25s}
+.btn .ar{display:inline-grid;transition:transform .35s var(--ease)}
+.btn:hover .ar{transform:translateX(4px)}
+.btn:active{transform:scale(.97)}
+.btn.v{background:var(--verde);color:#fff}.btn.v:hover{background:var(--verde-osc)}
+.btn.n{background:var(--navy);color:#fff}.btn.n:hover{background:var(--azul)}
+.btn.w{background:#fff;color:var(--navy)}.btn.w:hover{box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.btn.o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}.btn.o:hover{background:var(--ink);color:#fff}
+.btn.ow{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}.btn.ow:hover{background:#fff;color:var(--navy)}
+.btn.g{background:#ECE8DF;color:var(--ink)}.btn.g:hover{background:#E2DDD1}
+.btn.sm{padding:9px 16px;font-size:13px}
+.btn.full{width:100%;justify-content:center}
+.lnk{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--ink)}
+.lnk .ar{transition:transform .35s var(--ease)}
+.lnk:hover .ar{transform:translateX(4px)}
+.lnk:hover{color:var(--verde-osc)}
+.ibtn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;display:inline-grid;place-items:center;cursor:pointer;color:var(--ink);transition:transform .2s,border-color .2s}
+.ibtn:hover{border-color:var(--ink)}
+.ibtn.fav.on{color:#D22D5A;border-color:#F3C3D0}.ibtn.fav.on svg{fill:#D22D5A}
+
+/* ---------- reveal ---------- */
+[data-r]{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+[data-r].in{opacity:1;transform:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:min(88vh,760px);min-height:600px;color:#fff;overflow:hidden;background:var(--navy)}
+.hs{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease)}
+.hs.on{opacity:1}
+.hs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.hs.on img{animation:kb 9s var(--ease) forwards}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,36,112,.55) 0%,rgba(14,36,112,.1) 35%,rgba(10,18,50,.35) 60%,rgba(10,18,50,.88) 100%);pointer-events:none}
+.hc{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:42px}
+.eyb{font-size:12.5px;letter-spacing:2.2px;text-transform:uppercase;font-weight:600;color:#B8E8AE;display:flex;align-items:center;gap:10px}
+.eyb::before{content:"";width:28px;height:1.5px;background:currentColor}
+.htx{position:relative;min-height:236px}
+.ht{position:absolute;left:0;right:0;bottom:0;opacity:0;transform:translateY(-10px);transition:opacity .3s ease,transform .4s ease;pointer-events:none}
+.ht.on{opacity:1;transform:none;pointer-events:auto;transition:opacity .8s var(--ease) .35s,transform 1s var(--ease) .35s}
+.ht:not(.on){transform:translateY(-10px)}
+.ht h1{color:#fff;font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.2vw,80px);letter-spacing:-1.5px;line-height:1.02;max-width:880px;margin-top:14px}
+.ht h1 em{font-style:italic;color:#9BE58C;font-weight:300}
+.ht p{font-size:17.5px;color:rgba(255,255,255,.86);max-width:540px;margin:18px 0 0}
+.hsearch{display:flex;align-items:center;gap:10px;margin-top:30px;background:#fff;border-radius:16px;padding:8px 8px 8px 20px;max-width:640px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+.hsearch svg{color:var(--mute)}
+.hsearch input{flex:1;border:0;outline:0;font-size:16px;color:var(--ink);min-width:0;background:transparent;padding:10px 0}
+.quick{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:14px;font-size:13.5px;color:rgba(255,255,255,.8)}
+.quick button{background:none;border:0;color:#fff;padding:2px 0;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.35);transition:border-color .2s}
+.quick button:hover{border-color:#9BE58C}
+.hfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18)}
+.stats{display:flex;gap:44px}
+.stats div b{display:block;font-family:var(--serif);font-weight:400;font-size:38px;line-height:1;color:#fff}
+.stats div span{font-size:12.5px;color:rgba(255,255,255,.7)}
+.prog{display:flex;gap:8px;align-items:center}
+.prog button{width:56px;height:3px;border:0;padding:0;background:rgba(255,255,255,.3);border-radius:3px;overflow:hidden;cursor:pointer;position:relative}
+.prog button i{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
+.prog button.on i{animation:pg 8s linear forwards}
+.prog button.done i{transform:scaleX(1)}
+@keyframes pg{to{transform:scaleX(1)}}
+.credit{position:absolute;right:24px;top:calc(var(--hh) + 14px);z-index:2;font-size:11px;color:rgba(255,255,255,.6)}
+
+/* ---------- cinta ---------- */
+.ribbon{background:var(--navy);color:#fff;overflow:hidden;border-top:1px solid rgba(255,255,255,.08)}
+.rtrack{display:flex;width:max-content;animation:mq 46s linear infinite}
+.ribbon:hover .rtrack{animation-play-state:paused}
+.rtrack a{display:flex;align-items:center;gap:22px;padding:20px 22px 20px 0;font-family:var(--serif);font-style:italic;font-weight:300;font-size:22px;white-space:nowrap;color:rgba(255,255,255,.88);transition:color .2s}
+.rtrack a:hover{color:#9BE58C}
+.rtrack a::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--verde)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- secciones ---------- */
+section.s{padding:96px 0 0}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:34px}
+.kick{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--verde-osc);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.kick::before{content:"";width:22px;height:1.5px;background:currentColor}
+.sh h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.8px;line-height:1.05}
+.sh h2 em{font-style:italic;font-weight:300;color:var(--azul)}
+.sh p{margin:12px 0 0;color:var(--mute);max-width:520px}
+
+/* rubros editoriales */
+.rlist{display:flex;flex-wrap:wrap;gap:6px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.rl{position:relative;display:inline-flex;align-items:baseline;gap:4px;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.6vw,34px);color:var(--ink);padding:4px 26px 4px 0;margin-right:26px;cursor:pointer;background:none;border:0;letter-spacing:-.4px;transition:color .25s}
+.rl::after{content:"";position:absolute;right:0;top:50%;width:5px;height:5px;border-radius:50%;background:#C9C3B6;transform:translateY(-30%)}
+.rl:last-child::after{display:none}
+.rl sup{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--verde-osc);letter-spacing:0}
+.rl span{background:linear-gradient(currentColor,currentColor) left bottom/0 1.5px no-repeat;transition:background-size .45s var(--ease)}
+.rl:hover{color:var(--azul)}
+.rl:hover span{background-size:100% 1.5px}
+
+/* bento de beneficios */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:236px;gap:16px}
+.bc{position:relative;display:flex;flex-direction:column;justify-content:space-between;border-radius:22px;padding:24px;overflow:hidden;color:var(--ink);background:var(--cream);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.bc:hover{transform:translateY(-4px);box-shadow:0 22px 50px -18px rgba(14,36,112,.35)}
+.bc.big{grid-column:span 2;grid-row:span 2;padding:34px}
+.bc.t-navy{background:var(--navy);color:#fff}
+.bc.t-azul{background:var(--azul-2);color:#fff}
+.bc.t-verde{background:var(--verde-bg)}
+.bc.t-cream{background:var(--cream)}
+.bc.t-white{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.bc .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;position:relative;z-index:2}
+.bc .rub{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;font-weight:600;opacity:.75}
+.bc .go{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;opacity:.4;transition:opacity .3s,transform .45s var(--ease),background .3s}
+.bc:hover .go{opacity:1;transform:rotate(-45deg)}
+.bc .num{font-family:var(--serif);font-weight:300;font-size:84px;line-height:.85;letter-spacing:-3px;position:relative;z-index:2}
+.bc .num small{font-size:.42em;letter-spacing:-1px;margin-left:2px;font-weight:400}
+.bc.big .num{font-size:170px;letter-spacing:-7px}
+.bc .nm{position:relative;z-index:2;margin-top:12px}
+.bc .nm b{display:block;font-size:16px;font-weight:600}
+.bc .nm span{font-size:13.5px;opacity:.75}
+.bc.big .nm b{font-size:22px}
+.bc .flyer{position:absolute;right:-30px;bottom:-30px;width:56%;aspect-ratio:1/1;border-radius:22px;overflow:hidden;transform:rotate(-7deg);box-shadow:0 30px 60px rgba(0,0,0,.4);transition:transform .7s var(--ease);z-index:1}
+.bc.big:hover .flyer{transform:rotate(-3deg) translate(-10px,-10px)}
+.bc .flyer img{width:100%;height:100%;object-fit:cover}
+.mono{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;background:rgba(0,0,0,.08);overflow:hidden}
+.t-navy .mono,.t-azul .mono{background:rgba(255,255,255,.14);color:#fff}
+.mono img{width:100%;height:100%;object-fit:contain;background:#fff;padding:2px}
+
+/* rail empresas */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:300px;gap:16px;overflow-x:auto;padding:4px 24px 18px;margin:0 -24px;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
+.rail::-webkit-scrollbar{display:none}
+.rail.drag{cursor:grabbing;scroll-snap-type:none}
+.rail>*{scroll-snap-align:start}
+.ec{display:flex;flex-direction:column;gap:18px;background:#fff;border-radius:20px;padding:22px;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .3s,transform .45s var(--ease);user-select:none}
+.ec:hover{box-shadow:inset 0 0 0 1.5px var(--ink);transform:translateY(-3px)}
+.ec .av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:22px;color:#fff;overflow:hidden}
+.ec .av img{width:100%;height:100%;object-fit:contain;background:#fff;padding:4px}
+.ec h3{font-size:17px;font-weight:600}
+.ec .meta{font-size:13px;color:var(--mute)}
+.ec .ft{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:13px}
+.ver{display:inline-flex;align-items:center;gap:5px;color:var(--verde-osc);font-weight:600;font-size:12px}
+.ver svg.i{width:15px;height:15px}
+
+.wl{display:flex;align-items:center;justify-content:flex-start;height:56px}
+.wl img{max-height:56px;max-width:150px;width:auto;height:auto;object-fit:contain;border-radius:6px}
+.wl.big{height:112px;background:#fff;border-radius:20px;padding:14px 18px;box-shadow:inset 0 0 0 1px var(--line);justify-content:center;min-width:112px}
+.wl.big img{max-height:84px;max-width:220px}
+@media (max-width:860px){.wl.big{height:84px;padding:10px 14px}.wl.big img{max-height:62px;max-width:160px}}
+/* servicios: lista + imagen */
+.svc{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.sl a{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:14px;padding:22px 4px;border-top:1px solid var(--line);transition:padding .4s var(--ease),color .25s}
+.sl a:last-child{border-bottom:1px solid var(--line)}
+.sl .n{font-family:var(--serif);font-size:18px;color:var(--mute)}
+.sl h3{font-family:var(--serif);font-weight:400;font-size:28px;letter-spacing:-.5px}
+.sl small{display:block;color:var(--mute);font-size:13.5px;margin-top:2px}
+.sl .ar{opacity:0;transform:translateX(-8px);transition:all .35s var(--ease)}
+.sl a.on,.sl a:hover{padding-left:16px}
+.sl a.on h3,.sl a:hover h3{color:var(--azul)}
+.sl a.on .ar,.sl a:hover .ar{opacity:1;transform:none}
+.sfig{position:sticky;top:96px;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--navy)}
+.sfig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .6s var(--ease),transform 1.2s var(--ease)}
+.sfig img.on{opacity:1;transform:none}
+.sfig figcaption{position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;font-size:12.5px;background:rgba(14,36,112,.6);backdrop-filter:blur(8px);padding:6px 12px;border-radius:999px}
+
+/* eventos + vitrina */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ev{display:grid;grid-template-columns:88px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);align-items:start}
+.ev:last-child{border-bottom:1px solid var(--line)}
+.ev .dt{font-family:var(--serif);line-height:.9}
+.ev .dt b{display:block;font-size:52px;font-weight:300;color:var(--azul);letter-spacing:-2px}
+.ev .dt span{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mute);font-family:var(--sans);font-weight:600}
+.ev h3{font-size:19px;font-weight:600;margin:6px 0 4px}
+.ev .pl{display:flex;gap:6px;align-items:center;font-size:13.5px;color:var(--mute)}
+.ev .pl svg.i{width:15px;height:15px}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--mute)}
+.tag.dot::before{content:"";width:6px;height:6px;border-radius:50%;background:#E0A400}
+.tag.v{color:var(--verde-osc)}.tag.v.dot::before{background:var(--verde)}
+.tag.r{color:#B42318}.tag.r.dot::before{background:#D92D20}
+.pc{background:#fff;border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column}
+.pc .tone{height:150px;display:grid;place-items:center;color:var(--azul)}
+.pc .tone svg.i{width:46px;height:46px;stroke-width:1.1}
+.pc .bd{padding:18px 20px 20px}
+.pc h3{font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:-.3px;margin:8px 0 6px;line-height:1.15}
+.pc p{margin:0;font-size:14px;color:var(--mute)}
+.pc .bn{margin-top:14px;font-size:13px;font-weight:600;color:var(--verde-osc)}
+
+/* banda foto */
+.band{position:relative;margin-top:110px;min-height:560px;display:flex;align-items:center;color:#fff;overflow:hidden}
+.band .bg{position:absolute;inset:-12% 0;background-size:cover;background-position:center;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,18,50,.88) 0%,rgba(14,36,112,.55) 55%,rgba(14,36,112,.2) 100%)}
+.band .wrap{position:relative;z-index:2;width:100%}
+.band h2{color:#fff;font-family:var(--serif);font-weight:300;font-size:clamp(36px,5vw,64px);letter-spacing:-1.2px;line-height:1.04;max-width:760px}
+.band h2 em{font-style:italic;color:#9BE58C}
+.band p{color:rgba(255,255,255,.82);max-width:520px;font-size:17px;margin:20px 0 30px}
+.band .acts{display:flex;gap:12px;flex-wrap:wrap}
+
+/* newsletter */
+.news{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:56px 0;border-bottom:1px solid var(--line)}
+.news h3{font-family:var(--serif);font-weight:400;font-size:30px;letter-spacing:-.5px}
+.news p{margin:6px 0 0;color:var(--mute)}
+.news form{display:flex;gap:10px;min-width:420px}
+.inp{width:100%;border:1px solid #D8D3C8;border-radius:12px;padding:13px 16px;background:#fff;outline:0;font-size:15px;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.inp:focus{border-color:var(--azul-2);box-shadow:0 0 0 4px rgba(34,66,174,.12)}
+textarea.inp{min-height:100px;resize:vertical}
+label.l{display:block;font-size:13px;font-weight:600;color:var(--ink);margin:14px 0 6px}
+
+/* footer */
+footer.f{background:var(--navy);color:rgba(255,255,255,.82);margin-top:0;padding-top:72px}
+.fbig{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.6vw,60px);letter-spacing:-1.2px;color:#fff;line-height:1.02;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.14)}
+.fbig em{font-style:italic;color:#9BE58C}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding:44px 0}
+footer.f h4{color:#fff;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+footer.f .fgrid a{display:flex;gap:8px;align-items:center;font-size:14px;padding:4px 0;color:rgba(255,255,255,.78);transition:color .2s}
+footer.f .fgrid a:hover{color:#9BE58C}
+footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
+.flogo{height:56px;width:auto;margin-bottom:16px}
+.flogos{display:flex;gap:18px;margin-top:20px;align-items:flex-end}
+.flogos span{display:flex;flex-direction:column;gap:6px;font-size:11px;color:rgba(255,255,255,.65)}
+.flogos img{height:50px;width:auto}
+.flogos img.wbg{background:#fff;border-radius:8px;padding:3px 8px}
+.fsub{border-top:1px solid rgba(255,255,255,.14);padding:20px 0 28px;font-size:12px;color:rgba(255,255,255,.6);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.fsub span{max-width:620px}
+.fsub a{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- páginas internas ---------- */
+.pg{padding-top:36px;padding-bottom:20px}
+.crumb{display:flex;align-items:center;gap:8px;color:var(--mute);font-size:13px;margin-bottom:22px;flex-wrap:wrap}
+.crumb a:hover{color:var(--ink)}
+.crumb svg.i{width:13px;height:13px}
+.ph{margin-bottom:30px}
+.ph h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,56px);letter-spacing:-1.2px;line-height:1.02}
+.ph h1 em{font-style:italic;font-weight:300;color:var(--azul)}
+.ph p{color:var(--mute);margin:12px 0 0;max-width:600px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.cgrid{grid-auto-rows:236px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.chip{border:1px solid #D8D3C8;background:transparent;border-radius:999px;padding:8px 16px;font-size:13.5px;cursor:pointer;font-weight:500;color:var(--ink);transition:all .25s var(--ease)}
+.chip:hover{border-color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.muted{color:var(--mute)}
+.empty{text-align:center;padding:60px 16px;color:var(--mute)}
+.empty svg.i{width:44px;height:44px;stroke-width:1.2;color:#B8B2A6}
+.empty h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:12px 0 6px}
+.panel{background:#fff;border-radius:20px;padding:24px;box-shadow:inset 0 0 0 1px var(--line)}
+.ex{display:grid;grid-template-columns:250px 1fr;gap:36px}
+.filters{position:sticky;top:90px;align-self:start}
+.filters h4{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mute);margin:22px 0 8px;font-weight:600}
+.filters h4:first-child{margin-top:0}
+.opt{display:flex;justify-content:space-between;align-items:center;width:100%;border:0;background:transparent;text-align:left;padding:8px 10px;border-radius:10px;cursor:pointer;font-size:14.5px;color:var(--txt);transition:background .2s}
+.opt:hover{background:#EFEBE3}
+.opt.on{background:var(--ink);color:#fff}
+.opt.on small{color:#fff}
+.opt small{color:var(--mute)}
+.seg{display:flex;background:#EFEBE3;border-radius:12px;padding:4px;gap:4px}
+.seg button{flex:1;border:0;background:transparent;padding:8px 6px;border-radius:9px;font-size:13px;cursor:pointer;font-weight:500;transition:all .25s}
+.seg button.on{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);color:var(--ink);font-weight:600}
+.exh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.exh select{border:1px solid #D8D3C8;background:#fff;border-radius:10px;padding:9px 12px}
+.achip{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:#fff;border-radius:999px;padding:6px 8px 6px 14px;font-size:13px}
+.achip button{border:0;background:rgba(255,255,255,.18);color:#fff;width:20px;height:20px;border-radius:50%;cursor:pointer;display:grid;place-items:center;padding:0}
+.achip svg.i{width:12px;height:12px}
+/* detalle beneficio */
+.dt-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.dt-grid>.dt-hero{position:sticky;top:90px}
+.dt-hero{border-radius:28px;padding:40px;min-height:520px;display:flex;flex-direction:column;justify-content:space-between}
+.dt-hero .num{font-family:var(--serif);font-weight:300;font-size:clamp(120px,14vw,200px);line-height:.82;letter-spacing:-8px}
+.dt-hero .num small{font-size:.38em;letter-spacing:-2px}
+.dt-hero h1{font-family:var(--serif);font-weight:400;font-size:34px;letter-spacing:-.6px;color:inherit;margin-top:16px}
+.dt-side{display:flex;flex-direction:column;gap:20px}
+.dt-img{border-radius:28px;overflow:hidden;aspect-ratio:1/1;max-height:420px}
+.dt-img img{width:100%;height:100%;object-fit:cover}
+.steps{counter-reset:s;list-style:none;padding:0;margin:12px 0 0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.steps li:first-child{border-top:0}
+.steps li::before{content:"0" counter(s);font-family:var(--serif);font-size:18px;color:var(--verde-osc)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+/* empresa */
+.eh{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding-bottom:34px;border-bottom:1px solid var(--line);margin-bottom:40px}
+.eh .av{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:42px;color:#fff;overflow:hidden}
+.eh .av img{width:100%;height:100%;object-fit:contain;background:#fff;padding:8px}
+.eh h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,52px);letter-spacing:-1px}
+/* credencial */
+.cred{max-width:430px;border-radius:24px;overflow:hidden;color:#fff;background:var(--navy);position:relative;box-shadow:0 30px 60px -20px rgba(14,36,112,.5)}
+.cred::before{content:"";position:absolute;inset:0;background:url(img/p_temuco.jpg) center/cover;opacity:.18;mix-blend-mode:luminosity}
+.cred>*{position:relative}
+.cred .t2{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 0}
+.cred .t2 img{height:34px}
+.cred .bd{padding:22px;display:flex;gap:18px;align-items:center}
+.cred .qr{background:#fff;padding:9px;border-radius:12px;flex:none}
+.cred .qr img,.cred .qr canvas{width:112px!important;height:112px!important}
+.cred h3{color:#fff;font-family:var(--serif);font-weight:400;font-size:22px}
+.cred small{opacity:.8;display:block;font-size:12.5px}
+.cred .stt{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;font-weight:600;color:#9BE58C}
+.cred .stt::before{content:"";width:7px;height:7px;border-radius:50%;background:#9BE58C;box-shadow:0 0 0 4px rgba(155,229,140,.25)}
+/* admin / comercio */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:30px}
+.kpi{background:#fff;border-radius:20px;padding:20px 22px;box-shadow:inset 0 0 0 1px var(--line)}
+.kpi b{display:block;font-family:var(--serif);font-weight:300;font-size:44px;line-height:1;color:var(--ink);letter-spacing:-1.5px}
+.kpi span{font-size:13px;color:var(--mute)}
+.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.tbl th,.tbl td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
+.tbl th{font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--mute);font-weight:600;background:#F6F3EC}
+.tbl tr:last-child td{border-bottom:0}
+.tbl .acts{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.tabs{display:flex;gap:26px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.tabs button{border:0;background:none;padding:12px 0;font-weight:600;font-size:14.5px;color:var(--mute);cursor:pointer;position:relative}
+.tabs button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--ink);transform:scaleX(0);transition:transform .35s var(--ease)}
+.tabs button.on{color:var(--ink)}
+.tabs button.on::after{transform:scaleX(1)}
+.sw{position:relative;width:42px;height:24px;display:inline-block}
+.sw input{opacity:0;width:0;height:0}
+.sw span{position:absolute;inset:0;background:#CFCAC0;border-radius:999px;transition:.3s var(--ease);cursor:pointer}
+.sw span::before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.3s var(--ease)}
+.sw input:checked+span{background:var(--verde)}
+.sw input:checked+span::before{transform:translateX(18px)}
+
+/* bottom nav, sheet, toast, app */
+nav.bn{display:none;position:fixed;bottom:12px;left:12px;right:12px;z-index:60;background:rgba(22,25,31,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:22px;padding:8px 6px calc(8px + env(safe-area-inset-bottom)/2);justify-content:space-around;box-shadow:0 14px 40px rgba(0,0,0,.25)}
+nav.bn a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:500;color:rgba(255,255,255,.6);padding:4px 8px;min-width:58px;border-radius:14px;transition:color .2s,background .2s}
+nav.bn a.on{color:#fff;background:rgba(255,255,255,.1)}
+nav.bn a.on svg{color:#9BE58C}
+.ov{position:fixed;inset:0;background:rgba(10,14,25,.45);backdrop-filter:blur(3px);z-index:80;opacity:0;pointer-events:none;transition:opacity .3s}
+.ov.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;z-index:90;background:#fff;left:50%;top:50%;width:min(540px,calc(100vw - 32px));max-height:86vh;overflow:auto;border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,.3);opacity:0;pointer-events:none;transform:translate(-50%,-46%) scale(.98);transition:opacity .3s var(--ease),transform .4s var(--ease)}
+.sheet.on{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+.sheet .hd{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 12px;position:sticky;top:0;background:#fff}
+.sheet .hd h3{font-family:var(--serif);font-weight:400;font-size:24px}
+.sheet .bd{padding:6px 22px 18px}
+.sheet .ft{padding:14px 22px 20px;display:flex;gap:10px;justify-content:flex-end;position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:13px 18px;border-radius:14px;z-index:100;display:flex;gap:10px;align-items:center;font-size:14px;box-shadow:0 16px 40px rgba(0,0,0,.25);animation:tin .45s var(--ease)}
+.toast svg{color:#9BE58C}
+@keyframes tin{from{opacity:0;transform:translate(-50%,12px)}}
+.appframe{position:fixed;inset:0;z-index:95;background:rgba(10,14,25,.7);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;padding:20px}
+.appframe.on{display:flex}
+.phone{width:390px;height:min(820px,calc(100vh - 40px));border-radius:50px;background:#0B0D12;padding:12px;box-shadow:0 40px 100px rgba(0,0,0,.5)}
+.phone iframe{width:100%;height:100%;border:0;border-radius:40px;background:#fff}
+.appframe .side{color:#fff;max-width:300px}
+.appframe .side h3{color:#fff;font-family:var(--serif);font-weight:400;font-size:30px;margin-bottom:10px}
+body.app .demobar{display:none}
+
+/* View Transitions */
+::view-transition-old(root){animation:vtout .28s var(--ease) both}
+::view-transition-new(root){animation:vtin .5s var(--ease) both}
+@keyframes vtout{to{opacity:0;transform:translateY(-8px)}}
+@keyframes vtin{from{opacity:0;transform:translateY(14px)}}
+::view-transition-group(bnum),::view-transition-group(bcard){animation-duration:.6s;animation-timing-function:var(--ease)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  nav.dn a{padding:8px 8px;font-size:13.5px}
+}
+@media (max-width:860px){
+  :root{--hh:62px}
+  .dlong{display:none}
+  .wrap{padding:0 18px}
+  nav.dn,.only-d{display:none!important}
+  nav.bn{display:flex}
+  body{padding-bottom:96px}
+  .logo{height:36px}
+  .hact{margin-left:auto}
+  .hero{height:auto;min-height:640px}
+  .hc{position:relative;min-height:640px;padding-top:calc(var(--hh) + 40px)}
+  .htx{min-height:300px}
+  .ht p{font-size:15.5px}
+  .hsearch{padding:6px 6px 6px 14px}
+  .hsearch .btn{padding:11px 14px}
+  .hfoot{flex-direction:column;align-items:flex-start;gap:18px;margin-top:26px}
+  .stats{gap:22px}
+  .stats div b{font-size:28px}
+  .credit{display:none}
+  section.s{padding-top:64px}
+  .bento,.cgrid{grid-auto-rows:200px;gap:12px}
+  .bc{padding:18px;border-radius:18px}
+  .bc .num{font-size:60px;letter-spacing:-2px}
+  .bc.big{padding:22px}
+  .bc.big .num{font-size:110px;letter-spacing:-4px}
+  .bc .nm b{font-size:14px}
+  .bc .nm span{font-size:12px}
+  .rail{grid-auto-columns:78%;padding:4px 18px 18px;margin:0 -18px}
+  .svc,.two,.dt-grid,.ex{grid-template-columns:1fr;gap:28px}
+  .sfig{display:none}
+  .sl h3{font-size:22px}
+  .sl a{grid-template-columns:44px 1fr auto}
+  .band{min-height:480px;margin-top:70px}
+  .news{grid-template-columns:1fr}
+  .news form{min-width:0}
+  .fgrid{grid-template-columns:1fr}
+  .filters{position:static}
+  .dt-hero{min-height:360px;padding:26px}
+  .eh{grid-template-columns:auto 1fr}
+  .eh .actions{grid-column:1/-1}
+  .eh .av{width:76px;height:76px;font-size:28px}
+  .g3,.g2{grid-template-columns:1fr}
+  .sheet{top:auto;bottom:0;left:0;right:0;width:100%;border-radius:24px 24px 0 0;transform:translateY(30px);max-height:88vh}
+  .sheet.on{transform:none}
+  .tbl th:nth-child(3),.tbl td:nth-child(3){display:none}
+  .toast{bottom:110px}
+}
+
+/* ---- móvil: foto arriba que se funde al azul, texto abajo ---- */
+.hc>.wrap{width:100%}
+@media (max-width:860px){
+  .hero{height:auto;min-height:0;background:var(--navy)}
+  .hs{bottom:auto;height:430px}
+  .hs img{object-position:var(--pm,50% 50%);-webkit-mask-image:linear-gradient(#000 52%,transparent 100%);mask-image:linear-gradient(#000 52%,transparent 100%)}
+  .hero::after{background:linear-gradient(180deg,rgba(10,18,50,.62) 0%,rgba(10,18,50,0) 24%,rgba(10,18,50,0) 45%,rgba(14,36,112,.35) 70%,rgba(14,36,112,0) 100%);height:430px;bottom:auto}
+  .hc{min-height:0;padding-top:290px;padding-bottom:30px}
+  .htx{min-height:200px}
+  .ht h1{font-size:38px;letter-spacing:-1px}
+  .ht p{display:none}
+  .eyb{font-size:11px;letter-spacing:1.8px}
+  .hsearch{margin-top:22px}
+  .quick{font-size:12.5px}
+  .hfoot{margin-top:22px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%}
+  .stats div b{font-size:28px}
+  .stats div span{font-size:11.5px;display:block;line-height:1.3}
+  .band{flex-direction:column;align-items:stretch;min-height:0;background:var(--navy);margin-top:64px}
+  .band .bg{position:relative;inset:auto;height:300px;transform:none!important;background-position:68% 30%;-webkit-mask-image:linear-gradient(#000 60%,transparent 100%);mask-image:linear-gradient(#000 60%,transparent 100%)}
+  .band::after{display:none}
+  .band .bw{margin-top:-40px;padding-bottom:48px}
+  .band h2{font-size:34px}
+  .band p{font-size:15.5px}
+  .band .acts .btn{width:100%;justify-content:center;white-space:normal;text-align:center}
+  .dt-grid>.dt-hero{position:static;min-height:300px}
+  .dt-hero .num{font-size:120px;letter-spacing:-5px}
+  .dt-hero h1{font-size:26px}
+}
+
+/* indicadores económicos */
+.ind{background:#fff;border-bottom:1px solid var(--line)}
+.indh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:22px;flex-wrap:wrap}
+.indh .kick{margin:0}
+.indd{font-size:13px;color:var(--mute)}
+.indg{display:grid;grid-template-columns:repeat(7,1fr);margin:14px 0 6px}
+.it{padding:12px 16px 14px;border-left:1px solid var(--line);transition:opacity .4s}
+.it:first-child{border-left:0;padding-left:0}
+.it span{display:block;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;font-weight:600;color:var(--mute)}
+.it b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;color:var(--ink);letter-spacing:-.4px;margin-top:4px;white-space:nowrap}
+.it small{font-size:11.5px;color:var(--mute)}
+.indg.ld .it b{color:#C9C3B6}
+.indsrc{font-size:11.5px;color:var(--mute);padding-bottom:16px}
+.indsrc a{text-decoration:underline;text-underline-offset:2px}
+@media (max-width:1080px){.indg{grid-template-columns:repeat(4,1fr)}.it:nth-child(5){border-left:0;padding-left:0}}
+@media (max-width:860px){.indg{display:flex;overflow-x:auto;scrollbar-width:none;margin:10px -18px 4px;padding:0 18px}.indg::-webkit-scrollbar{display:none}.it{flex:none;min-width:130px}.it:nth-child(5){border-left:1px solid var(--line);padding-left:16px}.it b{font-size:21px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-r]{opacity:1;transform:none}
+  .rtrack{animation:none}
+}
+
+/* ================= Propuesta MODERNA estilo CCS (bosquejo) ================= */
+:root{--serif:'Work Sans',system-ui,sans-serif;--sans:'Work Sans',system-ui,sans-serif;
+  --navy:#0E2470;--azul:#133095;--azul-2:#2257C9;--azul-3:#1F4FB8;--verde:#3DAE2B;--verde-osc:#2B8A1F;--verde-bg:#E7F5E3;
+  --ink:#0E2470;--txt:#3D4458;--mute:#6F7385;--line:#E3E9F3;--paper:#FFFFFF;--cream:#F4F7FD;--barra:#E8EEFA;
+  --grad:linear-gradient(90deg,#2257C9 25%,#3DAE2B 75%);--shc:1px 3px 20px -2px rgba(14,36,112,.15);--rc:15px}
+body{background:#fff;font-family:var(--sans);color:var(--txt)}
+h1,h2,h3,h4{font-family:var(--sans);color:var(--ink)}
+em{font-style:normal;color:var(--verde-osc)}
+body.home main{margin-top:0}
+.sh h2,.ph h1,.band h2,.fbig,.pc h3,.ev h3,.eh h1,.dt-hero h1,.sl h3,.news h3,.cred h3{font-family:var(--sans)!important;font-weight:700!important;letter-spacing:-.01em}
+.ph h1{font-size:clamp(28px,3.2vw,38px)}
+.sh h2{font-size:clamp(24px,2.6vw,30px)}
+.bc .num,.dt-hero .num,.kpi b,.stats div b,.ev .dt b,.it b{font-family:var(--sans)!important;font-weight:700!important}
+.kick{color:var(--azul-2);letter-spacing:.08em}.kick::before{background:var(--grad);height:3px}
+/* botones */
+.btn{border-radius:50px;text-transform:uppercase;font-size:13px;letter-spacing:.02em;font-weight:600;padding:12px 22px}
+.btn.sm{font-size:12px;padding:9px 18px}
+.btn.n{background:var(--azul-2);color:#fff;box-shadow:inset 0 0 0 1px var(--azul-2)}.btn.n:hover{background:#fff;color:var(--ink)}
+.btn.v{background:var(--verde);color:#fff}
+.btn.gr{position:relative;background:transparent;color:var(--ink);isolation:isolate;box-shadow:none}
+.btn.gr::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--grad);z-index:-2}
+.btn.gr::after{content:"";position:absolute;inset:2px;border-radius:inherit;background:#fff;z-index:-1;transition:opacity .2s ease-in-out}
+.btn.gr:hover,.nc:hover .btn.gr,.qc:hover .btn.gr{color:#fff}.btn.gr:hover::after,.nc:hover .btn.gr::after,.qc:hover .btn.gr::after{opacity:0}
+.btn.w2{background:#fff;color:var(--azul-2);box-shadow:inset 0 0 0 1px var(--azul-2);width:100%;justify-content:center}.btn.w2:hover{background:var(--azul-2);color:#fff}
+/* tarjetas: sistema único */
+.bc,.ec,.pc,.panel,.kpi,.tbl,.dt-img,.cred,.wl.big,.evc,.ehead{border-radius:var(--rc)!important}
+.ec,.pc,.panel,.kpi{box-shadow:var(--shc)!important;border:0!important;transition:transform .2s ease}
+.ec:hover,.pc:hover{transform:translateY(-5px)}
+.bc{box-shadow:var(--shc);transition:transform .2s ease}.bc:hover{transform:translateY(-5px);box-shadow:var(--shc)}
+.bc.t-navy{background:linear-gradient(135deg,var(--navy),var(--azul-2))}.bc.t-azul{background:var(--azul-2)}.bc.t-cream{background:var(--cream)}.bc.t-verde{background:var(--verde-bg)}
+.tabs button.on::after{background:var(--grad);height:3px}
+.chip.on,.opt.on{background:var(--azul-2);border-color:var(--azul-2)}
+/* header de dos niveles */
+.hx{position:sticky;top:0;z-index:70;background:#fff;transition:box-shadow .25s}
+.hx.sc{box-shadow:5px 5px 25px rgba(14,36,112,.08)}
+.hx1 .wrap{display:flex;align-items:center;gap:26px;height:74px;transition:height .25s cubic-bezier(.2,.8,.2,1)}
+.hx.sc .hx1 .wrap{height:58px}
+.hx1 .lg{flex:none}.hx1 .lg img{height:48px;width:auto;transition:height .25s cubic-bezier(.2,.8,.2,1)}
+.hx.sc .hx1 .lg img{height:38px}
+.hxs{flex:1;max-width:360px;display:flex;align-items:center;border:1px solid #CBD6EA;border-radius:50px;height:42px;padding:0 6px 0 18px;transition:border-color .2s,box-shadow .2s}
+.hxs:focus-within{border-color:var(--azul-2);box-shadow:0 0 0 4px rgba(34,87,201,.12)}
+.hxs input{border:0;outline:0;flex:1;min-width:0;font-size:14px;background:transparent;color:var(--ink)}
+.hxs button{border:0;background:none;color:var(--azul-2);cursor:pointer;display:grid;place-items:center;width:34px;height:34px}
+.hxr{margin-left:auto;display:flex;gap:10px;align-items:center}
+.cb{width:42px;height:42px;border-radius:50%;border:0;background:var(--cream);display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:background .2s}
+.cb:hover{background:var(--barra)}
+.hbg{display:none;flex-direction:column;gap:4px;align-content:center}.hbg i{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px}
+.only-mm{display:none}
+.hx2{background:var(--barra);position:relative}
+.hx2>.wrap{position:relative}
+.mnav{display:flex;list-style:none;margin:0;padding:0}
+.mnav li{flex:1}
+.mnav button{width:100%;height:56px;border:0;background:transparent;display:flex;align-items:center;justify-content:center;gap:8px;font:600 14px var(--sans);color:var(--ink);cursor:pointer;transition:background .3s,color .2s}
+.mnav button svg.i{width:15px;height:15px;transform:rotate(90deg);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.mnav li.on button,.mnav button:hover{background:#D7E3F8}
+.mnav li.cur button{color:var(--azul-2)}
+.mnav li.on button svg.i{transform:rotate(-90deg)}
+.mm-ind{position:absolute;top:0;left:0;height:3px;width:0;background:var(--grad);opacity:0;transition:transform .32s cubic-bezier(.2,.8,.2,1),width .32s cubic-bezier(.2,.8,.2,1),opacity .2s;pointer-events:none;z-index:2}
+.hx2 .wrap>.mm-ind{left:20px}
+.mm-ind.on{opacity:1}
+.mm{position:absolute;left:0;right:0;top:100%;background:#fff;border-radius:0 0 22px 22px;box-shadow:0 30px 50px -18px rgba(14,36,112,.28);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .2s ease,transform .3s cubic-bezier(.2,.8,.2,1),visibility 0s .3s;z-index:3}
+.mm.open{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.mm-in{overflow:hidden;transition:height .32s cubic-bezier(.2,.8,.2,1)}
+.mmp{display:none;grid-template-columns:270px 1fr;gap:44px;padding:26px 0 30px}
+.mmp.cur{display:grid;animation:mmIn .38s cubic-bezier(.2,.8,.2,1) both}
+.mmp.cur.fromL{animation-name:mmInL}
+@keyframes mmIn{from{opacity:0;transform:translateX(18px)}}
+@keyframes mmInL{from{opacity:0;transform:translateX(-18px)}}
+.mml{border-right:1px solid var(--line);padding-right:22px}
+.mml a{display:flex;justify-content:space-between;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line);font-size:14.5px;color:#5E6274;transition:color .2s,padding .25s cubic-bezier(.2,.8,.2,1)}
+.mml a svg.i{width:16px;height:16px;opacity:.6}
+.mml a:hover,.mml a.cur,.mml a:focus-visible{color:var(--azul-2);padding-left:12px;outline:0}
+.mmb{display:none}.mmb.cur{display:block;animation:fadeB .3s ease both}
+@keyframes fadeB{from{opacity:0}}
+.mmb h3{font-size:30px;font-weight:500;margin-bottom:12px}
+.mmb .cols{columns:2;column-gap:36px;font-size:14.5px;color:#4A5064}
+.mmb .cols p{margin:0 0 10px;break-inside:avoid}
+.mmb .dot::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--azul-2);margin-right:8px;vertical-align:2px}
+.mmf{display:grid;grid-template-columns:1fr 1fr;border-radius:15px;overflow:hidden;box-shadow:var(--shc);margin-top:18px;min-height:190px}
+.mmf .t{padding:24px 26px;position:relative;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 120'%3E%3Cpath d='M0 90 C80 40 140 120 220 70 S340 20 400 60' fill='none' stroke='%233DAE2B' stroke-opacity='.25' stroke-width='1.2'/%3E%3Cpath d='M0 100 C90 50 150 125 230 80 S350 30 400 72' fill='none' stroke='%232257C9' stroke-opacity='.2' stroke-width='1.2'/%3E%3C/svg%3E") bottom/100% auto no-repeat}
+.mmf h4{font-size:20px;font-weight:700;margin-bottom:6px}
+.mmf p{margin:0 0 16px;font-size:14px}
+.mmf .im{background-size:cover;background-position:center}
+.mmx{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:50%;border:0;background:var(--cream);cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.mmx svg.i{width:16px;height:16px}
+.mm-ov{position:fixed;inset:0;background:rgba(14,36,112,.25);z-index:60;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.mm-ov.on{opacity:1;pointer-events:auto}
+/* drawer móvil */
+.drw{position:fixed;top:0;right:0;bottom:0;width:min(86vw,360px);background:#fff;z-index:96;transform:translateX(100%);transition:transform .38s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;overflow:auto;box-shadow:-20px 0 50px rgba(14,36,112,.2)}
+.drw.open{transform:none}
+.drw-h{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+.drw-h img{height:40px}
+.drw-ov{position:fixed;inset:0;background:rgba(14,36,112,.45);z-index:95;opacity:0;pointer-events:none;transition:opacity .3s}
+.drw-ov.on{opacity:1;pointer-events:auto}
+.acc>button{width:100%;display:flex;justify-content:space-between;align-items:center;border:0;background:#fff;padding:16px 20px;font:700 17px var(--sans);color:var(--ink);border-bottom:1px solid var(--line);cursor:pointer}
+.acc>button svg.i{transform:rotate(90deg);transition:transform .3s}
+.acc.open>button svg.i{transform:rotate(-90deg)}
+.acc .sub{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s cubic-bezier(.2,.8,.2,1);background:var(--cream)}
+.acc.open .sub{grid-template-rows:1fr}
+.acc .sub>div{overflow:hidden}
+.acc .sub a{display:flex;justify-content:space-between;align-items:center;padding:12px 26px;font-size:15px;color:#4A5064;border-bottom:1px solid var(--line)}
+.acc .sub a svg.i{width:15px;height:15px;opacity:.5}
+.drw-f{display:grid;gap:10px;padding:20px}
+/* portada */
+.chero{position:relative;overflow:hidden;background:#fff}
+.chs{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility 0s .28s}
+.chs.on{position:relative;opacity:1;visibility:visible;transition:opacity .6s cubic-bezier(.77,0,.175,1) .18s,visibility 0s 0s}
+.chs .tx{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:50px 56px 50px max(24px,calc((100vw - 1200px)/2 + 20px));background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%232257C9' stroke-opacity='.08'%3E%3Cpath d='M0 380 C160 260 300 460 470 330 S700 180 800 260'/%3E%3Cpath d='M0 400 C170 280 310 480 480 350 S710 200 800 280'/%3E%3Cpath d='M0 420 C180 300 320 500 490 370 S720 220 800 300'/%3E%3Cpath d='M0 440 C190 320 330 520 500 390 S730 240 800 320'/%3E%3C/g%3E%3C/svg%3E") center/cover no-repeat}
+.chs h1{font-size:clamp(30px,3.4vw,44px);font-weight:700;color:var(--azul-2);line-height:1.12;letter-spacing:-.015em;margin:0}
+.chs h1 em{color:var(--verde-osc)}
+.chs p{margin:0;font-size:16.5px;color:var(--txt);max-width:520px}
+.chs .im{position:relative;height:500px;border-radius:0 0 0 150px;overflow:hidden}
+.chs .im img{width:100%;height:100%;object-fit:cover;object-position:var(--pm,50% 50%);transform:scale(1.06);transition:transform 6s ease}
+.chs.on .im img{transform:scale(1)}
+.chs .cr{position:absolute;right:14px;bottom:12px;font-size:11px;color:#fff;background:rgba(14,36,112,.45);padding:3px 10px;border-radius:50px}
+.tagp{position:absolute;top:14px;left:14px;z-index:2;background:#fff;border:1px solid var(--azul-2);color:var(--azul-2);font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;padding:3px 16px;border-radius:50px}
+.tagp.st{position:static;align-self:flex-start}
+.cha{position:absolute;top:50%;z-index:4;width:40px;height:58px;border:0;background:var(--azul-2);color:#fff;display:grid;place-items:center;cursor:pointer;transform:translateY(-50%);transition:background .2s}
+.cha:hover{background:var(--navy)}.cha.l{left:0;border-radius:0 10px 10px 0}.cha.r{right:0;border-radius:10px 0 0 10px}
+.chd{position:absolute;left:max(24px,calc((100vw - 1200px)/2 + 20px));bottom:20px;display:flex;gap:8px;z-index:4}
+.chd button{width:10px;height:10px;border-radius:50px;border:0;background:#C9D5EE;padding:0;cursor:pointer;transition:width .35s cubic-bezier(.2,.8,.2,1),background .3s}
+.chd button.on{width:30px;background:var(--azul-2)}
+.cnums{background:var(--barra)}
+.cnums .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-top:22px;padding-bottom:22px}
+.cnums b{display:block;font-size:30px;font-weight:700;color:var(--azul-2);line-height:1}
+.cnums span{font-size:13.5px;color:var(--txt)}
+/* secciones */
+.cs{padding:64px 0 0}
+.ct{font-size:clamp(24px,2.6vw,30px);font-weight:700;color:var(--ink);text-align:center;margin:0 0 26px}
+.shc{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px}
+.shc .ct{margin:0;text-align:left}
+.lk{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--azul-2);background:var(--grad) left bottom/100% 2px no-repeat;padding-bottom:3px}
+.cen{text-align:center;margin:28px 0 0}
+.g3c{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.nc{display:flex;flex-direction:column;background:#fff;border-radius:15px;box-shadow:var(--shc);overflow:hidden;transition:transform .2s ease;position:relative}
+.nc:hover{transform:translateY(-5px)}
+.nc .im{position:relative;aspect-ratio:5/3;overflow:hidden;background:var(--cream)}
+.nc .im img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.nc:hover .im img{transform:scale(1.05)}
+.nc .bd{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.nc .dt{color:var(--azul-2);text-decoration:underline;text-underline-offset:3px;font-size:14px}
+.nc h3{font-size:20px;font-weight:700;line-height:1.2;margin:0}
+.nc p{margin:0;font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nc .bt{margin-top:auto;padding-top:10px}
+.bcc .num{font-size:44px;font-weight:800;color:var(--azul-2);letter-spacing:-.03em;line-height:1}
+.bcc .num small{font-size:.45em;margin-left:2px}
+.bcc .im{aspect-ratio:16/10}
+.fv{position:absolute;top:12px;right:12px;z-index:2;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.92);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.fv.on{color:#E0245E}.fv.on svg{fill:#E0245E}
+.crail{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*22px)/4);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 22px;scrollbar-width:none}
+.crail::-webkit-scrollbar{display:none}.crail>*{scroll-snap-align:start}
+.qa2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.qc{position:relative;display:block;min-height:230px;background:#fff;border-radius:15px;box-shadow:var(--shc);overflow:hidden;transition:transform .2s ease}
+.qc:hover{transform:translateY(-5px)}
+.qc .t{position:relative;z-index:2;width:58%;padding:28px 26px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.qc h3{font-size:21px;font-weight:700;margin:0}
+.qc p{font-size:14px;margin:0 0 10px;line-height:1.45}
+.qc .im{position:absolute;top:0;right:0;bottom:0;width:42%;border-radius:70px 0 0 0;overflow:hidden}
+.qc .im img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.qc:hover .im img{transform:scale(1.05)}
+.calt{background:var(--cream);padding:56px 0;margin-top:64px}
+.two2{display:grid;grid-template-columns:1.25fr .75fr;gap:32px}
+.mini{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center;background:#fff;border-radius:12px;box-shadow:0 6px 20px rgba(14,36,112,.09);padding:12px;margin-bottom:14px;transition:transform .2s}
+.mini:hover{transform:translateY(-3px)}
+.mdt{display:grid;place-items:center;height:76px;border-radius:10px;background:var(--grad);color:#fff;font-size:12px;text-transform:uppercase;font-weight:600;line-height:1}
+.mdt b{font-size:26px;font-weight:800;display:block}
+.mini .dt{font-size:12.5px;color:var(--azul-2)}
+.mini .mt{display:block;color:var(--ink);font-size:15.5px;margin:2px 0}
+.mini .ml{display:flex;gap:4px;align-items:center;font-size:13px;color:var(--mute)}
+.mini .ml svg.i{width:14px;height:14px}
+.svc2{display:flex;flex-direction:column;background:#fff;border-radius:15px;box-shadow:var(--shc);overflow:hidden;transition:transform .2s}
+.svc2:hover{transform:translateY(-5px)}
+.svc2 .im{aspect-ratio:16/8;overflow:hidden}.svc2 .im img{width:100%;height:100%;object-fit:cover}
+.svc2 .bd{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.svc2 h3{font-size:19px;font-weight:700;margin:0}.svc2 p{margin:0 0 12px;font-size:14px}
+.svc2 .btn{margin-top:auto}
+.logos{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.lrow{display:flex;gap:18px;width:max-content;padding:10px 0;animation:mq 45s linear infinite}
+.lrow.rev{animation-direction:reverse;animation-duration:52s}
+.logos:hover .lrow{animation-play-state:paused}
+.lt{width:200px;height:108px;flex:none;background:#fff;border-radius:15px;box-shadow:var(--shc);display:grid;place-items:center;padding:12px;transition:transform .2s}
+.lt:hover{transform:translateY(-4px)}
+.lt img{max-width:100%;max-height:78px;object-fit:contain}
+.lt span{font-weight:700;color:var(--ink);text-align:center;font-size:14px}
+.feat{display:grid;grid-template-columns:1fr 1fr;border-radius:15px;overflow:hidden;box-shadow:var(--shc);min-height:300px}
+.feat .t{padding:40px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 120'%3E%3Cpath d='M0 90 C80 40 140 120 220 70 S340 20 400 60' fill='none' stroke='%233DAE2B' stroke-opacity='.3' stroke-width='1.2'/%3E%3Cpath d='M0 100 C90 50 150 125 230 80 S350 30 400 72' fill='none' stroke='%232257C9' stroke-opacity='.25' stroke-width='1.2'/%3E%3C/svg%3E") bottom/100% auto no-repeat}
+.feat h3{font-size:26px;font-weight:700;margin:0}
+.feat p{margin:0}
+.feat .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.feat .im img{width:100%;height:100%;object-fit:cover}
+.ind{margin-top:56px}
+/* footer degradado */
+footer.f{background:linear-gradient(126deg,#3DAE2B -3%,#133095 57%)}
+.fbig em{color:#fff;opacity:.85}
+/* aparición: fade + subida 20px, 0,7 s, escalonado */
+[data-r]{transform:translateY(20px);transition:opacity .7s ease-out,transform .7s ease-out;transition-delay:calc(var(--d,0) * 90ms)}
+/* responsive */
+
+/* --- distribución de la Editorial con formato CCS --- */
+.hero{min-height:560px}
+.ht h1{font-family:var(--sans)!important;font-weight:700;letter-spacing:-.02em}
+.ht h1 em{font-style:normal}
+.eyb{letter-spacing:.12em}
+.hsearch{border-radius:50px;padding:6px 6px 6px 20px}
+.stats div b{font-family:var(--sans)!important;font-weight:700}
+.ribbon{background:var(--navy)}
+.rtrack a{font-family:var(--sans);font-style:normal;font-weight:600;font-size:19px;letter-spacing:-.01em}
+.rtrack a::after{background:var(--grad);width:8px;height:8px}
+.ind{margin-top:0}
+.rl{font-family:var(--sans);font-weight:500;letter-spacing:-.02em}
+.rl span{background-image:var(--grad)}
+.rl:hover{color:var(--azul-2)}
+.sh h2 em,.ph h1 em{font-style:normal;color:var(--azul-2)}
+.kick{font-weight:700}
+.bento .bc{border-radius:15px}
+.bc .num small{font-weight:600}
+.bc .go{border-color:currentColor}
+.rail .ec{border-radius:15px}
+.sl a{border-top-color:var(--line)}
+.sl h3{font-weight:600!important}
+.sl a.on h3,.sl a:hover h3{color:var(--azul-2)}
+.sfig{border-radius:15px;box-shadow:var(--shc)}
+.ev{border-top-color:var(--line)}
+.ev .dt b{color:var(--azul-2)}
+.band h2{font-weight:700!important}
+.news{border-bottom:0}
+.news h3{font-weight:700}
+.cred{border-radius:15px}
+@media (max-width:1180px){.mnav button{font-size:13px;gap:5px}.crail{grid-auto-columns:calc((100% - 2*22px)/3)}}
+@media (max-width:1089px){
+  .hx2,.hxs,.hx-cta{display:none!important}
+  .hbg,.only-mm{display:grid!important}
+  .hx1 .wrap{height:64px}.hx1 .lg img{height:40px}
+  .mm-ov{display:none}
+}
+@media (max-width:860px){
+  .chs{grid-template-columns:1fr}
+  .chs .im{order:-1;height:250px;border-radius:0 0 0 80px}
+  .chs .tx{padding:22px 18px 54px;gap:10px}
+  .chs p{font-size:15px}
+  .cha{top:125px;width:34px;height:46px}
+  .chd{left:18px;bottom:18px}
+  .cnums .wrap{grid-template-columns:repeat(2,1fr)}
+  .g3c{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 18px 18px;margin:0 -18px;scrollbar-width:none}
+  .g3c>*{scroll-snap-align:start}
+  .crail{grid-auto-columns:78%;padding:4px 18px 18px;margin:0 -18px}
+  .qa2{grid-template-columns:1fr 1fr;gap:12px}
+  .qc{min-height:0;display:flex;flex-direction:column-reverse}
+  .qc .t{width:100%;padding:14px}.qc h3{font-size:15.5px}.qc p{display:none}
+  .qc .im{position:relative;width:100%;height:110px;border-radius:0 0 0 40px}
+  .qc .btn{font-size:10.5px;padding:7px 12px}
+  .two2,.feat{grid-template-columns:1fr}
+  .feat .im{height:220px;order:-1}
+  .feat .t{padding:24px}
+  .lt{width:150px;height:86px}
+  .cs{padding-top:48px}
+  .shc{flex-direction:column;align-items:flex-start;gap:6px}
+  .mmp{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.chs,.chs .im img,.mm,.mmp.cur,.drw,.lrow{transition:none!important;animation:none!important}}
+
+/* ================= APP: Mi espacio de socio (misma identidad del estilo) ================= */
+#hdr,header.h,.hx,footer.f,.demobar,nav.bn,.mm-ov,.drw,.drw-ov,.appframe{display:none!important}
+body{padding:calc(70px + env(safe-area-inset-top)) 0 calc(100px + env(safe-area-inset-bottom))!important}
+body.home main,main{margin-top:0!important}
+.apbar{position:fixed;top:0;left:0;right:0;z-index:70;height:calc(58px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0 16px;display:flex;align-items:center;gap:6px;background:color-mix(in srgb,var(--paper,#fff) 88%,transparent);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.apbar img{height:34px;width:auto}
+.apbar .sp{flex:1}
+.apbar button{width:40px;height:40px;border-radius:50%;border:0;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;position:relative}
+.apbar button:active{transform:scale(.9)}
+.apbar .dot{position:absolute;top:8px;right:9px;width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 2px #fff}
+.tabbar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:70;height:66px;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;background:#fff;border-radius:22px;box-shadow:0 12px 34px -10px rgba(14,36,112,.35),0 0 0 1px rgba(14,36,112,.05)}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:600;color:var(--mute);transition:color .2s,transform .2s}
+.tabbar a:active{transform:scale(.92)}
+.tabbar a.on{color:var(--azul)}
+.tabbar a.on svg{color:var(--verde)}
+.tabbar a.fab{position:relative;top:-18px}
+.tabbar a.fab span.b{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(140deg,var(--azul-2,var(--azul)),var(--navy));box-shadow:0 10px 22px -6px rgba(14,36,112,.55),0 0 0 5px #fff}
+.tabbar a.fab svg.i{width:28px;height:28px}
+.app{padding-top:8px!important}
+.hi{display:flex;flex-direction:column;gap:2px;margin:4px 0 14px}
+.hi small{color:var(--mute);font-size:14px}
+.hi h1{font-size:24px!important;margin:0}
+.app .cred{max-width:none;width:100%;cursor:pointer}
+.app .cred:active{transform:scale(.985)}
+.credhint{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mute);margin:8px 2px 0}
+.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 6px}
+.qt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:14px 6px;background:#fff;border-radius:var(--rc,16px);box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -10px rgba(14,36,112,.3);font-size:12.5px;font-weight:600;color:var(--ink);cursor:pointer;border:0}
+.qt:active{transform:scale(.95)}
+.qt .ic{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--azul) 10%,#fff);color:var(--azul)}
+.qt .ic.v{background:color-mix(in srgb,var(--verde) 14%,#fff);color:var(--verde-osc,var(--verde))}
+.ash{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:26px 0 10px}
+.ash h2{font-size:19px!important;margin:0}
+.ash a{font-size:13px;font-weight:600;color:var(--azul)}
+.hrow{display:grid;grid-auto-flow:column;grid-auto-columns:74%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 14px;margin:0 -16px;scrollbar-width:none}
+.hrow::-webkit-scrollbar{display:none}
+.hrow>*{scroll-snap-align:start}
+.hrow .bc{height:212px}
+.hrow.pubs{grid-auto-columns:80%}
+.app .ev{grid-template-columns:70px 1fr}
+.miniind{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.miniind div{background:#fff;border-radius:var(--rc,14px);padding:10px 12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -12px rgba(14,36,112,.3)}
+.miniind span{display:block;font-size:11px;color:var(--mute);font-weight:600}
+.miniind b{font-size:15px;color:var(--ink)}
+.menu{display:grid;gap:8px}
+.menu a,.menu button{display:flex;align-items:center;gap:14px;width:100%;padding:14px 14px;background:#fff;border:0;border-radius:var(--rc,14px);box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -12px rgba(14,36,112,.3);font:inherit;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left}
+.menu .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--azul) 10%,#fff);color:var(--azul);flex:none}
+.menu small{display:block;font-weight:400;color:var(--mute);font-size:12.5px}
+.menu .ch{margin-left:auto;color:var(--mute)}
+.qrpage{text-align:left}
+.qrpage .cred .qr img,.qrpage .cred .qr canvas{width:150px!important;height:150px!important}
+.ntf{display:grid;gap:10px}
+.ntf div{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:14px;background:var(--cream,#F4F6FA)}
+.ntf .ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#fff;color:var(--azul);flex:none}
+.ntf b{display:block;color:var(--ink);font-size:14.5px}.ntf small{color:var(--mute)}
+@media (min-width:700px){.app{max-width:640px;margin:0 auto}.tabbar{max-width:560px;margin:0 auto}}
+</style>
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<a class="sr" href="#view">Saltar al contenido</a>
+<div class="demobar"><div class="wrap">
+  <span><b>DEMO LOCAL</b><span class="dlong"> · Beneficios y empresas = convenios reales publicados por la Cámara · Lo marcado “Ejemplo” es ficticio · Sin compras ni pagos</span></span>
+  <span style="display:flex;gap:12px;align-items:center">
+    <label>Ver como <select id="rolSel" aria-label="Rol de la demo"><option value="visitante">Visitante</option><option value="socio">Socio</option><option value="camara">Cámara (admin)</option></select></label>
+    <a href="#" id="appBtn" class="only-d">Ver como app</a>
+  </span>
+</div></div>
+
+<header class="hx" id="hdr">
+  <div class="hx1"><div class="wrap">
+    <a class="lg" href="#/" aria-label="Inicio"><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio, Servicios y Turismo de La Araucanía"></a>
+    <form class="hxs" role="search" onsubmit="event.preventDefault();UI.f={...UI.f,q:this.q.value,rub:''};go('#/explorar');render(true)"><input name="q" placeholder="Escribe tu búsqueda" aria-label="Buscar"><button aria-label="Buscar" id="hxsb"></button></form>
+    <div class="hxr">
+      <button class="cb only-mm" id="hSearch" aria-label="Buscar"></button>
+      <button class="cb" id="mRol" aria-label="Cambiar rol de la demo" title="Ver la demo como…"></button>
+      <a class="btn n sm hx-cta" href="#/hazte-socio">Hazte socio</a>
+      <a class="btn gr sm hx-cta" href="#/cuenta">Portal socios</a>
+      <button class="cb hbg" id="hbg" aria-label="Abrir menú" aria-expanded="false" aria-controls="drw"><i></i><i></i><i></i></button>
+    </div>
+  </div></div>
+  <nav class="hx2" aria-label="Principal"><div class="wrap"><ul class="mnav" id="mnav"></ul><span class="mm-ind" id="mmind"></span>
+    <div class="mm" id="mm" role="region" aria-label="Menú desplegado"><div class="wrap mm-in" id="mmin"></div><button class="mmx" aria-label="Cerrar menú" onclick="closeMM(true)"></button></div>
+  </div></nav>
+  <nav id="dnav" hidden></nav>
+</header>
+<div class="mm-ov" id="mmov"></div>
+<aside class="drw" id="drw" aria-label="Menú" aria-hidden="true"><div class="drw-h"><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio Temuco"><button class="cb" aria-label="Cerrar menú" onclick="drw(false)" id="drwx"></button></div><div id="drwb"></div></aside>
+<div class="drw-ov" id="drwov" onclick="drw(false)"></div>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="f">
+  <div class="wrap">
+    <div class="fbig" data-r>El comercio de La Araucanía,<br><em>en un solo lugar.</em></div>
+    <div class="fgrid">
+      <div>
+        <img class="flogo" src="img/logo-camara-2025-blanco.png" alt="Cámara de Comercio Temuco">
+        <p style="margin:0 0 6px;color:#fff;font-weight:600">Cámara de Comercio, Servicios y Turismo de Temuco A.G.</p>
+        <p style="margin:0;font-size:14px">Más de 100 años impulsando el comercio de La Araucanía. Las publicaciones son responsabilidad de cada empresa socia y son revisadas por la Cámara.</p>
+        <div class="flogos"><span>Proyecto apoyado por<img class="wbg" src="img/logo-sercotec.png" alt="SERCOTEC"></span><span>Miembros de<img src="img/logo-cnc.png" alt="Cámara Nacional de Comercio"></span></div>
+      </div>
+      <div><h4>Vitrina</h4><a href="#/explorar">Explorar</a><a href="#/empresas">Empresas socias</a><a href="#/beneficios">Beneficios</a><a href="#/favoritos">Mis favoritos</a><a href="#/hazte-socio">Postula para ser socio</a></div>
+      <div><h4>La Cámara</h4><a href="https://www.camaratemuco.cl/" target="_blank" rel="noopener">Inicio</a><a href="https://www.camaratemuco.cl/" target="_blank" rel="noopener">Nosotros</a><a href="#/servicios">Servicios Cámara</a><a href="https://www.camaratemuco.cl/" target="_blank" rel="noopener">Capacitación</a><a href="#/empresas">Socios</a><a href="https://www.camaratemuco.cl/" target="_blank" rel="noopener">Info Técnica</a><a href="#/eventos">Noticias</a><a href="https://www.camaratemuco.cl/" target="_blank" rel="noopener">Contacto</a></div>
+      <div id="fcontact"><h4>Contacto</h4></div>
+    </div>
+    <div class="fsub"><span>La información contenida en este sitio es de propiedad de la Cámara de Comercio de La Araucanía, y su reproducción será permitida toda vez que sea citada la fuente. <a href="#/ayuda">Políticas de Privacidad</a></span><span>© Cámara de Comercio, Servicios y Turismo de Temuco 2026 · Todos los derechos reservados · Prototipo de demostración</span></div>
+  </div>
+</footer>
+
+<nav class="bn" id="bnav" aria-label="Navegación inferior"></nav>
+<div class="ov" id="ov"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+<div class="appframe" id="appframe">
+  <div class="side"><h3>Misma web, vista app</h3><p style="opacity:.85">La misma página en el ancho de un teléfono. Se instala desde el navegador como app (PWA), sin pasar por tiendas.</p><button class="btn w" id="appClose">Cerrar</button></div>
+  <div class="phone"><iframe id="appIframe" title="Vista app"></iframe></div>
+</div>
+
+<script>
+/* ===================== Íconos ===================== */
+const P={
+ search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+ heart:'<path d="M12 21s-7.5-4.6-9.3-9.2C1.4 8.4 3.6 5 7 5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8C19.5 16.4 12 21 12 21z"/>',
+ home:'<path d="m3 11 9-7 9 7"/><path d="M5 10v10h14V10"/>',
+ grid:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+ build:'<path d="M4 21V5l8-2v18"/><path d="M12 9h8v12"/><path d="M8 8v.01M8 12v.01M8 16v.01M16 13v.01M16 17v.01"/>',
+ user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>',
+ chev:'<path d="m9 6 6 6-6 6"/>', arr:'<path d="M5 12h14M13 6l6 6-6 6"/>', arrne:'<path d="M7 17 17 7M8 7h9v9"/>',
+ wa:'<path d="M20 12a8 8 0 0 1-11.8 7L4 20l1-4.1A8 8 0 1 1 20 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1c-1 0-2-1-2-2l1-1-1-2z"/>',
+ phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+ globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>',
+ shield:'<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/>',
+ check:'<path d="m5 12 5 5 9-10"/>', x:'<path d="M6 6l12 12M18 6 6 18"/>',
+ share:'<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/>',
+ sliders:'<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/>',
+ qr:'<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h3v-3"/>',
+ swap:'<path d="M7 7h11l-3-3M17 17H6l3 3"/>',
+ pin:'<path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',
+ store:'<path d="M3 9 5 4h14l2 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0"/>',
+ cog:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',
+ cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+ folder:'<path d="M3 6h6l2 2h10v11H3z"/>',
+ camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
+ card:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/>',
+ cap:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
+ mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>'
+};
+const I=k=>`<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${P[k]}</svg>`;
+const AR=`<span class="ar">${I('arr')}</span>`;
+
+/* ===================== Datos (convenios REALES, solo campos públicos) ===================== */
+const RUB=['Salud','Gastronomía','Hotelería y turismo','Automotriz','Seguridad','Librería y oficina','Imagen y comunicación','Deportes y outdoor','Industrial','Servicios'];
+const FICHA='https://www.camaratemuco.cl/socios_camara/';
+const EMP={
+ diagnopro:{n:'Diagnopro',r:'Salud',slug:'diagnopro',logo:'img/l_diagnopro.jpg'},
+ pascual:{n:'Pascual Parabrisas',r:'Automotriz',slug:'pascual-parabrisas',logo:'img/l_pascual.jpg'},
+ dellmaggio:{n:'Dellmaggio',r:'Gastronomía',slug:'dell-maggio',logo:'img/l_dellmaggio.jpg'},
+ super:{n:'Extintores Super',r:'Seguridad',slug:'extintores-super',alt:'Sistema contra incendios',logo:'img/l_super.jpg'},
+ alemana:{n:'Librería Alemana',r:'Librería y oficina',slug:'libreria-alemana',logo:'img/l_alemana.jpg'},
+ topp:{n:'Topp & Brand',r:'Imagen y comunicación',slug:'topp-brand',logo:'img/l_topp.png'},
+ massmann:{n:'Pesca y Caza – Galería Massmann',r:'Deportes y outdoor',slug:'importadora-massmann',logo:'img/l_massmann.jpg'},
+ hotelrp:{n:'Hotel RP',r:'Hotelería y turismo',slug:'hotel-rp',logo:'img/l_hotelrp.jpg'},
+ rdproject:{n:'RD Project',r:'Servicios',slug:'rd-project',logo:'img/l_rdproject.jpg'},
+ dijar:{n:'Dijar',r:'Industrial',slug:'dijar',alt:'Correas y mangueras industriales',logo:'img/l_dijar.jpg'},
+ lazo:{n:'Óptica Lazo',r:'Salud',slug:'optica-lazo',logo:'img/l_lazo.jpg'},
+ mitta:{n:'Mitta',r:'Automotriz',slug:'mitta',alt:'Rent a Car & Leasing',logo:'img/l_mitta.png',foto:'img/f_mitta.jpg'},
+ nicolas:{n:'Hotel Nicolás',r:'Hotelería y turismo',slug:'hotel-nicolas',logo:'img/l_nicolas.png'},
+ malal:{n:'Hotel Malalcahuello',r:'Hotelería y turismo',slug:'malalcahuello'},
+ madonna:{n:'Restaurante Madonna',r:'Gastronomía',slug:'madonna-pizza',logo:'img/l_madonna.jpg'},
+ pampa:{n:'Restaurante La Pampa',r:'Gastronomía',slug:'madonna-pizza'},
+ corralero:{n:'El Corralero',r:'Gastronomía',slug:'el-corralero',logo:'img/l_corralero.jpg'},
+ ejemplo:{n:'Empresa de Ejemplo SpA',r:'Servicios',slug:'',ejemplo:true}
+};
+const CONV=[
+ {id:1,e:'diagnopro',d:'10% dcto. resonancia magnética'},{id:2,e:'diagnopro',d:'15% dcto. scanner / TAC'},
+ {id:3,e:'pascual',d:'10% de descuento'},{id:4,e:'dellmaggio',d:'10% de descuento'},
+ {id:5,e:'super',d:'10% de descuento'},{id:6,e:'alemana',d:'10% de descuento'},
+ {id:7,e:'topp',d:'15% de descuento'},{id:8,e:'massmann',d:'15% de descuento'},
+ {id:9,e:'hotelrp',d:'15% dcto. sobre tarifa rack'},{id:10,e:'rdproject',d:'20% de descuento'},
+ {id:12,e:'dijar',d:'20% de descuento'},{id:13,e:'lazo',d:'25% de descuento'},
+ {id:14,e:'mitta',d:'35% de descuento'},{id:15,e:'nicolas',d:'5% dcto. en restaurant'},
+ {id:16,e:'nicolas',d:'10% dcto. en alojamiento'},{id:17,e:'nicolas',d:'15% dcto. arriendo de salón'},
+ {id:18,e:'malal',d:'Beneficio según anexo'},{id:20,e:'madonna',d:'7% en el total de la compra'},
+ {id:21,e:'pampa',d:'6% en el total de la compra'},{id:22,e:'corralero',d:'10% en el total de la compra'}
+].map(c=>{const m=c.d.match(/(\d+)\s*%/);return{...c,pct:m?+m[1]:0,img:`img/c${c.id}.jpg`}});
+const SLIDES=[
+ {k:'b1',pm:'55% 50%',img:'img/p_temuco.jpg',cr:'Temuco · Foto: camaratemuco.cl',ey:'Vitrina de socios · Temuco',h:'El comercio de La Araucanía, <em>en un solo lugar.</em>',p:'Empresas socias verificadas por la Cámara de Comercio, sus beneficios y su contacto directo. Sin registrarte.'},
+ {k:'b4',pm:'50% 60%',img:'img/p_auditorio.jpg',cr:'Salón Auditorium · Foto: camaratemuco.cl',ey:'Salón Auditorium · Sede de la Cámara',h:'Arriendo en toda modalidad <em>con valor especial para socios.</em>',p:'Formato auditorio, sala en U o sala de clases, con capacidad para 70 personas en la sede de la Cámara.',cta:['Consulta el arriendo','https://www.camaratemuco.cl/servicios/salon-auditorium/']},
+ {k:'b2',pm:'50% 50%',img:'img/p_mercado.jpg',cr:'Mercado Municipal de Temuco · Foto: camaratemuco.cl',ey:'Beneficios exclusivos',h:'Hasta <em>35% de descuento</em> para socios.',p:'20 convenios vigentes en salud, hotelería, gastronomía, automotriz y más. Presenta tu credencial digital y listo.'},
+ {k:'b3',pm:'34% 50%',img:'img/p_centenario.jpg',cr:'Centenario de la Cámara · Foto: camaratemuco.cl',ey:'Más de 100 años',h:'Tu empresa, con el respaldo <em>de la Cámara.</em>',p:'Hazte socio y publica tus productos y servicios con el sello de empresa verificada.'}
+];
+const SERV=[
+ {t:'Boletín Comercial',u:'https://www.camaratemuco.cl/servicios/boletin-comercial/',s:'Informes comerciales y de morosidad',img:'img/s_boletin.jpg'},
+ {t:'Códigos de Barra',u:'https://www.camaratemuco.cl/servicios/codigos-de-barra/',s:'Afiliación GS1 Chile para tus productos',img:'img/s_codigosbarra.jpg'},
+ {t:'E-CERTChile',u:'https://www.camaratemuco.cl/servicios/e-certchile/',s:'Firma electrónica avanzada',img:'img/s_ecertchile.jpg'},
+ {t:'C-Medyar',u:'https://www.camaratemuco.cl/servicios/cmedyar/',s:'Centro de mediación y arbitraje',img:'img/s_cmedyar.jpg'},
+ {t:'OTEC Camcocap',u:'https://www.camaratemuco.cl/servicios/otec/',s:'Capacitación para tu equipo',img:'img/s_otec.jpg'},
+ {t:'Salón Auditorium',u:'https://www.camaratemuco.cl/servicios/salon-auditorium/',s:'Arriendo para eventos y seminarios',img:'img/s_auditorio.jpg'}
+];
+const EVT=[
+ {d:'03',m:'dic',t:'Desayuno empresarial de socios',l:'Sede Cámara · V. Mackenna 396',k:'Networking'},
+ {d:'10',m:'dic',t:'Feria de emprendedores locales',l:'Plaza Aníbal Pinto, Temuco',k:'Feria'},
+ {d:'15',m:'dic',t:'Capacitación OTEC: atención al cliente',l:'Salón Auditorium',k:'Capacitación'}
+];
+const AVC=['#0E2470','#133095','#2242AE','#003DA6','#2B7F1E','#3A4B7A'];
+const TONES=['t-cream','t-verde','t-azul','t-white','t-cream','t-verde'];
+
+/* ===================== Estado local ===================== */
+const DEF={rol:'visitante',favs:[],dest:[14,13,16,9,22],ban:{b1:true,b2:true,b3:true,b4:true},susp:[],convOff:[],convEdit:{},convNew:[],socEdit:{},socNew:[],
+ pubs:[
+  {id:'p1',emp:'ejemplo',tipo:'Producto',t:'Canasta de productos locales de La Araucanía',d:'Mermeladas, miel y café tostado en Temuco. Ideal para regalos corporativos.',ben:'10% para socios CCT',est:'publicada',ic:'store',bg:'#E7F3E3'},
+  {id:'p2',emp:'ejemplo',tipo:'Servicio',t:'Asesoría para postular a fondos Sercotec',d:'Acompañamiento en la formulación y rendición de proyectos para pymes.',ben:'Primera sesión sin costo para socios',est:'publicada',ic:'folder',bg:'#E8ECF8'},
+  {id:'p3',emp:'ejemplo',tipo:'Novedad',t:'Taller de vitrina digital para pymes',d:'Aprende a fotografiar tus productos y a escribir tu ficha.',ben:'',est:'revision',ic:'camera',bg:'#F1ECE2'}
+ ],fichaPend:true};
+let S;
+try{S=Object.assign(structuredClone(DEF),JSON.parse(localStorage.getItem('cct-vitrina-ed')||'{}'))}catch(_){S=structuredClone(DEF)}
+const save=()=>{try{localStorage.setItem('cct-vitrina-ed',JSON.stringify(S))}catch(_){}}
+const UI={hIx:0,f:{q:'',rub:'',ver:'todo',sort:'rel'},admTab:'cola'};
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* aplica en memoria lo que la Cámara editó en el panel (demo: guardado en este navegador) */
+function applyData(){
+  (S.socNew||[]).forEach(x=>{if(!EMP[x.k])EMP[x.k]={n:x.n,r:x.r,slug:'',nuevo:true}});
+  Object.entries(S.socEdit||{}).forEach(([k,v])=>{if(EMP[k])Object.assign(EMP[k],v)});
+  (S.convNew||[]).forEach(x=>{if(!CONV.some(c=>c.id===x.id))CONV.push({...x,pct:pctOf(x.d),img:EMP[x.e]&&EMP[x.e].logo||null})});
+  Object.entries(S.convEdit||{}).forEach(([id,v])=>{const c=CONV.find(x=>x.id===+id);if(c){c.d=v.d;c.pct=pctOf(v.d);c.hasta=v.hasta||''}});
+}
+function pctOf(d){const m=String(d).match(/(\d+)\s*%/);return m?+m[1]:0}
+applyData();
+
+/* ===================== Utilidades ===================== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const ini=n=>n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ& ]/g,'').split(/\s+/).filter(w=>w.length>2||/^(RP|RD)$/.test(w)).slice(0,2).map(w=>w[0]).join('').toUpperCase()||n[0];
+const avc=k=>AVC[[...k].reduce((a,c)=>a+c.charCodeAt(0),0)%AVC.length];
+const vis=k=>!(S.susp||[]).includes(k);
+const EK=()=>Object.keys(EMP).filter(vis);
+const CV=()=>CONV.filter(c=>vis(c.e)&&!(S.convOff||[]).includes(c.id));
+const convOf=k=>CV().filter(c=>c.e===k);
+const C=id=>CONV.find(c=>c.id===id);
+const fichaUrl=k=>EMP[k].slug?FICHA+EMP[k].slug+'/':'https://www.camaratemuco.cl/';
+const rubShort=r=>r.split(' y ')[0];
+const cap=t=>t.charAt(0).toUpperCase()+t.slice(1);
+const shortD=c=>{if(!c.pct)return c.d;let t=c.d.replace(/^\d+\s*%\s*/,'');t=t.replace(/^de descuento$/,'descuento en el total de la compra').replace(/^dcto\.\s*/,'descuento ').replace(/^en el total/,'descuento en el total');return cap(t)};
+const wlogo=(k,cls='')=>{const E=EMP[k];return E.logo?`<span class="wl ${cls}"><img src="img/lw_${k}.jpg" alt="${esc(E.n)}"></span>`:mono(k,'av')};
+const mono=(k,cls='mono')=>{const E=EMP[k];return E.logo?`<span class="${cls}"><img src="${E.logo}" alt="${esc(E.n)}"></span>`:`<span class="${cls}" ${cls==='av'?`style="background:${avc(k)}"`:''}>${esc(ini(E.n))}</span>`};
+function toast(msg){document.querySelectorAll('.toast').forEach(t=>t.remove());const t=document.createElement('div');t.className='toast';t.setAttribute('role','status');t.innerHTML=I('check')+'<span>'+msg+'</span>';document.body.appendChild(t);setTimeout(()=>t.remove(),3000)}
+function sheet(title,body,foot=''){const s=$('#sheet');s.innerHTML=`<div class="hd"><h3>${title}</h3><button class="ibtn" style="border:0" onclick="closeSheet()" aria-label="Cerrar">${I('x')}</button></div><div class="bd">${body}</div>${foot?`<div class="ft">${foot}</div>`:''}`;s.classList.add('on');$('#ov').classList.add('on');document.body.style.overflow='hidden'}
+function closeSheet(){$('#sheet').classList.remove('on');$('#ov').classList.remove('on');document.body.style.overflow=''}
+$('#ov').onclick=closeSheet;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSheet();$('#appframe').classList.remove('on')}});
+function go(h){location.hash=h}
+function toggleFav(id,ev){if(ev){ev.preventDefault();ev.stopPropagation()}const i=S.favs.indexOf(id);if(i>=0){S.favs.splice(i,1);toast('Quitado de favoritos')}else{S.favs.push(id);toast('Guardado en favoritos')}save();render(true)}
+function openWA(msg){window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener');toast('Abriendo WhatsApp con el mensaje listo')}
+function contacto(tipo,k){
+  const n=k?EMP[k].n:'la Cámara';
+  if(tipo==='wa'){openWA(`Hola ${n}, los encontré en la Vitrina de la Cámara de Comercio de Temuco y quiero más información.`);return}
+  sheet('Llamar',`<p>En la versión final se llama al teléfono que <b>${esc(n)}</b> publique en su ficha.</p><p class="muted" style="font-size:13.5px">Prototipo: aún no se usan teléfonos reales de las empresas. El contacto va directo a la empresa; la Cámara no guarda los datos del visitante.</p>`,`<button class="btn n" onclick="closeSheet()">Entendido</button>`);
+}
+function cotizar(id){const p=S.pubs.find(x=>x.id===id);const E=EMP[p.emp||'ejemplo'];
+  sheet('Pedir cotización',`<p class="muted" style="margin-top:0;font-size:14px">${esc(p.t)} · ${esc(E.n)}</p><form id="cq" onsubmit="event.preventDefault();enviarCot('${id}',this)">
+  <label class="l" for="cq1">Tu nombre</label><input id="cq1" name="n" class="inp" required>
+  <label class="l" for="cq2">¿Qué necesitas?</label><textarea id="cq2" name="m" class="inp" required placeholder="Cantidad, fecha, detalles…"></textarea>
+  <p class="muted" style="font-size:12.5px">Se abre WhatsApp con tu mensaje listo. En la versión final llega directo al número de la empresa; en esta demo eliges el contacto.</p></form>`,
+  `<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn v" onclick="document.getElementById('cq').requestSubmit()">${I('wa')} Enviar por WhatsApp</button>`)}
+function enviarCot(id,f){const p=S.pubs.find(x=>x.id===id);const E=EMP[p.emp||'ejemplo'];closeSheet();
+  openWA(`Hola ${E.n}, soy ${f.n.value}. Los encontré en la Vitrina de la Cámara de Comercio de Temuco y quiero cotizar: ${p.t}. ${f.m.value}`)}
+function compartir(){const u=location.href;if(navigator.share){navigator.share({title:document.title,url:u}).catch(()=>{});return}try{navigator.clipboard.writeText(u);toast('Enlace copiado')}catch(_){}}
+/* transición compartida tarjeta → detalle */
+function vt(el){if(RM)return;document.querySelectorAll('[style*="view-transition-name"]').forEach(x=>x.style.viewTransitionName='');const n=el.querySelector('.num');if(n)n.style.viewTransitionName='bnum';el.style.viewTransitionName='bcard'}
+
+/* ===================== Componentes ===================== */
+function bc(c,tone,big){
+  const E=EMP[c.e];
+  return `<a class="bc ${tone}${big?' big':''}" href="#/b/${c.id}" onclick="vt(this)" data-r>
+    <div class="top"><span style="display:flex;gap:12px;align-items:center">${mono(c.e)}<span class="rub">${esc(rubShort(E.r))}</span></span><span class="go">${I('arrne')}</span></div>
+    <div><div class="num">${c.pct?`${c.pct}<small>%</small>`:'<small style="font-size:.5em">Anexo</small>'}</div>
+    <div class="nm"><b>${esc(E.n)}</b><span>${esc(shortD(c))}</span></div></div>
+    ${big&&c.img?`<div class="flyer"><img src="${c.img}" alt=""></div>`:''}</a>`;
+}
+function ec(k){
+  const E=EMP[k],n=convOf(k).length;
+  return `<a class="ec" href="#/e/${k}" draggable="false" data-r>${wlogo(k)}
+    <div><h3>${esc(E.n)}</h3><div class="meta">${esc(E.r)} · Temuco</div></div>
+    <div class="ft"><span class="ver">${I('shield')} Socio verificado</span><span>${n} beneficio${n>1?'s':''} ${I('arr').replace('class="i"','class="i" style="width:15px;height:15px;vertical-align:-3px"')}</span></div></a>`;
+}
+function pc(p){
+  const k=p.emp||'ejemplo',E=EMP[k];
+  return `<div class="pc" data-r>${p.foto?`<div style="height:190px;overflow:hidden"><img src="${p.foto}" alt="" style="width:100%;height:100%;object-fit:cover"></div>`:`<div class="tone" style="background:${p.bg||'#F1ECE2'}">${I(p.ic||'store')}</div>`}<div class="bd">
+  <span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${esc(p.tipo)}</span>
+  <h3>${esc(p.t)}</h3><p>${esc(p.d)}</p>${p.ben?`<div class="bn">${esc(p.ben)}</div>`:''}
+  <p style="margin-top:12px"><a href="#/e/${k}" class="lnk" style="font-size:13px">${esc(E.n)}</a></p>
+  ${p.est==='publicada'?`<div style="margin-top:12px"><button class="btn v sm" onclick="cotizar('${p.id}')">${I('wa')} Pedir cotización</button></div>`:''}</div></div>`;
+}
+function evRow(e){return `<div class="ev" data-r><div class="dt"><b>${e.d}</b><span>${e.m}</span></div><div><span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${esc(e.k)}</span><h3>${esc(e.t)}</h3><span class="pl">${I('pin')} ${esc(e.l)}</span></div></div>`}
+
+/* ===================== Inicio ===================== */
+function vInicio(){
+  const sl=SLIDES.filter(s=>S.ban[s.k]!==false);UI.nSl=sl.length;if(UI.hIx>=UI.nSl)UI.hIx=0;
+  const dest=S.dest.map(C).filter(c=>c&&CV().includes(c)).slice(0,5);
+  const rubs=RUB.map(r=>[r,EK().map(k=>EMP[k]).filter(e=>e.r===r).length]).filter(x=>x[1]);
+  const names=[...new Set(EK().map(k=>EMP[k]).map(e=>e.n))];
+  const rib=names.map(n=>{const k=EK().find(x=>EMP[x].n===n);return `<a href="#/e/${k}">${esc(n)}</a>`}).join('');
+  const pubs=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')).slice(0,2);
+  return `
+  <section class="hero" aria-roledescription="carrusel" aria-label="Portada">
+    ${sl.map((s,i)=>`<div class="hs ${i===UI.hIx?'on':''}" style="--pm:${s.pm||'50% 50%'}"><img src="${s.img}" alt="" ${i?'loading="lazy"':''}></div>`).join('')}
+    <div class="credit" id="credit">${esc(sl[UI.hIx]?.cr||'')}</div>
+    <div class="hc"><div class="wrap">
+      <div class="htx">${sl.map((s,i)=>`<div class="ht ${i===UI.hIx?'on':''}"><span class="eyb">${s.ey}</span><h1>${s.h}</h1><p>${s.p}</p>${s.cta?`<a class="btn v" style="margin-top:20px" href="${s.cta[1]}" target="_blank" rel="noopener">${s.cta[0]} ${AR}</a>`:''}</div>`).join('')}</div>
+      <form class="hsearch" onsubmit="event.preventDefault();UI.f={...UI.f,q:this.q.value,rub:''};go('#/explorar')">${I('search')}<input name="q" placeholder="¿Qué necesitas? Hotel, óptica, parabrisas…" aria-label="Buscar en la vitrina"><button class="btn n">Buscar ${AR}</button></form>
+      <div class="quick"><span>Populares:</span>${['Hotel','Óptica','Restaurante','Parabrisas','Resonancia'].map(q=>`<button type="button" onclick="UI.f={...UI.f,q:'${q}',rub:''};go('#/explorar')">${q}</button>`).join('')}</div>
+      <div class="hfoot">
+        <div class="stats"><div><b data-count="${CV().length}">0</b><span>beneficios vigentes</span></div><div><b data-count="${EK().filter(k=>!EMP[k].ejemplo).length}">0</b><span>empresas socias</span></div><div><b data-count="35" data-suf="%">0</b><span>descuento máximo</span></div><div class="only-d"><b data-count="100" data-pre="+">0</b><span>años de historia</span></div></div>
+        ${UI.nSl>1?`<div class="prog">${sl.map((_,i)=>`<button aria-label="Portada ${i+1}" class="${i===UI.hIx?'on':i<UI.hIx?'done':''}" onclick="setSlide(${i})"><i></i></button>`).join('')}</div>`:''}
+      </div>
+    </div></div>
+  </section>
+  <div class="ribbon" aria-label="Empresas socias"><div class="rtrack">${rib}${rib}</div></div>
+  <section class="ind" aria-label="Indicadores económicos"><div class="wrap">
+    <div class="indh"><span class="kick">Indicadores económicos</span><span class="indd" id="indDate"></span></div>
+    <div class="indg" id="indGrid"></div>
+    <div class="indsrc" id="indSrc"></div>
+  </div></section>
+
+  <section class="s"><div class="wrap">
+    <div class="sh" data-r><div><div class="kick">Empresas socias</div><h2>Con el sello <em>de la Cámara</em></h2></div><a class="lnk" href="#/empresas">Directorio completo ${AR}</a></div>
+    <div class="rail" id="rail">${EK().map(ec).join('')}</div>
+  </div></section>
+
+  <section class="s"><div class="wrap">
+    <div class="sh" data-r><div><div class="kick">Beneficios destacados</div><h2>Descuentos reales, <em>para socios reales</em></h2><p>Presenta tu credencial digital en el local y obtén el beneficio. Seleccionados por la Cámara.</p></div><a class="lnk" href="#/beneficios">Ver los ${CV().length} ${AR}</a></div>
+    <div class="bento">${dest.map((c,i)=>bc(c,i?TONES[i]:'t-navy',i===0)).join('')}</div>
+  </div></section>
+
+  <section class="s"><div class="wrap">
+    <div class="sh" data-r><div><div class="kick">Rubros</div><h2>Encuentra empresas <em>por lo que necesitas</em></h2></div><a class="lnk" href="#/explorar">Explorar todo ${AR}</a></div>
+    <div class="rlist" data-r>${rubs.map(([r,n])=>`<button class="rl" onclick="UI.f={q:'',rub:'${r}',ver:'todo',sort:'rel'};go('#/explorar')"><span>${esc(r)}</span><sup>${n}</sup></button>`).join('')}</div>
+  </div></section>
+
+  <section class="s"><div class="wrap">
+    <div class="sh" data-r><div><div class="kick">Servicios de la Cámara</div><h2>Herramientas para <em>hacer crecer</em> tu empresa</h2></div><a class="lnk" href="#/servicios">Todos los servicios ${AR}</a></div>
+    <div class="svc"><div class="sl">${SERV.map((s,i)=>`<a href="${s.u}" target="_blank" rel="noopener" class="${i?'':'on'}" onmouseenter="svcHover(${i})" data-r style="--d:${i}"><span class="n">0${i+1}</span><span><h3>${esc(s.t)}</h3><small>${esc(s.s)}</small></span><span class="ar">${I('arr')}</span></a>`).join('')}</div>
+      <figure class="sfig" style="margin:0">${SERV.map((s,i)=>`<img src="${s.img}" alt="" class="${i?'':'on'}">`).join('')}<figcaption id="svcCap">${esc(SERV[0].t)}</figcaption></figure></div>
+  </div></section>
+
+  <section class="s"><div class="wrap two">
+    <div><div class="sh" data-r><div><div class="kick">Agenda</div><h2>Próximos <em>eventos</em></h2></div><a class="lnk" href="#/eventos">Ver agenda ${AR}</a></div>${EVT.map(evRow).join('')}</div>
+    <div><div class="sh" data-r><div><div class="kick">Promociones de socios</div><h2>Lo que <em>ofrecen</em></h2></div><a class="lnk" href="#/promociones">Ver todas ${AR}</a></div><div class="grid g2">${pubs.map(pc).join('')}</div></div>
+  </div></section>
+
+  <section class="band"><div class="bg" id="bandBg" style="background-image:url(img/p_band.jpg)"></div><div class="wrap bw">
+    <div class="kick" style="color:#9BE58C" data-r>Más de 100 años</div>
+    <h2 data-r>¿Tienes una empresa en La Araucanía? <em>Súmate a la Cámara.</em></h2>
+    <p data-r>Aparece en la vitrina con sello de empresa verificada, publica tus productos y accede a los beneficios de los socios.</p>
+    <div class="acts" data-r><a class="btn v" href="#/hazte-socio">Hazte socio ${AR}</a><a class="btn ow" href="#/cuenta" onclick="setRol('socio','emp')">Ya soy socio: publicar mi empresa</a></div>
+  </div></section>
+
+  <div class="wrap"><div class="news" data-r><div><h3>Recibe los nuevos beneficios</h3><p>Te avisamos cuando se sumen comercios y descuentos. Sin spam.</p></div>
+    <form onsubmit="event.preventDefault();this.reset();toast('Suscripción simulada (demo)')"><input class="inp" type="email" required placeholder="tu@correo.cl" aria-label="Correo"><button class="btn n">Suscribirme</button></form></div></div>
+  <div style="height:80px"></div>`;
+}
+function bcc(c){const E=EMP[c.e],on=S.favs.includes('b'+c.id);
+  return `<a class="nc bcc" href="#/b/${c.id}" onclick="vt(this)"><div class="im">${c.img?`<img src="${c.img}" alt="" loading="lazy">`:''}<span class="tagp">${esc(rubShort(E.r))}</span><button class="fv ${on?'on':''}" aria-label="Favorito" onclick="toggleFav('b${c.id}',event)">${I('heart')}</button></div><div class="bd"><div class="num">${c.pct?`${c.pct}<small>%</small>`:'<small>Anexo</small>'}</div><h3>${esc(E.n)}</h3><p>${esc(shortD(c))}</p><span class="bt"><span class="btn gr sm">Ver beneficio</span></span></div></a>`}
+/* slider de portada: fundido 0,6 s, autoplay 5,5 s con pausa al pasar el mouse */
+const CH={i:0,t:null};
+function chTo(i){const sl=[...document.querySelectorAll('.chs')];if(!sl.length)return;CH.i=(i+sl.length)%sl.length;sl.forEach((e,j)=>{e.classList.toggle('on',j===CH.i);e.setAttribute('aria-hidden',j===CH.i?'false':'true')});document.querySelectorAll('.chd button').forEach((b,j)=>b.classList.toggle('on',j===CH.i))}
+function chGo(d){chTo(CH.i+d)}
+function ccsInit(){clearInterval(CH.t);CH.i=0;const h=$('#chero');if(!h||RM)return;let paused=false;h.onmouseenter=()=>paused=true;h.onmouseleave=()=>paused=false;
+  CH.t=setInterval(()=>{if(!paused&&!document.hidden&&document.body.contains(h)&&!$('#sheet').classList.contains('on'))chGo(1)},5500)}
+function setSlide(i){
+  if(!UI.nSl)return;UI.hIx=(i+UI.nSl)%UI.nSl;
+  document.querySelectorAll('.hs').forEach((e,j)=>e.classList.toggle('on',j===UI.hIx));
+  document.querySelectorAll('.ht').forEach((e,j)=>e.classList.toggle('on',j===UI.hIx));
+  document.querySelectorAll('.prog button').forEach((b,j)=>{b.classList.remove('on','done');void b.offsetWidth;b.classList.add(j===UI.hIx?'on':j<UI.hIx?'done':'x')});
+  const sl=SLIDES.filter(s=>S.ban[s.k]!==false);const c=$('#credit');if(c)c.textContent=sl[UI.hIx]?.cr||'';
+}
+setInterval(()=>{if($('.hs')&&!document.hidden&&!$('#sheet').classList.contains('on')&&!$('#appframe').classList.contains('on'))setSlide(UI.hIx+1)},8000);
+function svcHover(i){document.querySelectorAll('.sl a').forEach((a,j)=>a.classList.toggle('on',j===i));document.querySelectorAll('.sfig img').forEach((m,j)=>m.classList.toggle('on',j===i));const c=$('#svcCap');if(c)c.textContent=SERV[i].t}
+
+/* ===================== Explorar ===================== */
+function results(){
+  const f=UI.f,q=norm(f.q);
+  let bs=CV().filter(c=>{const E=EMP[c.e];return(!f.rub||E.r===f.rub)&&(!q||norm(E.n+' '+c.d+' '+E.r+' '+(E.alt||'')).includes(q))});
+  let es=EK().filter(k=>{const E=EMP[k];return(!f.rub||E.r===f.rub)&&(!q||norm(E.n+' '+E.r+' '+(E.alt||'')).includes(q))});
+  if(f.sort==='pct')bs.sort((a,b)=>b.pct-a.pct);
+  if(f.sort==='az'){bs.sort((a,b)=>EMP[a.e].n.localeCompare(EMP[b.e].n));es.sort((a,b)=>EMP[a].n.localeCompare(EMP[b].n))}
+  return{bs,es};
+}
+function filterPanel(){
+  const f=UI.f,cnt=r=>CV().filter(c=>EMP[c.e].r===r).length;
+  return `<h4>Mostrar</h4><div class="seg">${[['todo','Todo'],['ben','Beneficios'],['emp','Empresas']].map(([v,l])=>`<button class="${f.ver===v?'on':''}" onclick="UI.f.ver='${v}';refreshEx()">${l}</button>`).join('')}</div>
+  <h4>Rubro</h4><button class="opt ${!f.rub?'on':''}" onclick="UI.f.rub='';refreshEx()">Todos <small>${CV().length}</small></button>
+  ${RUB.filter(cnt).map(r=>`<button class="opt ${f.rub===r?'on':''}" onclick="UI.f.rub='${r}';refreshEx()"><span>${esc(r)}</span><small>${cnt(r)}</small></button>`).join('')}
+  <h4>Comuna</h4><select class="inp" disabled><option>Temuco</option></select>
+  <button class="btn g full" style="margin-top:18px" onclick="UI.f={q:'',rub:'',ver:'todo',sort:'rel'};refreshEx()">Limpiar filtros</button>`;
+}
+function vExplorar(){
+  const {bs,es}=results(),f=UI.f,showB=f.ver!=='emp',showE=f.ver!=='ben',total=(showB?bs.length:0)+(showE?es.length:0);
+  const title=f.rub?`<em>${esc(f.rub)}</em>`:(f.q?`Resultados para <em>“${esc(f.q)}”</em>`:'Explora <em>la vitrina</em>');
+  const ch=[];if(f.q)ch.push(['q',`“${f.q}”`]);if(f.rub)ch.push(['rub',f.rub]);if(f.ver!=='todo')ch.push(['ver',f.ver==='ben'?'Solo beneficios':'Solo empresas']);
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Explorar</span></nav>
+  <div class="ph"><h1>${title}</h1><p>${total} resultado${total!==1?'s':''} en empresas socias de la Cámara</p></div>
+  <div class="ex"><aside class="filters only-d" aria-label="Filtros">${filterPanel()}</aside><div>
+    <div class="exh"><div class="chips" style="margin:0">${ch.map(([k,l])=>`<span class="achip">${esc(l)}<button aria-label="Quitar filtro" onclick="UI.f.${k}=${k==='ver'?"'todo'":"''"};refreshEx()">${I('x')}</button></span>`).join('')}</div>
+    <div style="display:flex;gap:8px"><button class="btn g sm" style="display:${innerWidth<=860?'inline-flex':'none'}" onclick="sheet('Filtros',filterPanel(),'<button class=&quot;btn n full&quot; onclick=&quot;closeSheet()&quot;>Ver resultados</button>')">${I('sliders')} Filtros</button>
+    <select aria-label="Ordenar" onchange="UI.f.sort=this.value;refreshEx()">${[['rel','Relevancia'],['pct','Mayor descuento'],['az','A – Z']].map(([v,l])=>`<option value="${v}" ${f.sort===v?'selected':''}>${l}</option>`).join('')}</select></div></div>
+    ${total?`${showB&&bs.length?`<div class="grid g3 cgrid" style="margin-bottom:40px">${bs.map((c,i)=>bc(c,TONES[i%TONES.length])).join('')}</div>`:''}
+    ${showE&&es.length?`<div class="kick">Empresas (${es.length})</div><div class="grid g3">${es.map(ec).join('')}</div>`:''}`
+    :`<div class="empty">${I('search')}<h3>No encontramos resultados</h3><p>Prueba con otra palabra o quita filtros.</p><button class="btn n" onclick="UI.f={q:'',rub:'',ver:'todo',sort:'rel'};refreshEx()">Limpiar filtros</button></div>`}
+  </div></div></div>`;
+}
+function refreshEx(){closeSheet();render(true)}
+
+/* ===================== Detalle ===================== */
+function vBeneficio(id){
+  const c=C(+id);if(!c)return notFound();
+  const E=EMP[c.e],on=S.favs.includes('b'+c.id),rel=CV().filter(x=>x.id!==c.id&&(EMP[x.e].r===E.r||x.e===c.e)).slice(0,3);
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<a href="#/beneficios">Beneficios</a>${I('chev')}<span>${esc(E.n)}</span></nav>
+  <div class="dt-grid">
+    <div class="bc t-navy dt-hero" style="view-transition-name:bcard">
+      <div class="top"><span style="display:flex;gap:12px;align-items:center">${mono(c.e)}<span class="rub">${esc(E.r)}</span></span><span class="ver" style="color:#9BE58C">${I('shield')} Socio verificado</span></div>
+      <div><div class="num" style="view-transition-name:bnum">${c.pct?`${c.pct}<small>%</small>`:'<small>Anexo</small>'}</div>
+      <h1>${esc(shortD(c))}</h1><a href="#/e/${c.e}" class="lnk" style="color:#fff;margin-top:12px">${esc(E.n)} ${AR}</a></div>
+    </div>
+    <div class="dt-side">
+      <div class="panel"><b style="color:var(--ink);font-size:16px">¿Cómo uso este beneficio?</b>
+        <ol class="steps"><li>Abre tu credencial digital de socio en la app.</li><li>Muéstrala en ${esc(E.n)} antes de pagar.</li><li>El comercio valida tu credencial y aplica el beneficio.</li></ol>
+        <p class="muted" style="font-size:13px;margin:10px 0 0">${c.hasta?'Vigente hasta '+esc(c.hasta):'Vigencia por confirmar con la Cámara'}</p>
+        <div class="actions" style="margin-top:16px">${S.rol==='socio'?`<a class="btn v" href="#/cuenta">${I('qr')} Ver mi credencial</a>`:`<a class="btn v" href="#/hazte-socio">Hazte socio para usarlo ${AR}</a>`}
+        <button class="btn o" onclick="contacto('wa','${c.e}')">${I('wa')} WhatsApp</button>
+        <button class="ibtn fav ${on?'on':''}" aria-label="Favorito" onclick="toggleFav('b${c.id}')">${I('heart')}</button>
+        <button class="ibtn" aria-label="Compartir" onclick="compartir()">${I('share')}</button></div></div>
+      ${c.img?`<div class="dt-img"><img src="${c.img}" alt="Afiche del beneficio ${esc(E.n)}"></div>`:''}
+      <a class="lnk" href="${fichaUrl(c.e)}" target="_blank" rel="noopener">Ficha en camaratemuco.cl ${AR}</a>
+    </div>
+  </div>
+  ${rel.length?`<section class="s" style="padding-top:80px"><div class="sh"><div><div class="kick">Relacionados</div><h2>También te <em>puede interesar</em></h2></div></div><div class="grid g3 cgrid">${rel.map((x,i)=>bc(x,TONES[i+1])).join('')}</div></section>`:''}</div>`;
+}
+function vEmpresa(k){
+  const E=EMP[k];if(!E)return notFound();
+  const cs=convOf(k),on=S.favs.includes('e'+k);
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<a href="#/empresas">Empresas</a>${I('chev')}<span>${esc(E.n)}</span></nav>
+  <div class="eh">${wlogo(k,'big')}<div><div class="kick">${esc(E.r)}${E.alt?' · '+esc(E.alt):''}</div><h1>${esc(E.n)}</h1><p class="muted" style="margin:8px 0 0;display:flex;gap:14px;align-items:center"><span class="ver">${I('shield')} Socio verificado CCT</span> Temuco</p></div>
+    <div class="actions"><button class="btn v" onclick="contacto('wa','${k}')">${I('wa')} WhatsApp</button><button class="btn o" onclick="contacto('tel','${k}')">${I('phone')} Llamar</button><a class="ibtn" href="${fichaUrl(k)}" target="_blank" rel="noopener" aria-label="Ficha web">${I('globe')}</a><button class="ibtn fav ${on?'on':''}" aria-label="Favorito" onclick="toggleFav('e${k}')">${I('heart')}</button></div></div>
+  ${E.foto?`<div class="dt-img" style="aspect-ratio:21/8;max-height:none;margin:-10px 0 44px"><img src="${E.foto}" alt="${esc(E.n)}"></div>`:''}
+  <div class="sh"><div><div class="kick">Beneficios para socios</div><h2>${cs.length?`${cs.length} beneficio${cs.length>1?'s':''} <em>para socios</em>`:'Sin convenios <em>por ahora</em>'}</h2></div></div>
+  ${cs.length?`<div class="grid g3 cgrid">${cs.map((c,i)=>bc(c,TONES[i])).join('')}</div>`:''}
+  <section class="s" style="padding-top:70px"><div class="sh"><div><div class="kick">Publicaciones</div><h2>Productos, servicios <em>y promociones</em></h2></div></div>
+  ${(()=>{const ps=S.pubs.filter(p=>(p.emp||'ejemplo')===k&&p.est==='publicada');return ps.length?`<div class="grid g3">${ps.map(pc).join('')}</div>`:`<div class="empty panel">${I('folder')}<h3>Esta empresa aún no publica</h3><p>Cuando publique desde “Mi empresa”, y la Cámara lo apruebe, aparecerá aquí.</p></div>`})()}</section></div>`;
+}
+
+/* ===================== Listados ===================== */
+const ph=(t,s)=>`<div class="ph"><h1>${t}</h1>${s?`<p>${s}</p>`:''}</div>`;
+function vEmpresas(){
+  const q=norm(UI.dq||''),r=UI.dr||'';
+  const ks=EK().filter(k=>(!r||EMP[k].r===r)&&(!q||norm(EMP[k].n+' '+EMP[k].r).includes(q))).sort((a,b)=>EMP[a].n.localeCompare(EMP[b].n));
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Empresas</span></nav>${ph('Empresas <em>socias</em>',`${EK().length} empresas con convenio vigente con la Cámara`)}
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px"><input class="inp" style="flex:1;min-width:220px" placeholder="Buscar empresa o rubro" value="${esc(UI.dq||'')}" oninput="UI.dq=this.value;clearTimeout(UI.t);UI.t=setTimeout(()=>{render(true);const i=document.querySelector('#view input');i.focus();i.setSelectionRange(i.value.length,i.value.length)},250)" aria-label="Buscar empresa">
+  <select class="inp" style="width:auto" onchange="UI.dr=this.value;render(true)" aria-label="Rubro"><option value="">Todos los rubros</option>${RUB.map(x=>`<option ${r===x?'selected':''}>${x}</option>`).join('')}</select></div>
+  ${ks.length?`<div class="grid g3">${ks.map(ec).join('')}</div>`:`<div class="empty">${I('build')}<h3>Sin coincidencias</h3></div>`}</div>`;
+}
+function vBeneficios(){
+  const r=UI.br||'',list=CV().filter(c=>!r||EMP[c.e].r===r);
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Beneficios</span></nav>${ph('Beneficios <em>para socios</em>',`${CV().length} convenios registrados por la Cámara · presenta tu credencial digital en el local · vigencia por confirmar`)}
+  <div class="chips"><button class="chip ${!r?'on':''}" onclick="UI.br='';render(true)">Todos</button>${[...new Set(CV().map(c=>EMP[c.e].r))].map(x=>`<button class="chip ${r===x?'on':''}" onclick="UI.br='${x}';render(true)">${esc(x)}</button>`).join('')}</div>
+  <div class="grid g4 cgrid">${list.map((c,i)=>bc(c,TONES[i%TONES.length])).join('')}</div></div>`;
+}
+function vServicios(){
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Servicios Cámara</span></nav>${ph('Servicios <em>de la Cámara</em>','Información y contratación en camaratemuco.cl')}
+  <div class="grid g3">${SERV.map((s,i)=>`<a class="pc" href="${s.u}" target="_blank" rel="noopener" data-r style="--d:${i}"><div style="aspect-ratio:4/3;overflow:hidden"><img src="${s.img}" alt="" style="width:100%;height:100%;object-fit:cover"></div><div class="bd"><span class="tag v">0${i+1}</span><h3>${esc(s.t)}</h3><p>${esc(s.s)}</p></div></a>`).join('')}</div></div>`;
+}
+const NEWS=[
+ {t:'Ceremonia de aniversario de la Cámara',d:'Socios, autoridades y directores se reunieron para celebrar un nuevo aniversario de la institución.',img:'img/p_centenario.jpg',f:'14 nov'},
+ {t:'Encuentro de socios en la sede',d:'Jornada de vinculación entre empresas socias y la directiva de la Cámara.',img:'img/p_socios.jpg',f:'05 nov'},
+ {t:'Nuevos beneficios para socios',d:'La Cámara suma convenios en salud, hotelería y gastronomía para sus empresas asociadas.',img:'img/p_evento.jpg',f:'28 oct'}
+];
+function vEventos(){return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Noticias y agenda</span></nav>${ph('Noticias <em>y agenda</em>','Noticias institucionales y actividades de la Cámara · contenido de ejemplo, lo publica la Cámara desde su panel')}
+  <div class="grid g3" style="margin-bottom:56px">${NEWS.map((n,i)=>`<article class="pc" data-r style="--d:${i}"><div style="aspect-ratio:16/10;overflow:hidden"><img src="${n.img}" alt="" style="width:100%;height:100%;object-fit:cover"></div><div class="bd"><span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${n.f}</span><h3>${esc(n.t)}</h3><p>${esc(n.d)}</p></div></article>`).join('')}</div>
+  <div class="sh"><div><div class="kick">Agenda</div><h2>Próximas <em>actividades</em></h2></div></div>${EVT.map(evRow).join('')}</div>`}
+function vPromos(){
+  const t=UI.pt||'',list=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')&&(!t||p.tipo===t));
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Promociones</span></nav>${ph('Promociones <em>y productos</em>','Lo que publican las empresas socias, revisado por la Cámara. Pide tu cotización directo por WhatsApp.')}
+  <div class="chips">${[['','Todo'],['Promoción','Promociones'],['Producto','Productos'],['Servicio','Servicios'],['Novedad','Novedades']].map(([v,l])=>`<button class="chip ${t===v?'on':''}" onclick="UI.pt='${v}';render(true)">${l}</button>`).join('')}</div>
+  ${list.length?`<div class="grid g3">${list.map(pc).join('')}</div>`:`<div class="empty">${I('store')}<h3>Aún no hay publicaciones aquí</h3><p>Entra como Socio → Mi empresa y publica; después apruébala como Cámara.</p></div>`}</div>`;
+}
+function vFavoritos(){
+  const bs=CV().filter(c=>S.favs.includes('b'+c.id)),es=EK().filter(k=>S.favs.includes('e'+k));
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Favoritos</span></nav>${ph('Mis <em>favoritos</em>','Se guardan solo en este dispositivo')}
+  ${bs.length||es.length?`${bs.length?`<div class="grid g4 cgrid" style="margin-bottom:30px">${bs.map((c,i)=>bc(c,TONES[i%TONES.length])).join('')}</div>`:''}${es.length?`<div class="grid g3">${es.map(ec).join('')}</div>`:''}`
+  :`<div class="empty">${I('heart')}<h3>Aún no guardas favoritos</h3><p>Toca el corazón en un beneficio o una empresa.</p><a class="btn n" href="#/beneficios">Ver beneficios ${AR}</a></div>`}</div>`;
+}
+function vHazteSocio(){
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Hazte socio</span></nav>
+  <div class="two"><div>${ph('Súmate <em>a la Cámara</em>','Más de 100 años impulsando el comercio, los servicios y el turismo de La Araucanía.')}
+    <div class="grid g2">${[['store','Tu empresa en la vitrina','Ficha y publicaciones con sello de socio verificado'],['card','Beneficios exclusivos',`${CV().length} convenios en comercios de Temuco`],['qr','Credencial digital','Tu QR de socio en el teléfono'],['cap','Capacitación y servicios','OTEC, Boletín Comercial, Auditorium']].map(([ic,t,s],i)=>`<div class="panel" data-r style="--d:${i}"><span style="color:var(--azul)">${I(ic)}</span><b style="display:block;margin-top:10px;color:var(--ink)">${t}</b><span class="muted" style="font-size:14px">${s}</span></div>`).join('')}</div>
+    <div class="dt-img" style="aspect-ratio:16/9;max-height:none;margin-top:16px"><img src="img/p_centenario.jpg" alt="Centenario de la Cámara de Comercio de Temuco"></div></div>
+    <form class="panel" style="align-self:start" onsubmit="event.preventDefault();this.reset();toast('Solicitud enviada (simulada). La Cámara te contactará.')">
+      <h3 style="font-family:var(--serif);font-weight:400;font-size:28px">Postula para ser socio</h3><p class="muted" style="font-size:13px;margin:6px 0 0">Formulario de demostración: no se envía ni se guarda nada.</p>
+      <label class="l" for="hs1">Nombre de la empresa</label><input id="hs1" class="inp" required>
+      <label class="l" for="hs2">Rubro</label><select id="hs2" class="inp">${RUB.map(r=>`<option>${r}</option>`).join('')}</select>
+      <label class="l" for="hs3">Correo de contacto</label><input id="hs3" class="inp" type="email" required>
+      <label style="display:flex;gap:10px;align-items:center;margin-top:14px;font-size:13.5px"><input type="checkbox" required> Acepto la política de privacidad</label>
+      <button class="btn v full" style="margin-top:18px">Enviar postulación ${AR}</button></form></div></div>`;
+}
+function vAyuda(){
+  return `<div class="wrap pg" style="max-width:860px"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Ayuda</span></nav>${ph('Cómo funciona <em>la vitrina</em>')}
+  <div class="panel"><ol class="steps"><li>Cualquier persona navega la vitrina sin registrarse.</li><li>El contacto con cada empresa es directo (WhatsApp, teléfono o sitio web).</li><li>Los socios usan sus beneficios mostrando la credencial digital en el comercio.</li><li>Cada empresa socia publica desde “Mi empresa”; la Cámara revisa y aprueba antes de publicar.</li></ol></div>
+  <p class="muted" style="font-size:13.5px;margin-top:18px">Privacidad: la vitrina muestra solo información comercial pública de cada empresa. No se publican RUT, direcciones particulares ni datos de representantes.</p></div>`;
+}
+
+/* ===================== Cuenta / roles ===================== */
+function vCuenta(){
+  if(S.rol==='camara')return vAdmin();
+  if(S.rol!=='socio')return `<div class="wrap pg" style="max-width:700px"><div class="panel" style="text-align:center;padding:44px 28px">
+    <span style="color:var(--azul);display:inline-grid">${I('user')}</span><h2 style="font-family:var(--serif);font-weight:400;font-size:36px;margin:10px 0">Ingreso <em style="color:var(--azul)">socios</em></h2><p class="muted">Espacio privado para empresas socias: credencial digital, beneficios y la vitrina de tu empresa. La Cámara administra socios, convenios y publicaciones. En esta demo el ingreso es simulado.</p>
+    <div class="actions" style="justify-content:center;margin-top:20px"><button class="btn v" onclick="setRol('socio')">Entrar como socio</button><button class="btn g" onclick="setRol('camara')">Entrar como Cámara</button></div></div></div>`;
+  const tab=UI.ctab||'cred';
+  const tabs=`<div class="tabs">${[['cred','Mi credencial'],['emp','Mi empresa']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="UI.ctab='${v}';render(true)">${l}</button>`).join('')}</div>`;
+  const head=`<nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Mi espacio</span></nav>${ph('Mi <em>espacio de socio</em>','Credencial, beneficios y la vitrina de tu empresa.')}${tabs}`;
+  if(tab==='emp')return vMiEmpresa(head);
+  setTimeout(drawQR,0);
+  return `<div class="wrap pg">${head}
+  <div class="two"><div>
+    <div class="cred" data-r><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
+      <div class="bd"><div class="qr" id="qr"></div><div><h3>Empresa de Ejemplo SpA</h3><small>Socio N° 0000 · desde 2019</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>
+    <p class="muted" style="font-size:13px;max-width:430px;margin-top:14px">Muéstrala en el comercio para obtener tu beneficio; el QR permite verificar que el socio está activo. Datos de ejemplo.</p></div>
+  <div><div class="kick" style="margin-top:12px">Beneficios usados</div>
+    ${[[16,'12 nov'],[13,'28 oct']].map(([id,f])=>{const c=C(id);return `<a class="ev" href="#/b/${id}" style="grid-template-columns:72px 1fr auto;align-items:center"><span class="dt"><b style="font-size:40px">${c.pct}<small style="font-size:.45em">%</small></b></span><span><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b><br><span class="muted" style="font-size:13.5px">${esc(c.d)} · ${f}</span> <span class="tag dot" style="margin-left:6px">Ejemplo</span></span>${I('chev')}</a>`}).join('')}
+    <div class="actions" style="margin-top:22px"><a class="btn n" href="#/beneficios">Ver todos los beneficios ${AR}</a><button class="btn g" onclick="setRol('visitante')">Salir</button></div></div></div></div>`;
+}
+function drawQR(){const el=$('#qr');if(!el)return;el.innerHTML='';if(window.QRCode)new QRCode(el,{text:'https://www.camaratemuco.cl/?demo=credencial-ejemplo',width:112,height:112,colorDark:'#0E2470',colorLight:'#ffffff'});else el.innerHTML=`<div style="width:112px;height:112px;display:grid;place-items:center;color:#0E2470">${I('qr')}</div>`}
+function vMiEmpresa(head){
+  const est={publicada:'<span class="tag v dot">Publicada</span>',revision:'<span class="tag dot">En revisión</span>',rechazada:'<span class="tag r dot">Rechazada</span>'};
+  const mine=S.pubs.filter(p=>(p.emp||'ejemplo')==='ejemplo');
+  return `<div class="wrap pg">${head}
+  <div class="eh"><span class="av" style="background:var(--verde)">EE</span><div><div class="kick">Servicios · Temuco · perfil comercial</div><h1>Empresa de Ejemplo SpA</h1><p style="margin:8px 0 0">${S.fichaPend?'<span class="tag dot">Cambios de ficha en revisión</span>':'<span class="tag v dot">Ficha aprobada</span>'} <a class="lnk" href="#/e/ejemplo" style="margin-left:10px;font-size:13px">Ver mi ficha pública ${AR}</a></p></div>
+    <div class="actions"><button class="btn v" onclick="nuevaPub()">Nueva publicación ${AR}</button><button class="btn o" onclick="editarFicha()">Editar perfil</button></div></div>
+  <div class="kpis"><div class="kpi"><b>${mine.filter(p=>p.est==='publicada').length}</b><span>Publicadas</span></div><div class="kpi"><b>${mine.filter(p=>p.est==='revision').length}</b><span>En revisión</span></div><div class="kpi"><b>${mine.filter(p=>p.est==='rechazada').length}</b><span>Rechazadas</span></div><div class="kpi"><b>${CV().length}</b><span>Beneficios disponibles para ti</span></div></div>
+  <div class="kick">Mis publicaciones</div>
+  <table class="tbl"><thead><tr><th>Publicación</th><th>Tipo</th><th>Beneficio socio</th><th>Estado</th></tr></thead><tbody>
+  ${mine.map(p=>`<tr><td><b style="color:var(--ink)">${esc(p.t)}</b>${p.foto?' <span class="tag v">con foto</span>':''}${p.est==='rechazada'&&p.mot?`<br><small class="muted">Motivo: ${esc(p.mot)}</small>`:''}</td><td>${esc(p.tipo)}</td><td>${esc(p.ben||'—')}</td><td>${est[p.est]}</td></tr>`).join('')}
+  </tbody></table></div>`;
+}
+function nuevaPub(){
+  sheet('Nueva publicación',`<form id="np" onsubmit="event.preventDefault();guardarPub(this)">
+   <label class="l">Tipo</label><div class="seg" id="npt">${['Producto','Servicio','Promoción','Novedad'].map((t,i)=>`<button type="button" class="${i?'':'on'}" onclick="document.querySelectorAll('#npt button').forEach(b=>b.classList.remove('on'));this.classList.add('on')">${t}</button>`).join('')}</div>
+   <label class="l" for="np1">Título</label><input id="np1" name="t" class="inp" required maxlength="80" placeholder="Ej: Menú ejecutivo de temporada">
+   <label class="l" for="np2">Descripción</label><textarea id="np2" name="d" class="inp" required maxlength="300"></textarea>
+   <label class="l" for="np3">Beneficio para socios (opcional)</label><input id="np3" name="b" class="inp" maxlength="60" placeholder="Ej: 10% presentando la credencial">
+   <label class="l" for="npf">Foto</label><input id="npf" type="file" accept="image/*" class="inp" onchange="leerFoto(this)"><input type="hidden" name="foto" id="npfv"><img id="npprev" alt="" style="display:none;margin-top:10px;max-height:170px;border-radius:12px">
+   <p class="muted" style="font-size:13px">La Cámara revisa cada publicación antes de mostrarla en la vitrina.</p></form>`,
+   `<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn v" onclick="document.getElementById('np').requestSubmit()">Enviar a revisión</button>`);
+}
+function guardarPub(f){
+  const tipo=document.querySelector('#npt .on').textContent,m={Producto:['store','#E7F3E3'],Servicio:['folder','#E8ECF8'],'Promoción':['card','#FBE9E9'],Novedad:['cal','#F1ECE2']}[tipo];
+  S.pubs.unshift({id:'p'+Date.now(),emp:'ejemplo',tipo,t:f.t.value,d:f.d.value,ben:f.b.value,foto:f.foto.value||'',est:'revision',ic:m[0],bg:m[1]});save();closeSheet();render(true);toast('Enviada a revisión de la Cámara');
+}
+function leerFoto(inp){const fl=inp.files&&inp.files[0];if(!fl)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const mx=800,k=Math.min(1,mx/Math.max(im.width,im.height)),cv=document.createElement('canvas');cv.width=Math.round(im.width*k);cv.height=Math.round(im.height*k);cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height);const u=cv.toDataURL('image/jpeg',.8);$('#npfv').value=u;const pv=$('#npprev');pv.src=u;pv.style.display='block'};im.src=r.result};r.readAsDataURL(fl)}
+function editarFicha(){
+  sheet('Editar perfil comercial',`<form id="ef" onsubmit="event.preventDefault();S.fichaPend=true;save();closeSheet();render(true);toast('Cambios enviados a revisión')">
+   <label class="l">Nombre comercial</label><input class="inp" value="Empresa de Ejemplo SpA">
+   <label class="l">Rubro</label><select class="inp">${RUB.map(r=>`<option ${r==='Servicios'?'selected':''}>${r}</option>`).join('')}</select>
+   <label class="l">Descripción</label><textarea class="inp">Empresa de ejemplo para la demostración de la vitrina.</textarea>
+   <label class="l">WhatsApp / teléfono de contacto</label><input class="inp" value="+56 9 0000 0000">
+   <label class="l">Sitio web o redes</label><input class="inp" value="https://ejemplo.cl"></form>`,
+   `<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn v" onclick="document.getElementById('ef').requestSubmit()">Enviar a revisión</button>`);
+}
+function vAdmin(){
+  if(S.rol!=='camara')return `<div class="wrap pg"><div class="panel" style="text-align:center"><h2 style="font-family:var(--serif);font-weight:400">Administración</h2><p class="muted">Solo para la Cámara.</p><button class="btn n" onclick="setRol('camara')">Ver como Cámara</button></div></div>`;
+  const pend=S.pubs.filter(p=>p.est==='revision');
+  const cola=[...(S.fichaPend?[{k:'ficha',t:'Cambios en el perfil de Empresa de Ejemplo SpA',tipo:'Perfil'}]:[]),...pend.map(p=>({k:p.id,t:p.t,tipo:p.tipo,foto:p.foto}))];
+  const tab=UI.admTab;
+  const keys=Object.keys(EMP).sort((a,b)=>EMP[a].n.localeCompare(EMP[b].n));
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Administración</span></nav>${ph('Panel <em>de la Cámara</em>','Socios, convenios, publicaciones y contenido de la vitrina')}
+  <div class="kpis"><div class="kpi"><b>${EK().length}</b><span>Socios visibles en la vitrina</span></div><div class="kpi"><b>${CV().length}</b><span>Convenios activos</span></div><div class="kpi"><b style="color:${cola.length?'#B7791F':'var(--verde-osc)'}">${cola.length}</b><span>Por revisar</span></div><div class="kpi"><b>${(S.susp||[]).length}</b><span>Socios suspendidos</span></div></div>
+  <div class="tabs">${[['cola',`Por revisar (${cola.length})`],['soc','Socios'],['conv','Convenios'],['dest','Destacados'],['ban','Portadas']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="UI.admTab='${v}';render(true)">${l}</button>`).join('')}</div>
+  ${tab==='cola'?(cola.length?`<table class="tbl"><thead><tr><th>Solicitud</th><th>Tipo</th><th>Empresa</th><th></th></tr></thead><tbody>${cola.map(c=>`<tr><td>${c.foto?`<img src="${c.foto}" alt="" style="width:54px;height:40px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:8px">`:''}<b style="color:var(--ink)">${esc(c.t)}</b></td><td><span class="tag">${esc(c.tipo)}</span></td><td>Empresa de Ejemplo SpA</td><td><div class="acts"><button class="btn v sm" onclick="aprobar('${c.k}')">${I('check')} Aprobar</button><button class="btn g sm" onclick="rechazar('${c.k}')">Rechazar</button></div></td></tr>`).join('')}</tbody></table>`
+     :`<div class="empty panel">${I('check')}<h3>Todo revisado</h3><p>Entra como Socio → Mi empresa, crea una publicación y vuelve aquí para aprobarla.</p></div>`):''}
+  ${tab==='soc'?`<div class="actions" style="margin:0 0 16px"><button class="btn n sm" onclick="socioForm()">+ Nuevo socio</button><span class="muted" style="font-size:13px">Al suspender un socio desaparece de la vitrina junto con sus convenios. En la versión final: importación de correos por planilla.</span></div>
+    <table class="tbl"><thead><tr><th>Empresa</th><th>Rubro</th><th>Convenios</th><th style="text-align:right">Activo</th><th></th></tr></thead><tbody>${keys.map(k=>`<tr><td><span style="display:flex;gap:10px;align-items:center">${mono(k)}<b style="color:var(--ink)">${esc(EMP[k].n)}</b>${EMP[k].ejemplo||EMP[k].nuevo?'<span class="tag dot">'+(EMP[k].nuevo?'Nuevo':'Ejemplo')+'</span>':''}</span></td><td>${esc(EMP[k].r)}</td><td>${CONV.filter(c=>c.e===k).length}</td><td style="text-align:right"><label class="sw" aria-label="Activo"><input type="checkbox" ${vis(k)?'checked':''} onchange="toggleSoc('${k}',this.checked)"><span></span></label></td><td style="text-align:right"><button class="btn g sm" onclick="socioForm('${k}')">Editar</button></td></tr>`).join('')}</tbody></table>`:''}
+  ${tab==='conv'?`<div class="actions" style="margin:0 0 16px"><button class="btn n sm" onclick="convForm()">+ Nuevo convenio</button><span class="muted" style="font-size:13px">Convenios cargados en oct-2024: la vigencia de cada uno está por validar con la Cámara.</span></div>
+    <table class="tbl"><thead><tr><th>Empresa</th><th>Beneficio</th><th>Vigencia</th><th style="text-align:right">Activo</th><th></th></tr></thead><tbody>${CONV.map(c=>`<tr><td><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b></td><td>${esc(c.d)}</td><td>${c.hasta?'Hasta '+esc(c.hasta):'<span class="tag dot">Por validar</span>'}</td><td style="text-align:right"><label class="sw" aria-label="Activo"><input type="checkbox" ${(S.convOff||[]).includes(c.id)?'':'checked'} onchange="toggleConv(${c.id},this.checked)"><span></span></label></td><td style="text-align:right"><button class="btn g sm" onclick="convForm(${c.id})">Editar</button></td></tr>`).join('')}</tbody></table>`:''}
+  ${tab==='dest'?`<p class="muted" style="margin-top:0;font-size:14px">Beneficios del bloque destacado del inicio (${S.dest.length}/5). El primero va en grande.</p><table class="tbl"><thead><tr><th>Beneficio</th><th>Empresa</th><th>Rubro</th><th style="text-align:right">Inicio</th></tr></thead><tbody>${CONV.map(c=>`<tr><td>${esc(c.d)}</td><td><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b></td><td>${esc(EMP[c.e].r)}</td><td style="text-align:right"><label class="sw" aria-label="Destacar"><input type="checkbox" ${S.dest.includes(c.id)?'checked':''} onchange="toggleDest(${c.id},this)"><span></span></label></td></tr>`).join('')}</tbody></table>`:''}
+  ${tab==='ban'?`<table class="tbl"><thead><tr><th>Portada</th><th>Mensaje</th><th>Foto</th><th style="text-align:right">Activa</th></tr></thead><tbody>${SLIDES.map(s=>`<tr><td><b style="color:var(--ink)">${esc(s.ey)}</b></td><td>${s.h.replace(/<[^>]+>/g,'')}</td><td><img src="${s.img}" alt="" style="width:90px;height:52px;object-fit:cover;border-radius:8px"></td><td style="text-align:right"><label class="sw" aria-label="Activa"><input type="checkbox" ${S.ban[s.k]!==false?'checked':''} onchange="S.ban['${s.k}']=this.checked;if(!Object.values(S.ban).some(Boolean)){S.ban['${s.k}']=true;this.checked=true;toast('Debe quedar al menos 1 portada')}save()"><span></span></label></td></tr>`).join('')}</tbody></table>`:''}
+  <p style="margin-top:22px"><button class="btn g sm" onclick="resetDemo()">Reiniciar datos de la demo</button></p></div>`;
+}
+function toggleSoc(k,on){S.susp=S.susp||[];const i=S.susp.indexOf(k);if(on&&i>=0)S.susp.splice(i,1);if(!on&&i<0)S.susp.push(k);save();render(true);toast(on?'Socio activo: visible en la vitrina':'Socio suspendido: oculto de la vitrina')}
+function toggleConv(id,on){S.convOff=S.convOff||[];const i=S.convOff.indexOf(id);if(on&&i>=0)S.convOff.splice(i,1);if(!on&&i<0)S.convOff.push(id);save();render(true);toast(on?'Convenio activo':'Convenio pausado: ya no se muestra')}
+function socioForm(k){const E=k?EMP[k]:{n:'',r:'Servicios'};
+  sheet(k?'Editar socio':'Nuevo socio',`<form id="sf" onsubmit="event.preventDefault();guardarSocio(${k?`'${k}'`:'null'},this)">
+   <label class="l" for="sf1">Nombre comercial</label><input id="sf1" name="n" class="inp" required value="${esc(E.n)}">
+   <label class="l" for="sf2">Rubro</label><select id="sf2" name="r" class="inp">${RUB.map(r=>`<option ${r===E.r?'selected':''}>${r}</option>`).join('')}</select>
+   <label class="l" for="sf3">Correo de contacto</label><input id="sf3" class="inp" type="email" placeholder="contacto@empresa.cl">
+   <label class="l" for="sf4">WhatsApp (se muestra solo con consentimiento del socio)</label><input id="sf4" class="inp" placeholder="+56 9 …">
+   <p class="muted" style="font-size:12.5px">Demo: los cambios se guardan solo en este navegador. Los datos legales (RUT, representantes) nunca se muestran en la vitrina.</p></form>`,
+   `<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn n" onclick="document.getElementById('sf').requestSubmit()">Guardar</button>`)}
+function guardarSocio(k,f){const v={n:f.n.value.trim(),r:f.r.value};
+  if(k){S.socEdit=S.socEdit||{};S.socEdit[k]=v}else{S.socNew=S.socNew||[];S.socNew.push({k:'n'+Date.now(),...v})}
+  save();applyData();closeSheet();render(true);toast(k?'Socio actualizado':'Socio creado: ya aparece en el directorio')}
+function convForm(id){const c=id?CONV.find(x=>x.id===id):null;const ks=Object.keys(EMP).sort((a,b)=>EMP[a].n.localeCompare(EMP[b].n));
+  sheet(c?'Editar convenio':'Nuevo convenio',`<form id="cf" onsubmit="event.preventDefault();guardarConv(${c?c.id:'null'},this)">
+   <label class="l" for="cf1">Empresa</label><select id="cf1" name="e" class="inp" ${c?'disabled':''}>${ks.map(k=>`<option value="${k}" ${c&&c.e===k?'selected':''}>${esc(EMP[k].n)}</option>`).join('')}</select>
+   <label class="l" for="cf2">Beneficio</label><input id="cf2" name="d" class="inp" required maxlength="100" value="${c?esc(c.d):''}" placeholder="Ej: 15% de descuento en el total de la compra">
+   <label class="l" for="cf3">Vigente hasta</label><input id="cf3" name="h" class="inp" type="date" value="${c&&c.hasta?esc(c.hasta):''}">
+   <p class="muted" style="font-size:12.5px">El % se toma del texto del beneficio. Sin fecha, el convenio queda "Por validar".</p></form>`,
+   `<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn n" onclick="document.getElementById('cf').requestSubmit()">Guardar</button>`)}
+function guardarConv(id,f){const d=f.d.value.trim(),h=f.h.value;
+  if(id){S.convEdit=S.convEdit||{};S.convEdit[id]={d,hasta:h}}else{S.convNew=S.convNew||[];const nid=100+S.convNew.length+1;S.convNew.push({id:nid,e:f.e.value,d,hasta:h})}
+  save();applyData();closeSheet();render(true);toast(id?'Convenio actualizado':'Convenio creado: ya aparece en Beneficios')}
+function aprobar(k){if(k==='ficha')S.fichaPend=false;else{const p=S.pubs.find(x=>x.id===k);if(p)p.est='publicada'}save();render(true);toast('Aprobado: ya se ve en la vitrina')}
+function rechazar(k){sheet('Rechazar solicitud',`<label class="l" for="mot">Motivo (se informa a la empresa)</label><select id="mot" class="inp"><option>Información incompleta</option><option>Imagen de baja calidad</option><option>No corresponde al rubro</option><option>Promoción sin condiciones claras</option></select>`,`<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn n" onclick="doRech('${k}')">Rechazar</button>`)}
+function doRech(k){const m=$('#mot').value;if(k==='ficha')S.fichaPend=false;else{const p=S.pubs.find(x=>x.id===k);if(p){p.est='rechazada';p.mot=m}}save();closeSheet();render(true);toast('Rechazado: '+m)}
+function toggleDest(id,el){const i=S.dest.indexOf(id);if(i>=0){if(S.dest.length<=1){el.checked=true;toast('Debe quedar al menos 1');return}S.dest.splice(i,1)}else{if(S.dest.length>=5){el.checked=false;toast('Máximo 5 destacados');return}S.dest.push(id)}save()}
+function resetDemo(){S=structuredClone(DEF);save();location.hash='#/';location.reload()}
+function notFound(){return `<div class="wrap pg"><div class="empty">${I('search')}<h3>No encontramos esta página</h3><a class="btn n" href="#/">Volver al inicio</a></div></div>`}
+
+
+/* ===================== Indicadores económicos (mindicador.cl: Banco Central / INE) ===================== */
+const IND_KEYS=[['uf','UF','$',2],['dolar','Dólar','$',2],['euro','Euro','$',2],['utm','UTM','$',2],['imacec','Imacec','%',2],['libra_cobre','Libra de cobre','US$',2],['tasa_desempleo','Desempleo','%',2]];
+/* respaldo: valores publicados el jueves 19-11-2026 (se usan solo si no hay conexión) */
+const IND_FALLBACK={fecha:'2026-11-19T03:00:00.000Z',fb:true,v:{uf:[41364.17,'2026-11-19'],dolar:[1002.07,'2026-11-19'],euro:[1099.6,'2026-11-19'],utm:[72440,'2026-11-01'],imacec:[0.2,'2026-09-01'],libra_cobre:[6,'2026-11-19'],tasa_desempleo:[9.8,'2026-09-01']}};
+let IND=null;
+try{const c=JSON.parse(localStorage.getItem('cct-ind')||'null');if(c&&c.v)IND=c}catch(_){}
+const nf=(n,d)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+const mes=f=>new Date(f+'T12:00:00').toLocaleDateString('es-CL',{month:'short',year:'numeric'}).replace('.','');
+function paintInd(){
+  const g=$('#indGrid');if(!g)return;const d=IND||IND_FALLBACK;
+  g.classList.toggle('ld',!IND);
+  g.innerHTML=IND_KEYS.map(([k,l,u,dec])=>{const x=d.v[k];if(!x)return'';const val=u==='%'?nf(x[0],dec)+'%':u==='US$'?'US$ '+nf(x[0],dec):'$'+nf(x[0],dec);
+    const sub=k==='libra_cobre'?'por libra':(['utm','imacec','tasa_desempleo'].includes(k)?mes(x[1]):'');
+    return `<div class="it"><span>${l}</span><b>${val}</b>${sub?`<small>${sub}</small>`:'<small>&nbsp;</small>'}</div>`}).join('');
+  const f=new Date(d.fecha);const ds=f.toLocaleDateString('es-CL',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'America/Santiago'});
+  $('#indDate').textContent=ds.charAt(0).toUpperCase()+ds.slice(1);
+  $('#indSrc').innerHTML=!IND?'Actualizando indicadores…':d.fb?'Valores de referencia del 19-11-2026: no fue posible actualizar (sin conexión).':'Fuente: <a href="https://mindicador.cl" target="_blank" rel="noopener">mindicador.cl</a> (Banco Central de Chile e INE) · se actualiza automáticamente';
+}
+async function loadInd(){
+  if(IND&&!IND.fb&&Date.now()-IND.ts<60*60*1000){paintInd();return}
+  const ac=new AbortController(),t=setTimeout(()=>ac.abort(),7000);
+  try{
+    const r=await fetch('https://mindicador.cl/api',{signal:ac.signal});if(!r.ok)throw 0;const j=await r.json();
+    const v={};IND_KEYS.forEach(([k])=>{if(j[k]&&j[k].valor!=null)v[k]=[j[k].valor,String(j[k].fecha).slice(0,10)]});
+    if(!v.uf)throw 0;
+    IND={ts:Date.now(),fecha:j.uf.fecha,v};try{localStorage.setItem('cct-ind',JSON.stringify(IND))}catch(_){}
+  }catch(_){if(!IND||IND.fb){IND={...IND_FALLBACK,ts:Date.now()};setTimeout(loadInd,60*1000)}}
+  finally{clearTimeout(t)}
+  paintInd();
+}
+setInterval(()=>{if(!document.hidden)loadInd()},30*60*1000);
+
+/* ===================== Movimiento ===================== */
+let io;
+function animateIn(){
+  if(io)io.disconnect();
+  const els=[...document.querySelectorAll('#view [data-r]:not(.in), footer [data-r]:not(.in)')];
+  if(RM||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));countAll(true);return}
+  els.forEach((e,i)=>{if(!e.style.getPropertyValue('--d'))e.style.setProperty('--d',(i%6))});
+  io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');countIn(en.target);io.unobserve(en.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(e=>io.observe(e));
+  countIn(document.querySelector('.hero'));
+}
+function countIn(root){if(!root)return;root.querySelectorAll('[data-count]:not([data-done])').forEach(el=>{el.dataset.done=1;const to=+el.dataset.count,pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=performance.now(),dur=1400;
+  const fmt=v=>pre+Math.round(v).toLocaleString('es-CL')+suf;
+  if(RM){el.textContent=fmt(to);return}
+  const step=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(to*e);if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)})}
+function countAll(){countIn(document)}
+function dragRail(){const r=$('#rail');if(!r)return;let x0,s0,down=false,moved=false;
+  r.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=r.scrollLeft;r.classList.add('drag')});
+  window.addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-x0;if(Math.abs(dx)>4)moved=true;r.scrollLeft=s0-dx});
+  window.addEventListener('pointerup',()=>{if(!down)return;down=false;r.classList.remove('drag')});
+  r.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true)}
+const hdr=$('#hdr');
+function onScroll(){hdr.classList.toggle('sc',scrollY>40);const b=$('#bandBg');if(b&&!RM&&innerWidth>860){const r=b.parentElement.getBoundingClientRect();const v=Math.max(-50,Math.min(50,(r.top+r.height/2-innerHeight/2)*-.1));b.style.transform=`translateY(${v}px)`}}
+addEventListener('scroll',onScroll,{passive:true});
+
+/* ===================== Rol, navegación, router ===================== */
+function setRol(r,tab){if(r==='comercio'){r='socio';tab='emp'}if(tab)UI.ctab=tab;S.rol=r;save();$('#rolSel').value=r;const dst=r==='visitante'?null:'#/cuenta';if(dst&&location.hash!==dst)go(dst);else render(true);toast('Viendo la demo como: '+{visitante:'Visitante',socio:'Socio',camara:'Cámara'}[r])}
+$('#rolSel').onchange=e=>setRol(e.target.value);
+$('#mRol').innerHTML=I('swap');
+$('#mRol').onclick=()=>sheet('Ver demo como',`<div class="grid" style="gap:6px">${[['visitante','Visitante','Vitrina pública: empresas, promociones, beneficios'],['socio','Socio','Credencial, beneficios y Mi empresa (perfil y publicaciones)'],['camara','Cámara (admin)','Socios, convenios, publicaciones y portadas']].map(([v,t,s])=>`<button class="opt ${S.rol===v?'on':''}" style="padding:14px" onclick="closeSheet();setRol('${v}')"><span><b>${t}</b><br><small>${s}</small></span></button>`).join('')}</div>`);
+$('#hSearch').innerHTML=I('search');
+$('#hSearch').onclick=()=>sheet('Buscar en la vitrina',`<form onsubmit="event.preventDefault();UI.f={...UI.f,q:this.q.value,rub:''};closeSheet();go('#/explorar');render(true)"><div style="display:flex;gap:8px"><input name="q" class="inp" placeholder="Empresa, rubro o beneficio" autofocus><button class="btn n">Buscar</button></div></form>`);
+$('#fcontact').insertAdjacentHTML('beforeend',`<a href="https://maps.google.com/?q=Vicu%C3%B1a+Mackenna+396,+Temuco" target="_blank" rel="noopener">${I('pin')}V. Mackenna 396, Temuco</a><a href="mailto:administracion@camaratemuco.cl">${I('mail')}administracion@camaratemuco.cl</a><a href="tel:+56452210818">${I('phone')}+56 (45) 221 0818</a><a href="tel:+56452210556">${I('phone')}+56 (45) 221 0556</a><a href="tel:+56452218536">${I('phone')}+56 (45) 221 8536</a><p style="font-size:13px;margin:10px 0 0;color:rgba(255,255,255,.65)">Atención: L. a V. 09:00 a 14:00 hrs.<br>y 15:00 a 16:30 hrs.</p>`);
+$('#appBtn').onclick=e=>{e.preventDefault();const u=location.href.split('#')[0].split('?')[0]+'?app=1'+(location.hash||'#/');$('#appIframe').src=u;$('#appframe').classList.add('on')};
+$('#appClose').onclick=()=>$('#appframe').classList.remove('on');
+if(new URLSearchParams(location.search).get('app')==='1')document.body.classList.add('app');
+
+const MODS=[
+ {k:'socios',t:'Socios',h:'Ser socio de la Cámara',p:['Las empresas socias acceden a convenios y descuentos, a la vitrina comercial con sello de empresa verificada y a los servicios de la Cámara con condiciones preferentes.','Tu credencial digital acredita la membresía en el comercio, y desde tu espacio de socio administras el perfil comercial y las publicaciones de tu empresa.'],
+  items:[['Hazte socio','#/hazte-socio'],['Beneficios para socios','#/beneficios'],['Directorio de socios','#/empresas'],['Mi credencial','#/cuenta',"setRol('socio','cred')"],['Publicar en la vitrina','#/cuenta',"setRol('socio','emp')"],['Pago de cuotas','https://www.camaratemuco.cl/']],
+  f:['¿Quieres ser parte de la Cámara?','Súmate y accede a beneficios, vitrina y servicios para tu empresa.','Hazte socio','#/hazte-socio','img/p_band.jpg']},
+ {k:'camara',t:'La Cámara',h:'Más de 100 años impulsando el comercio',p:['La Cámara de Comercio, Servicios y Turismo de La Araucanía reúne a empresas de la región para promover su desarrollo y representar al comercio local.','Es miembro de la Cámara Nacional de Comercio y articula servicios, capacitación y vinculación entre sus socios y la comunidad.'],
+  items:[['Nosotros','https://www.camaratemuco.cl/'],['Directorio','https://www.camaratemuco.cl/'],['Capacitación','https://www.camaratemuco.cl/capacitacion/'],['Info técnica','https://www.camaratemuco.cl/'],['Contacto','https://www.camaratemuco.cl/']],
+  f:['Conoce a la Cámara','Historia, directorio y equipo de la institución.','Conócenos','https://www.camaratemuco.cl/','img/p_centenario.jpg']},
+ {k:'servicios',t:'Servicios',svc:true},
+ {k:'beneficios',t:'Beneficios',h:'Beneficios para socios',p:['Convenios con descuentos en comercios de Temuco, agrupados por rubro. Se usan mostrando la credencial digital de socio.','La vigencia y condiciones de cada convenio las administra la Cámara desde su panel.'],
+  items:null,f:['Hasta 35% de descuento','Revisa todos los convenios vigentes para socios.','Ver beneficios','#/beneficios','img/c14.jpg']},
+ {k:'vitrina',t:'Vitrina comercial',h:'Compra local, con empresas verificadas',p:['Directorio de empresas socias por rubro, con fotos, promociones y contacto directo por WhatsApp.','Cada publicación es revisada por la Cámara antes de aparecer en la vitrina.'],
+  items:[['Empresas socias','#/empresas'],['Promociones y productos','#/promociones'],['Explorar y buscar','#/explorar'],['Mis favoritos','#/favoritos']],
+  f:['Encuentra lo que necesitas','Busca por rubro, empresa o beneficio.','Explorar','#/explorar','img/p_mercado.jpg']},
+ {k:'noticias',t:'Noticias y eventos',h:'Noticias y agenda',p:['Noticias institucionales y actividades de la Cámara: encuentros de socios, ferias y capacitaciones.','La Cámara publica y actualiza estos contenidos desde su panel de administración.'],
+  items:[['Noticias','#/eventos'],['Agenda de actividades','#/eventos'],['Salón Auditorium','https://www.camaratemuco.cl/servicios/salon-auditorium/']],
+  f:['Próximas actividades','Desayunos empresariales, ferias y capacitaciones.','Ver agenda','#/eventos','img/p_evento.jpg']}
+];
+const MM={cur:null,t:null,idx:-1};
+const isExt=u=>/^https?:/.test(u);
+const lnk=(t,u,on)=>`<a href="${u}"${isExt(u)?' target="_blank" rel="noopener"':''} onclick="${on?on+';':''}closeMM();drw(false)">${t}${I('chev')}</a>`;
+function featHTML(f){return `<div class="mmf"><div class="t"><h4>${f[0]}</h4><p>${f[1]}</p><a class="btn gr sm" href="${f[3]}"${isExt(f[3])?' target="_blank" rel="noopener"':''} onclick="closeMM()">${f[2]}</a></div><div class="im" style="background-image:url(${f[4]})"></div></div>`}
+function modItems(m){if(m.svc)return SERV.map(s=>[s.t,s.u]);if(m.k==='beneficios')return RUB.filter(r=>CV().some(c=>EMP[c.e].r===r)).map(r=>[`${r} (${CV().filter(c=>EMP[c.e].r===r).length})`,'#/explorar',`UI.f={q:'',rub:'${r}',ver:'ben',sort:'rel'}`]);return m.items}
+function buildMM(){
+  $('#mnav').innerHTML=MODS.map((m,i)=>`<li data-k="${m.k}" data-i="${i}"><button type="button" aria-expanded="false" aria-controls="mm">${m.t}${I('chev')}</button></li>`).join('');
+  $('#mmin').innerHTML=MODS.map(m=>{const it=modItems(m);
+    const bodies=m.svc?SERV.map((s,j)=>`<div class="mmb ${j?'':'cur'}" data-j="${j}"><h3>${esc(s.t)}</h3><div class="cols"><p>${esc(s.s)}. Servicio de la Cámara de Comercio de Temuco, con condiciones especiales para empresas socias.</p><p>Revisa requisitos, valores y contacto en la página del servicio.</p></div>${featHTML([s.t,s.s+'.','Conocer más',s.u,s.img])}</div>`).join('')
+      :`<div class="mmb cur"><h3>${m.h}</h3><div class="cols">${m.p.map(x=>`<p>${x}</p>`).join('')}<p class="dot">Vitrina de socios · Cámara de Comercio Temuco</p></div>${featHTML(m.f)}</div>`;
+    return `<div class="mmp" data-k="${m.k}"><div class="mml">${it.map((x,j)=>lnk(x[0],x[1],x[2]).replace('<a ',`<a data-j="${j}" `)).join('')}</div><div class="mmbs">${bodies}</div></div>`}).join('');
+  $('#mmx')||0;
+  document.querySelectorAll('#mnav li').forEach(li=>{const b=li.querySelector('button');
+    li.addEventListener('mouseenter',()=>{if(!wide())return;clearTimeout(MM.t);if(MM.cur)openMM(li.dataset.k);else MM.t=setTimeout(()=>openMM(li.dataset.k),180)});
+    b.addEventListener('click',()=>{MM.cur===li.dataset.k?closeMM(true):openMM(li.dataset.k,true)});
+    b.addEventListener('keydown',e=>{const i=+li.dataset.i;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(i+(e.key==='ArrowRight'?1:-1)+MODS.length)%MODS.length;const nb=document.querySelectorAll('#mnav button')[n];nb.focus();if(MM.cur)openMM(MODS[n].k)}if(e.key==='ArrowDown'&&MM.cur){e.preventDefault();const a=document.querySelector('.mmp.cur .mml a');a&&a.focus()}})});
+  document.querySelectorAll('.mmp').forEach(p=>p.querySelectorAll('.mml a').forEach(a=>a.addEventListener('mouseenter',()=>{const bs=p.querySelectorAll('.mmb');if(bs.length<2)return;bs.forEach(b=>b.classList.toggle('cur',b.dataset.j===a.dataset.j));p.querySelectorAll('.mml a').forEach(x=>x.classList.toggle('cur',x===a));fitMM()})));
+  const hdr=$('#hdr');
+  hdr.addEventListener('mouseleave',()=>{if(!wide())return;clearTimeout(MM.t);MM.t=setTimeout(()=>closeMM(),220)});
+  hdr.addEventListener('mouseenter',()=>clearTimeout(MM.t));
+  $('#mmov').addEventListener('mouseenter',()=>{if(wide())closeMM()});$('#mmov').onclick=()=>closeMM(true);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&MM.cur)closeMM(true)});
+  /* drawer móvil: módulos en acordeón */
+  $('#drwb').innerHTML=MODS.map(m=>`<div class="acc"><button type="button" aria-expanded="false" onclick="accT(this)">${m.t}${I('chev')}</button><div class="sub"><div>${modItems(m).map(x=>lnk(x[0],x[1],x[2])).join('')}</div></div></div>`).join('')+`<div class="drw-f"><a class="btn n full" href="#/hazte-socio" onclick="drw(false)">Hazte socio</a><a class="btn gr full" href="#/cuenta" onclick="drw(false)">Portal socios</a></div>`;
+  $('#hbg').onclick=()=>drw(true);
+  addEventListener('resize',()=>{if(MM.cur)moveInd(MM.cur)});
+}
+const wide=()=>matchMedia('(hover:hover) and (min-width:1090px)').matches;
+function moveInd(k){const li=document.querySelector(`#mnav li[data-k="${k}"]`),ind=$('#mmind');if(!li){ind.classList.remove('on');return}const r=li.getBoundingClientRect(),p=li.parentNode.getBoundingClientRect();ind.style.width=r.width+'px';ind.style.transform=`translateX(${r.left-p.left}px)`;ind.classList.add('on')}
+function fitMM(){const p=document.querySelector('.mmp.cur');if(p)$('#mmin').style.height=p.offsetHeight+'px'}
+function openMM(k,focus){const i=MODS.findIndex(m=>m.k===k),dir=MM.idx<0||i>=MM.idx?'':'fromL';
+  document.querySelectorAll('#mnav li').forEach(li=>{const on=li.dataset.k===k;li.classList.toggle('on',on);li.querySelector('button').setAttribute('aria-expanded',on)});
+  document.querySelectorAll('.mmp').forEach(p=>{p.classList.remove('cur','fromL');if(p.dataset.k===k){void p.offsetWidth;p.classList.add('cur');if(dir&&MM.cur)p.classList.add(dir)}});
+  $('#mm').classList.add('open');$('#mmov').classList.add('on');MM.cur=k;MM.idx=i;moveInd(k);requestAnimationFrame(fitMM);
+  if(focus){const a=document.querySelector('.mmp.cur .mml a');setTimeout(()=>a&&a.focus(),60)}}
+function closeMM(ret){if(!MM.cur)return;const k=MM.cur;$('#mm').classList.remove('open');$('#mmov').classList.remove('on');document.querySelectorAll('#mnav li').forEach(li=>{li.classList.remove('on');li.querySelector('button').setAttribute('aria-expanded','false')});MM.cur=null;MM.idx=-1;const r=curMod();r?moveInd(r):$('#mmind').classList.remove('on');if(ret){const b=document.querySelector(`#mnav li[data-k="${k}"] button`);b&&b.focus()}}
+function drw(on){$('#drw').classList.toggle('open',on);$('#drwov').classList.toggle('on',on);$('#drw').setAttribute('aria-hidden',!on);$('#hbg').setAttribute('aria-expanded',on);document.body.style.overflow=on?'hidden':'';if(on)setTimeout(()=>$('#drwx').focus(),80);else if(document.activeElement&&$('#drw').contains(document.activeElement))$('#hbg').focus()}
+function accT(b){const a=b.parentNode,on=!a.classList.contains('open');document.querySelectorAll('.acc').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});a.classList.toggle('open',on);b.setAttribute('aria-expanded',on)}
+function curMod(){const r=(location.hash||'#/').split('?')[0];if(/^#\/(empresas|promociones|explorar|favoritos|e\/)/.test(r))return'vitrina';if(/^#\/(beneficios|b\/)/.test(r))return'beneficios';if(/^#\/servicios/.test(r))return'servicios';if(/^#\/eventos/.test(r))return'noticias';if(/^#\/(hazte-socio|cuenta)/.test(r))return'socios';return null}
+function paintNav(){
+  const r=(location.hash||'#/').split('?')[0],cm=curMod();
+  document.querySelectorAll('#mnav li').forEach(li=>li.classList.toggle('cur',li.dataset.k===cm));
+  if(!MM.cur){cm?moveInd(cm):$('#mmind').classList.remove('on')}
+  const ic=S.rol==='camara'?'cog':S.rol==='socio'?'qr':'user';
+  $('#bnav').innerHTML=[['#/','Inicio','home'],['#/empresas','Empresas','build'],['#/promociones','Promos','card'],['#/beneficios','Beneficios','shield'],['#/cuenta',S.rol==='camara'?'Admin':S.rol==='socio'?'Mi espacio':'Ingresar',ic]].map(([u,l,i])=>`<a href="${u}" class="${r===u?'on':''}">${I(i)}<span>${l}</span></a>`).join('');
+}
+function draw(){
+  const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
+  const routes={'':vInicio,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>{UI.ctab='emp';return vCuenta()},admin:vAdmin,promociones:vPromos};
+  document.body.classList.toggle('home',!seg[0]);
+  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(routes[seg[0]||'']||notFound)();
+  closeMM();paintNav();onScroll();animateIn();dragRail();paintInd();ccsInit();
+}
+let lastPath=(location.hash||'#/').split('?')[0];
+function render(local){
+  const p=(location.hash||'#/').split('?')[0],changed=p!==lastPath;lastPath=p;
+  const run=()=>{draw();if(changed&&!local)scrollTo({top:0,behavior:'instant'})};
+  if(!local&&changed&&document.startViewTransition&&!RM){document.startViewTransition(run)}else run();
+}
+addEventListener('hashchange',()=>render(false));
+addEventListener('resize',()=>{clearTimeout(UI.rt);UI.rt=setTimeout(()=>{if(/explorar/.test(location.hash))render(true)},200)});
+$('#rolSel').value=S.rol;
+buildMM();$('#hxsb').innerHTML=I('search');$('#drwx').innerHTML=I('x');document.querySelector('.mmx').innerHTML=I('x');
+draw();
+loadInd();
+document.querySelectorAll('footer [data-r]').forEach(e=>e.classList.add('in'));
+</script>
+
+<header class="apbar" aria-label="Barra de la app"><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio Temuco"><span class="sp"></span>
+  <button aria-label="Buscar" onclick="go('#/explorar')" id="apS"></button>
+  <button aria-label="Notificaciones" onclick="notifs()" id="apN"></button>
+  <button aria-label="Ver la demo como" onclick="$('#mRol').click()" id="apR"></button></header>
+<nav class="tabbar" id="tabbar" aria-label="Navegación de la app"></nav>
+<script>
+/* ===== APP: estructura centrada en "Mi espacio de socio" ===== */
+$('#apS').innerHTML=I('search');$('#apN').innerHTML=I('cal').replace('<path','<path')+'';
+$('#apN').innerHTML='<svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><span class="dot"></span>';
+$('#apR').innerHTML=I('swap');
+function credHTML(){return `<div class="cred" data-r onclick="go('#/qr')" role="button" aria-label="Ver mi credencial"><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
+  <div class="bd"><div class="qr" id="qr"></div><div><h3>Empresa de Ejemplo SpA</h3><small>Socio N° 0000 · desde 2019</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>`}
+const usados=()=>[[16,'12 nov'],[13,'28 oct']].map(([id,f])=>{const c=C(id);return `<a class="ev" href="#/b/${id}" style="grid-template-columns:62px 1fr auto;align-items:center"><span class="dt"><b style="font-size:34px">${c.pct}<small style="font-size:.45em">%</small></b></span><span><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b><br><span class="muted" style="font-size:13px">${esc(c.d)} · ${f}</span> <span class="tag dot" style="margin-left:4px">Ejemplo</span></span>${I('chev')}</a>`}).join('');
+function ingresar(){return `<div class="panel" data-r style="text-align:center;padding:26px 20px"><span style="color:var(--azul);display:inline-grid">${I('qr')}</span><h2 style="font-size:22px;margin:8px 0 6px">Mi espacio de socio</h2><p class="muted" style="margin:0 0 16px">Tu credencial digital, tus beneficios y la vitrina de tu empresa, en un solo lugar.</p><div class="actions" style="justify-content:center"><button class="btn v" onclick="setRol('socio');go('#/')">Ingresar como socio</button><a class="btn o" href="#/hazte-socio">Hazte socio</a></div></div>`}
+function vAppHome(){
+  if(S.rol==='camara')return vAdmin();
+  const socio=S.rol==='socio';
+  const dest=[...S.dest.map(C).filter(c=>c&&CV().includes(c)),...CV().filter(c=>!S.dest.includes(c.id)).sort((a,b)=>b.pct-a.pct)].slice(0,8);
+  const pubs=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')).slice(0,6);
+  if(socio)setTimeout(drawQR,0);
+  const Q=[[ 'qr','Mostrar credencial',"go('#/qr')",''],['card','Beneficios',"go('#/beneficios')",'v'],['store','Mi empresa',"UI.ctab='emp';go('#/cuenta')",''],['camera','Publicar',"UI.ctab='emp';go('#/cuenta');setTimeout(nuevaPub,350)",'v'],['build','Directorio',"go('#/empresas')",''],['cal','Agenda',"go('#/eventos')",'v']];
+  const ind=(IND||IND_FALLBACK).v;
+  return `<div class="wrap pg app">
+   ${socio?`<div class="hi" data-r><small>Hola,</small><h1>Empresa de Ejemplo SpA</h1></div>${credHTML()}<div class="credhint">${I('qr')} Toca la credencial para mostrar tu QR en el comercio</div>`:ingresar()}
+   <div class="qgrid">${Q.filter(q=>socio||!['Mi empresa','Publicar','Mostrar credencial'].includes(q[1])).map(([ic,t,on,cl])=>`<button class="qt" data-r onclick="${on}"><span class="ic ${cl}">${I(ic)}</span>${t}</button>`).join('')}</div>
+   <div class="ash"><h2>Beneficios para ti</h2><a href="#/beneficios">Ver los ${CV().length}</a></div>
+   <div class="hrow">${dest.map((c,i)=>bc(c,i?TONES[i%TONES.length]:'t-navy',false)).join('')}</div>
+   <div class="ash"><h2>Promociones de socios</h2><a href="#/promociones">Ver todas</a></div>
+   <div class="hrow pubs">${pubs.map(pc).join('')||'<p class="muted">Aún no hay publicaciones.</p>'}</div>
+   ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Directorio</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
+   <div class="ash"><h2>Próximo evento</h2><a href="#/eventos">Agenda</a></div>${evRow(EVT[0])}
+   <div class="ash"><h2>Indicadores</h2><a href="https://mindicador.cl" target="_blank" rel="noopener">mindicador.cl</a></div>
+   <div class="miniind"><div><span>UF</span><b>$${nf(ind.uf[0],2)}</b></div><div><span>Dólar</span><b>$${nf(ind.dolar[0],2)}</b></div><div><span>UTM</span><b>$${nf(ind.utm[0],0)}</b></div></div>
+  </div>`;
+}
+function vQR(){
+  if(S.rol!=='socio')return `<div class="wrap pg app">${ingresar()}</div>`;
+  setTimeout(drawQR,0);
+  return `<div class="wrap pg app qrpage"><div class="hi"><small>Mi espacio de socio</small><h1>Mi credencial</h1></div>${credHTML()}
+   <div class="panel" style="margin-top:16px"><b style="color:var(--ink)">Cómo usarla</b><ol class="steps"><li>Muestra esta credencial en el comercio antes de pagar.</li><li>El comercio escanea el QR y verifica que eres socio activo.</li><li>Se aplica tu beneficio. Sube el brillo de la pantalla si cuesta escanear.</li></ol></div>
+   <div class="ash"><h2>Beneficios usados</h2><a href="#/beneficios">Ver beneficios</a></div>${usados()}</div>`;
+}
+function vMas(){
+  const it=(ic,t,s,on)=>`<a href="#" onclick="event.preventDefault();${on}"><span class="ic">${I(ic)}</span><span>${t}<small>${s}</small></span><span class="ch">${I('chev')}</span></a>`;
+  const socio=S.rol==='socio',cam=S.rol==='camara';
+  return `<div class="wrap pg app"><div class="hi"><small>${socio?'Empresa de Ejemplo SpA':cam?'Cámara de Comercio':'Visitante'}</small><h1>Más</h1></div><div class="menu">
+   ${socio?it('store','Mi empresa','Perfil comercial y publicaciones',"UI.ctab='emp';go('#/cuenta')")+it('qr','Mi credencial','Tu QR de socio',"go('#/qr')"):''}
+   ${cam?it('cog','Panel de la Cámara','Socios, convenios y publicaciones',"go('#/admin')"):''}
+   ${it('search','Explorar','Buscar empresas y beneficios',"go('#/explorar')")}
+   ${it('build','Directorio de empresas','Empresas socias por rubro',"go('#/empresas')")}
+   ${it('heart','Favoritos','Guardados en este teléfono',"go('#/favoritos')")}
+   ${it('folder','Servicios de la Cámara','Boletín, OTEC, Auditorium y más',"go('#/servicios')")}
+   ${it('cal','Noticias y agenda','Actividades de la Cámara',"go('#/eventos')")}
+   ${socio||cam?'':it('user','Hazte socio','Postula a la Cámara',"go('#/hazte-socio')")}
+   ${it('swap','Ver la demo como…','Visitante, Socio o Cámara',"$('#mRol').click()")}
+   ${it('sliders','Cambiar estilo','Editorial o Moderna',"location.href='index.html?elegir=1'")}
+   ${S.rol!=='visitante'?it('x','Salir','Volver a visitante',"setRol('visitante');go('#/')"):''}
+  </div></div>`;
+}
+function notifs(){sheet('Notificaciones',`<div class="ntf">
+  <div><span class="ic">${I('check')}</span><span><b>Tu publicación fue aprobada</b><small>“Canasta de productos locales” ya se ve en la vitrina · Ejemplo</small></span></div>
+  <div><span class="ic">${I('card')}</span><span><b>Nuevo convenio en Salud</b><small>Revisa los beneficios para socios · Ejemplo</small></span></div>
+  <div><span class="ic">${I('cal')}</span><span><b>Desayuno empresarial de socios</b><small>3 de diciembre · Sede Cámara · Ejemplo</small></span></div></div>`,`<button class="btn n" onclick="closeSheet()">Entendido</button>`)}
+paintNav=function(){
+  const r=(location.hash||'#/').split('?')[0],cam=S.rol==='camara';
+  const T=[['#/',cam?'Admin':'Mi espacio',cam?'cog':'home'],['#/beneficios','Beneficios','card'],['#/qr','','qr'],['#/promociones','Promos','store'],['#/mas','Más','grid']];
+  $('#tabbar').innerHTML=T.map(([u,l,ic],i)=>i===2?`<a href="${u}" class="fab ${r===u?'on':''}" aria-label="Mi credencial"><span class="b">${I(ic)}</span></a>`:`<a href="${u}" class="${r===u||(u==='#/'&&/^#\/(cuenta|admin)$/.test(r))?'on':''}">${I(ic)}<span>${l}</span></a>`).join('');
+};
+draw=function(){
+  const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
+  const R={'':vAppHome,qr:vQR,mas:vMas,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>{UI.ctab='emp';return vCuenta()},admin:vAdmin,promociones:vPromos};
+  document.body.classList.remove('home');
+  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(R[seg[0]||'']||notFound)();
+  paintNav();animateIn();if(typeof dragRail==='function')dragRail();paintInd();
+};
+setRol=(function(o){return function(r,tab){o(r,tab);if(location.hash==='#/cuenta'&&!tab&&r!=='camara'){go('#/')}}})(setRol);
+document.body.classList.add('app');
+draw();
+</script>
+<script>if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+</body>
+</html>
