@@ -502,6 +502,106 @@ body.app .demobar{display:none}
 .indsrc a{text-decoration:underline;text-underline-offset:2px}
 @media (max-width:1080px){.indg{grid-template-columns:repeat(4,1fr)}.it:nth-child(5){border-left:0;padding-left:0}}
 @media (max-width:860px){.indg{display:flex;overflow-x:auto;scrollbar-width:none;margin:10px -18px 4px;padding:0 18px}.indg::-webkit-scrollbar{display:none}.it{flex:none;min-width:130px}.it:nth-child(5){border-left:1px solid var(--line);padding-left:16px}.it b{font-size:21px}}
+
+/* ===== header de 2 niveles + megamenú (despliegue y animación de la Moderna, identidad Editorial) ===== */
+:root{--hh:125px}
+.hx{position:sticky;top:0;z-index:70;background:rgba(250,248,244,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.07);transition:background .35s var(--ease),box-shadow .35s}
+.hx1 .wrap{display:flex;align-items:center;gap:26px;height:72px;transition:height .35s var(--ease)}
+.hx.sc .hx1 .wrap{height:58px}
+.hx1 .lg{flex:none;position:relative;height:46px;transition:height .35s var(--ease)}
+.hx1 .lg img{height:100%;width:auto;transition:opacity .3s}
+.hx1 .lg .lw{position:absolute;inset:0;opacity:0}
+.hx.sc .hx1 .lg{height:38px}
+.hxs{flex:1;max-width:380px;display:flex;align-items:center;border:1px solid #D8D3C8;border-radius:999px;height:42px;padding:0 6px 0 18px;background:#fff;transition:border-color .2s,box-shadow .2s,background .3s}
+.hxs:focus-within{border-color:var(--azul-2);box-shadow:0 0 0 4px rgba(34,66,174,.12)}
+.hxs input{border:0;outline:0;flex:1;min-width:0;font-size:14px;background:transparent;color:var(--ink)}
+.hxs input::placeholder{color:var(--mute)}
+.hxs button{border:0;background:none;color:var(--ink);cursor:pointer;display:grid;place-items:center;width:34px;height:34px}
+.hxr{margin-left:auto;display:flex;gap:10px;align-items:center}
+.cb{width:42px;height:42px;border-radius:50%;border:1px solid transparent;background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:background .2s,color .2s}
+.cb:hover{background:rgba(0,0,0,.05)}
+.hbg{display:none;flex-direction:column;gap:4px;align-content:center}.hbg i{display:block;width:18px;height:1.7px;background:currentColor;border-radius:2px}
+.only-mm{display:none}
+.btn.gr{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}.btn.gr:hover{background:var(--ink);color:#fff}
+.hx2{position:relative;border-top:1px solid var(--line)}
+.hx2>.wrap{position:relative}
+.mnav{display:flex;list-style:none;margin:0;padding:0;gap:4px}
+.mnav li{flex:1}
+.mnav button{width:100%;height:52px;border:0;background:transparent;display:flex;align-items:center;justify-content:center;gap:7px;font:500 14.5px var(--sans);color:var(--ink);cursor:pointer;transition:color .2s}
+.mnav button svg.i{width:14px;height:14px;transform:rotate(90deg);opacity:.6;transition:transform .35s var(--ease)}
+.mnav li.on button,.mnav button:hover,.mnav li.cur button{color:var(--azul)}
+.mnav li.on button svg.i{transform:rotate(-90deg)}
+.mm-ind{position:absolute;bottom:0;left:0;height:2px;width:0;background:var(--verde);opacity:0;transition:transform .35s var(--ease),width .35s var(--ease),opacity .2s;pointer-events:none;z-index:4}
+.hx2 .wrap>.mm-ind{left:24px}
+.mm-ind.on{opacity:1}
+.mm{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-radius:0 0 26px 26px;box-shadow:0 40px 70px -26px rgba(14,36,112,.35),0 1px 0 var(--line) inset;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .22s ease,transform .35s var(--ease),visibility 0s .35s;z-index:3}
+.mm.open{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.mm-in{overflow:hidden;transition:height .35s var(--ease)}
+.mmp{display:none;grid-template-columns:270px 1fr;gap:44px;padding:28px 0 32px}
+.mmp.cur{display:grid;animation:mmIn .4s var(--ease) both}
+.mmp.cur.fromL{animation-name:mmInL}
+@keyframes mmIn{from{opacity:0;transform:translateX(18px)}}
+@keyframes mmInL{from{opacity:0;transform:translateX(-18px)}}
+.mml{border-right:1px solid var(--line);padding-right:22px}
+.mml a{display:flex;justify-content:space-between;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--txt);transition:color .2s,padding .3s var(--ease)}
+.mml a svg.i{width:16px;height:16px;opacity:.5}
+.mml a:hover,.mml a.cur,.mml a:focus-visible{color:var(--azul);padding-left:12px;outline:0}
+.mmb{display:none}.mmb.cur{display:block;animation:fadeB .3s ease both}
+@keyframes fadeB{from{opacity:0}}
+.mmb h3{font-family:var(--serif);font-weight:400;font-size:34px;letter-spacing:-.6px;margin-bottom:12px}
+.mmb .cols{columns:2;column-gap:36px;font-size:14.5px;color:var(--txt)}
+.mmb .cols p{margin:0 0 10px;break-inside:avoid}
+.mmb .dot::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--verde);margin-right:8px;vertical-align:2px}
+.mmf{display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:inset 0 0 0 1px var(--line);margin-top:18px;min-height:190px}
+.mmf .t{padding:24px 26px}
+.mmf h4{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.3px;margin-bottom:6px}
+.mmf p{margin:0 0 16px;font-size:14px;color:var(--mute)}
+.mmf .im{background-size:cover;background-position:center;transition:transform 1.2s var(--ease)}
+.mm.open .mmf .im{animation:kb2 6s var(--ease) both}
+@keyframes kb2{from{transform:scale(1.08)}to{transform:scale(1)}}
+.mmx{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.mmx svg.i{width:16px;height:16px}
+.mm-ov{position:fixed;inset:0;background:rgba(10,14,25,.35);backdrop-filter:blur(2px);z-index:60;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.mm-ov.on{opacity:1;pointer-events:auto}
+.drw{position:fixed;top:0;right:0;bottom:0;width:min(86vw,360px);background:var(--paper);z-index:96;transform:translateX(100%);transition:transform .4s var(--ease);display:flex;flex-direction:column;overflow:auto;box-shadow:-20px 0 50px rgba(10,14,25,.25)}
+.drw.open{transform:none}
+.drw-h{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+.drw-h img{height:40px}
+.drw-ov{position:fixed;inset:0;background:rgba(10,14,25,.45);z-index:95;opacity:0;pointer-events:none;transition:opacity .3s}
+.drw-ov.on{opacity:1;pointer-events:auto}
+.acc>button{width:100%;display:flex;justify-content:space-between;align-items:center;border:0;background:transparent;padding:16px 20px;font:400 21px var(--serif);color:var(--ink);border-bottom:1px solid var(--line);cursor:pointer}
+.acc>button svg.i{transform:rotate(90deg);transition:transform .3s var(--ease);opacity:.6}
+.acc.open>button svg.i{transform:rotate(-90deg)}
+.acc .sub{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease);background:#fff}
+.acc.open .sub{grid-template-rows:1fr}
+.acc .sub>div{overflow:hidden}
+.acc .sub a{display:flex;justify-content:space-between;align-items:center;padding:12px 26px;font-size:15px;color:var(--txt);border-bottom:1px solid var(--line)}
+.acc .sub a svg.i{width:15px;height:15px;opacity:.5}
+.drw-f{display:grid;gap:10px;padding:20px}
+/* inicio: header transparente sobre la foto de portada; sólido al bajar o al abrir un módulo */
+body.edh.home .hx:not(.sc):not(.mo){background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+body.edh.home .hx:not(.sc):not(.mo) .hx2{border-top-color:rgba(255,255,255,.18)}
+body.edh.home .hx:not(.sc):not(.mo) .mnav button,body.edh.home .hx:not(.sc):not(.mo) .cb,body.edh.home .hx:not(.sc):not(.mo) .hxs button{color:#fff}
+body.edh.home .hx:not(.sc):not(.mo) .cb:hover{background:rgba(255,255,255,.12)}
+body.edh.home .hx:not(.sc):not(.mo) .mnav button:hover{color:#9BE58C}
+body.edh.home .hx:not(.sc):not(.mo) .lg .lc{opacity:0}
+body.edh.home .hx:not(.sc):not(.mo) .lg .lw{opacity:1}
+body.edh.home .hx:not(.sc):not(.mo) .hxs{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}
+body.edh.home .hx:not(.sc):not(.mo) .hxs input{color:#fff}
+body.edh.home .hx:not(.sc):not(.mo) .hxs input::placeholder{color:rgba(255,255,255,.75)}
+body.edh.home .hx:not(.sc):not(.mo) .btn.gr{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+body.edh.home .hx:not(.sc):not(.mo) .btn.gr:hover{background:#fff;color:var(--navy)}
+body.edh.home .hx:not(.sc):not(.mo) .btn.n{background:#fff;color:var(--navy)}
+@media (max-width:1180px){.mnav button{font-size:13.5px;gap:5px}}
+@media (max-width:1089px){
+  :root{--hh:64px}
+  .hx2,.hxs,.hx-cta{display:none!important}
+  .hbg,.only-mm{display:grid!important}
+  .hx1 .wrap{height:64px}.hx1 .lg{height:38px}
+  .mm-ov{display:none}
+}
+@media (max-width:860px){:root{--hh:62px}.hx1 .wrap{height:62px}.hx1 .lg{height:36px}}
+@media (prefers-reduced-motion:reduce){.mm,.mmp.cur,.drw,.mm-ind{transition:none!important;animation:none!important}}
 /* ===== ideas 20-11: volver, dirección + Maps, novedades, cuota, mi vitrina ===== */
 .back{display:inline-flex;align-items:center;gap:4px;border:0;background:#fff;box-shadow:inset 0 0 0 1px var(--line);border-radius:999px;padding:7px 14px 7px 8px;margin:0 0 14px;font-weight:600;font-size:13.5px;color:var(--ink);cursor:pointer;transition:box-shadow .2s,transform .2s}
 .back:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}.back:active{transform:scale(.96)}
@@ -655,7 +755,7 @@ body.sub .apbar img{height:28px}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="robots" content="noindex, nofollow">
 </head>
-<body>
+<body class="edh">
 <a class="sr" href="#view">Saltar al contenido</a>
 <div class="demobar"><div class="wrap">
   <span><b>DEMO LOCAL</b><span class="dlong"> · Beneficios y empresas = convenios reales publicados por la Cámara · Lo marcado “Ejemplo” es ficticio · Sin compras ni pagos</span></span>
@@ -665,15 +765,26 @@ body.sub .apbar img{height:28px}
   </span>
 </div></div>
 
-<header class="h" id="hdr"><div class="wrap">
-  <a class="logo" href="#/" aria-label="Inicio"><img class="lc" src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio, Servicios y Turismo de La Araucanía"><img class="lw" src="img/logo-camara-2025-blanco.png" alt=""></a>
-  <nav class="dn" id="dnav" aria-label="Principal"></nav>
-  <div class="hact">
-    <button class="hb" id="hSearch" aria-label="Buscar"></button>
-    <button class="hb" id="mRol" aria-label="Cambiar rol de la demo"></button>
-    <a class="btn v sm only-d" href="#/hazte-socio">Hazte socio</a>
-  </div>
-</div></header>
+<header class="hx" id="hdr">
+  <div class="hx1"><div class="wrap">
+    <a class="lg" href="#/" aria-label="Inicio"><img class="lc" src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio, Servicios y Turismo de La Araucanía"><img class="lw" src="img/logo-camara-2025-blanco.png" alt=""></a>
+    <form class="hxs" role="search" onsubmit="event.preventDefault();UI.f={...UI.f,q:this.q.value,rub:''};go('#/explorar');render(true)"><input name="q" placeholder="Escribe tu búsqueda" aria-label="Buscar"><button aria-label="Buscar" id="hxsb"></button></form>
+    <div class="hxr">
+      <button class="cb only-mm" id="hSearch" aria-label="Buscar"></button>
+      <button class="cb" id="mRol" aria-label="Cambiar rol de la demo" title="Ver la demo como…"></button>
+      <a class="btn n sm hx-cta" href="#/hazte-socio">Hazte socio</a>
+      <a class="btn gr sm hx-cta" href="#/cuenta">Portal socios</a>
+      <button class="cb hbg" id="hbg" aria-label="Abrir menú" aria-expanded="false" aria-controls="drw"><i></i><i></i><i></i></button>
+    </div>
+  </div></div>
+  <nav class="hx2" aria-label="Principal"><div class="wrap"><ul class="mnav" id="mnav"></ul><span class="mm-ind" id="mmind"></span>
+    <div class="mm" id="mm" role="region" aria-label="Menú desplegado"><div class="wrap mm-in" id="mmin"></div><button class="mmx" aria-label="Cerrar menú" onclick="closeMM(true)"></button></div>
+  </div></nav>
+  <nav id="dnav" hidden></nav>
+</header>
+<div class="mm-ov" id="mmov"></div>
+<aside class="drw" id="drw" aria-label="Menú" aria-hidden="true"><div class="drw-h"><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio Temuco"><button class="cb" aria-label="Cerrar menú" onclick="drw(false)" id="drwx"></button></div><div id="drwb"></div></aside>
+<div class="drw-ov" id="drwov" onclick="drw(false)"></div>
 
 <main id="view" tabindex="-1"></main>
 
@@ -1111,7 +1222,7 @@ const ph=(t,s)=>`<div class="ph"><h1>${t}</h1>${s?`<p>${s}</p>`:''}</div>`;
 function vEmpresas(){
   const q=norm(UI.dq||''),r=UI.dr||'';
   const ks=EK().filter(k=>(!r||EMP[k].r===r)&&(!q||norm(EMP[k].n+' '+EMP[k].r).includes(q))).sort((a,b)=>EMP[a].n.localeCompare(EMP[b].n));
-  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Empresas</span></nav>${ph('Empresas <em>socias</em>',`${EK().length} empresas con convenio vigente con la Cámara`)}
+  return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Empresas</span></nav>${ph('Empresas <em>socias</em>',`${EK().filter(k=>!EMP[k].ejemplo).length} empresas socias en la vitrina${EK().some(k=>EMP[k].ejemplo)?` · más ${EK().filter(k=>EMP[k].ejemplo).length} de ejemplo`:''}`)}
   <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px"><input class="inp" style="flex:1;min-width:220px" placeholder="Buscar empresa o rubro" value="${esc(UI.dq||'')}" oninput="UI.dq=this.value;clearTimeout(UI.t);UI.t=setTimeout(()=>{render(true);const i=document.querySelector('#view input');i.focus();i.setSelectionRange(i.value.length,i.value.length)},250)" aria-label="Buscar empresa">
   <select class="inp" style="width:auto" onchange="UI.dr=this.value;render(true)" aria-label="Rubro"><option value="">Todos los rubros</option>${RUB.map(x=>`<option ${r===x?'selected':''}>${x}</option>`).join('')}</select></div>
   ${ks.length?`<div class="grid g3">${ks.map(ec).join('')}</div>`:`<div class="empty">${I('build')}<h3>Sin coincidencias</h3></div>`}</div>`;
@@ -1370,11 +1481,66 @@ $('#appBtn').onclick=e=>{e.preventDefault();const u=location.href.split('#')[0].
 $('#appClose').onclick=()=>$('#appframe').classList.remove('on');
 if(new URLSearchParams(location.search).get('app')==='1')document.body.classList.add('app');
 
+const MODS=[
+ {k:'socios',t:'Socios',h:'Ser socio de la Cámara',p:['Las empresas socias acceden a convenios y descuentos, a la vitrina comercial con sello de empresa verificada y a los servicios de la Cámara con condiciones preferentes.','Tu credencial digital acredita la membresía en el comercio, y desde tu espacio de socio administras el perfil comercial y las publicaciones de tu empresa.'],
+  items:[['Hazte socio','#/hazte-socio'],['Beneficios para socios','#/beneficios'],['Directorio de socios','#/empresas'],['Mi credencial','#/cuenta',"setRol('socio','cred')"],['Publicar en la vitrina','#/cuenta?t=emp',"setRol('socio','emp')"],['Pagar mi cuota','#/cuenta',"setRol('socio','cred')"]],
+  f:['¿Quieres ser parte de la Cámara?','Súmate y accede a beneficios, vitrina y servicios para tu empresa.','Hazte socio','#/hazte-socio','img/p_band.jpg']},
+ {k:'camara',t:'La Cámara',h:'Más de 100 años impulsando el comercio',p:['La Cámara de Comercio, Servicios y Turismo de La Araucanía reúne a empresas de la región para promover su desarrollo y representar al comercio local.','Es miembro de la Cámara Nacional de Comercio y articula servicios, capacitación y vinculación entre sus socios y la comunidad.'],
+  items:[['Nosotros','https://www.camaratemuco.cl/'],['Directorio','https://www.camaratemuco.cl/'],['Capacitación','https://www.camaratemuco.cl/capacitacion/'],['Info técnica','https://www.camaratemuco.cl/'],['Contacto','https://www.camaratemuco.cl/']],
+  f:['Conoce a la Cámara','Historia, directorio y equipo de la institución.','Conócenos','https://www.camaratemuco.cl/','img/p_centenario.jpg']},
+ {k:'servicios',t:'Servicios',svc:true},
+ {k:'beneficios',t:'Beneficios',h:'Beneficios para socios',p:['Convenios con descuentos en comercios de Temuco, agrupados por rubro. Se usan mostrando la credencial digital de socio.','La vigencia y condiciones de cada convenio las administra la Cámara desde su panel.'],
+  items:null,f:['Hasta 35% de descuento','Revisa todos los convenios vigentes para socios.','Ver beneficios','#/beneficios','img/c14.jpg']},
+ {k:'vitrina',t:'Vitrina comercial',h:'Compra local, con empresas verificadas',p:['Directorio de empresas socias por rubro, con fotos, promociones y contacto directo por WhatsApp.','Cada publicación es revisada por la Cámara antes de aparecer en la vitrina.'],
+  items:[['Empresas socias','#/empresas'],['Promociones y productos','#/promociones'],['Explorar y buscar','#/explorar'],['Mis favoritos','#/favoritos']],
+  f:['Encuentra lo que necesitas','Busca por rubro, empresa o beneficio.','Explorar','#/explorar','img/p_mercado.jpg']},
+ {k:'noticias',t:'Noticias y eventos',h:'Noticias y agenda',p:['Noticias institucionales y actividades de la Cámara: encuentros de socios, ferias y capacitaciones.','La Cámara publica y actualiza estos contenidos desde su panel de administración.'],
+  items:[['Noticias','#/eventos'],['Agenda de actividades','#/eventos'],['Salón Auditorium','https://www.camaratemuco.cl/servicios/salon-auditorium/']],
+  f:['Próximas actividades','Desayunos empresariales, ferias y capacitaciones.','Ver agenda','#/eventos','img/p_evento.jpg']}
+];
+const MM={cur:null,t:null,idx:-1};
+const isExt=u=>/^https?:/.test(u);
+const lnk=(t,u,on)=>`<a href="${u}"${isExt(u)?' target="_blank" rel="noopener"':''} onclick="${on?on+';':''}closeMM();drw(false)">${t}${I('chev')}</a>`;
+function featHTML(f){return `<div class="mmf"><div class="t"><h4>${f[0]}</h4><p>${f[1]}</p><a class="btn gr sm" href="${f[3]}"${isExt(f[3])?' target="_blank" rel="noopener"':''} onclick="closeMM()">${f[2]}</a></div><div class="im" style="background-image:url(${f[4]})"></div></div>`}
+function modItems(m){if(m.svc)return SERV.map(s=>[s.t,s.u]);if(m.k==='beneficios')return RUB.filter(r=>CV().some(c=>EMP[c.e].r===r)).map(r=>[`${r} (${CV().filter(c=>EMP[c.e].r===r).length})`,'#/explorar',`UI.f={q:'',rub:'${r}',ver:'ben',sort:'rel'}`]);return m.items}
+function buildMM(){
+  $('#mnav').innerHTML=MODS.map((m,i)=>`<li data-k="${m.k}" data-i="${i}"><button type="button" aria-expanded="false" aria-controls="mm">${m.t}${I('chev')}</button></li>`).join('');
+  $('#mmin').innerHTML=MODS.map(m=>{const it=modItems(m);
+    const bodies=m.svc?SERV.map((s,j)=>`<div class="mmb ${j?'':'cur'}" data-j="${j}"><h3>${esc(s.t)}</h3><div class="cols"><p>${esc(s.s)}. Servicio de la Cámara de Comercio de Temuco, con condiciones especiales para empresas socias.</p><p>Revisa requisitos, valores y contacto en la página del servicio.</p></div>${featHTML([s.t,s.s+'.','Conocer más',s.u,s.img])}</div>`).join('')
+      :`<div class="mmb cur"><h3>${m.h}</h3><div class="cols">${m.p.map(x=>`<p>${x}</p>`).join('')}<p class="dot">Vitrina de socios · Cámara de Comercio Temuco</p></div>${featHTML(m.f)}</div>`;
+    return `<div class="mmp" data-k="${m.k}"><div class="mml">${it.map((x,j)=>lnk(x[0],x[1],x[2]).replace('<a ',`<a data-j="${j}" `)).join('')}</div><div class="mmbs">${bodies}</div></div>`}).join('');
+  $('#mmx')||0;
+  document.querySelectorAll('#mnav li').forEach(li=>{const b=li.querySelector('button');
+    li.addEventListener('mouseenter',()=>{if(!wide())return;clearTimeout(MM.t);if(MM.cur)openMM(li.dataset.k);else MM.t=setTimeout(()=>openMM(li.dataset.k),180)});
+    b.addEventListener('click',()=>{MM.cur===li.dataset.k?closeMM(true):openMM(li.dataset.k,true)});
+    b.addEventListener('keydown',e=>{const i=+li.dataset.i;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(i+(e.key==='ArrowRight'?1:-1)+MODS.length)%MODS.length;const nb=document.querySelectorAll('#mnav button')[n];nb.focus();if(MM.cur)openMM(MODS[n].k)}if(e.key==='ArrowDown'&&MM.cur){e.preventDefault();const a=document.querySelector('.mmp.cur .mml a');a&&a.focus()}})});
+  document.querySelectorAll('.mmp').forEach(p=>p.querySelectorAll('.mml a').forEach(a=>a.addEventListener('mouseenter',()=>{const bs=p.querySelectorAll('.mmb');if(bs.length<2)return;bs.forEach(b=>b.classList.toggle('cur',b.dataset.j===a.dataset.j));p.querySelectorAll('.mml a').forEach(x=>x.classList.toggle('cur',x===a));fitMM()})));
+  const hdr=$('#hdr');
+  hdr.addEventListener('mouseleave',()=>{if(!wide())return;clearTimeout(MM.t);MM.t=setTimeout(()=>closeMM(),220)});
+  hdr.addEventListener('mouseenter',()=>clearTimeout(MM.t));
+  $('#mmov').addEventListener('mouseenter',()=>{if(wide())closeMM()});$('#mmov').onclick=()=>closeMM(true);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&MM.cur)closeMM(true)});
+  /* drawer móvil: módulos en acordeón */
+  $('#drwb').innerHTML=MODS.map(m=>`<div class="acc"><button type="button" aria-expanded="false" onclick="accT(this)">${m.t}${I('chev')}</button><div class="sub"><div>${modItems(m).map(x=>lnk(x[0],x[1],x[2])).join('')}</div></div></div>`).join('')+`<div class="drw-f"><a class="btn n full" href="#/hazte-socio" onclick="drw(false)">Hazte socio</a><a class="btn gr full" href="#/cuenta" onclick="drw(false)">Portal socios</a></div>`;
+  $('#hbg').onclick=()=>drw(true);
+  addEventListener('resize',()=>{if(MM.cur)moveInd(MM.cur)});
+}
+const wide=()=>matchMedia('(hover:hover) and (min-width:1090px)').matches;
+function moveInd(k){const li=document.querySelector(`#mnav li[data-k="${k}"]`),ind=$('#mmind');if(!li){ind.classList.remove('on');return}const r=li.getBoundingClientRect(),p=li.parentNode.getBoundingClientRect();ind.style.width=r.width+'px';ind.style.transform=`translateX(${r.left-p.left}px)`;ind.classList.add('on')}
+function fitMM(){const p=document.querySelector('.mmp.cur');if(p)$('#mmin').style.height=p.offsetHeight+'px'}
+function openMM(k,focus){const i=MODS.findIndex(m=>m.k===k),dir=MM.idx<0||i>=MM.idx?'':'fromL';
+  document.querySelectorAll('#mnav li').forEach(li=>{const on=li.dataset.k===k;li.classList.toggle('on',on);li.querySelector('button').setAttribute('aria-expanded',on)});
+  document.querySelectorAll('.mmp').forEach(p=>{p.classList.remove('cur','fromL');if(p.dataset.k===k){void p.offsetWidth;p.classList.add('cur');if(dir&&MM.cur)p.classList.add(dir)}});
+  $('#mm').classList.add('open');$('#hdr').classList.add('mo');$('#mmov').classList.add('on');MM.cur=k;MM.idx=i;moveInd(k);requestAnimationFrame(fitMM);
+  if(focus){const a=document.querySelector('.mmp.cur .mml a');setTimeout(()=>a&&a.focus(),60)}}
+function closeMM(ret){if(!MM.cur)return;const k=MM.cur;$('#mm').classList.remove('open');$('#hdr').classList.remove('mo');$('#mmov').classList.remove('on');document.querySelectorAll('#mnav li').forEach(li=>{li.classList.remove('on');li.querySelector('button').setAttribute('aria-expanded','false')});MM.cur=null;MM.idx=-1;const r=curMod();r?moveInd(r):$('#mmind').classList.remove('on');if(ret){const b=document.querySelector(`#mnav li[data-k="${k}"] button`);b&&b.focus()}}
+function drw(on){$('#drw').classList.toggle('open',on);$('#drwov').classList.toggle('on',on);$('#drw').setAttribute('aria-hidden',!on);$('#hbg').setAttribute('aria-expanded',on);document.body.style.overflow=on?'hidden':'';if(on)setTimeout(()=>$('#drwx').focus(),80);else if(document.activeElement&&$('#drw').contains(document.activeElement))$('#hbg').focus()}
+function accT(b){const a=b.parentNode,on=!a.classList.contains('open');document.querySelectorAll('.acc').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});a.classList.toggle('open',on);b.setAttribute('aria-expanded',on)}
+function curMod(){const r=(location.hash||'#/').split('?')[0];if(/^#\/(empresas|promociones|explorar|favoritos|e\/)/.test(r))return'vitrina';if(/^#\/(beneficios|b\/)/.test(r))return'beneficios';if(/^#\/servicios/.test(r))return'servicios';if(/^#\/eventos/.test(r))return'noticias';if(/^#\/(hazte-socio|cuenta)/.test(r))return'socios';return null}
 function paintNav(){
-  const r=(location.hash||'#/').split('?')[0];
-  const cu=S.rol==='camara'?'Admin':S.rol==='socio'?'Mi espacio':'Ingresar';
-  const D=[['#/empresas','Empresas'],['#/beneficios','Beneficios'],['#/promociones','Promociones'],['#/eventos','Noticias'],['#/servicios','Servicios'],['#/cuenta',cu]];
-  $('#dnav').innerHTML=D.map(([u,l])=>`<a href="${u}" class="${r===u?'on':''}">${l}</a>`).join('');
+  const r=(location.hash||'#/').split('?')[0],cm=curMod();
+  document.querySelectorAll('#mnav li').forEach(li=>li.classList.toggle('cur',li.dataset.k===cm));
+  if(!MM.cur){cm?moveInd(cm):$('#mmind').classList.remove('on')}
   const ic=S.rol==='camara'?'cog':S.rol==='socio'?'qr':'user';
   $('#bnav').innerHTML=[['#/','Inicio','home'],['#/empresas','Empresas','build'],['#/promociones','Promos','card'],['#/beneficios','Beneficios','shield'],['#/cuenta',S.rol==='camara'?'Admin':S.rol==='socio'?'Mi espacio':'Ingresar',ic]].map(([u,l,i])=>`<a href="${u}" class="${r===u?'on':''}">${I(i)}<span>${l}</span></a>`).join('');
 }
@@ -1383,7 +1549,7 @@ function draw(){
   const routes={'':vInicio,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
   document.body.classList.toggle('home',!seg[0]);
   $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(routes[seg[0]||'']||notFound)();addBack(seg);
-  paintNav();onScroll();animateIn();dragRail();paintInd();
+  closeMM();paintNav();onScroll();animateIn();dragRail();paintInd();
 }
 let lastPath=(location.hash||'#/').split('?')[0];
 function render(local){
@@ -1394,6 +1560,7 @@ function render(local){
 addEventListener('hashchange',()=>render(false));
 addEventListener('resize',()=>{clearTimeout(UI.rt);UI.rt=setTimeout(()=>{if(/explorar/.test(location.hash))render(true)},200)});
 $('#rolSel').value=S.rol;
+buildMM();$('#hxsb').innerHTML=I('search');$('#drwx').innerHTML=I('x');document.querySelector('.mmx').innerHTML=I('x');
 draw();
 loadInd();
 document.querySelectorAll('footer [data-r]').forEach(e=>e.classList.add('in'));
