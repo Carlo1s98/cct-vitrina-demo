@@ -502,6 +502,89 @@ body.app .demobar{display:none}
 .indsrc a{text-decoration:underline;text-underline-offset:2px}
 @media (max-width:1080px){.indg{grid-template-columns:repeat(4,1fr)}.it:nth-child(5){border-left:0;padding-left:0}}
 @media (max-width:860px){.indg{display:flex;overflow-x:auto;scrollbar-width:none;margin:10px -18px 4px;padding:0 18px}.indg::-webkit-scrollbar{display:none}.it{flex:none;min-width:130px}.it:nth-child(5){border-left:1px solid var(--line);padding-left:16px}.it b{font-size:21px}}
+/* ===== ideas 20-11: volver, dirección + Maps, novedades, cuota, mi vitrina ===== */
+.back{display:inline-flex;align-items:center;gap:4px;border:0;background:#fff;box-shadow:inset 0 0 0 1px var(--line);border-radius:999px;padding:7px 14px 7px 8px;margin:0 0 14px;font-weight:600;font-size:13.5px;color:var(--ink);cursor:pointer;transition:box-shadow .2s,transform .2s}
+.back:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}.back:active{transform:scale(.96)}
+.back svg.i{width:18px;height:18px}
+.eadr{display:flex;align-items:flex-start;gap:5px;font-size:13px;color:var(--txt);margin-top:6px;line-height:1.35}
+.eadr svg.i{width:15px;height:15px;color:var(--verde-osc);margin-top:1px}
+.ehadr{display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--ink);text-decoration:underline;text-decoration-color:var(--verde);text-underline-offset:4px}
+.ehadr svg.i{width:16px;height:16px;color:var(--verde-osc)}
+.dcard{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:#fff;border-radius:22px;box-shadow:inset 0 0 0 1px var(--line);margin:-10px 0 48px;overflow:hidden}
+.dmain{padding:26px 28px;background:linear-gradient(135deg,var(--verde-bg),#fff 70%)}
+.dadr{display:flex;gap:14px;align-items:center;color:var(--ink)}
+.dadr .dpin{width:56px;height:56px;border-radius:16px;background:var(--navy);color:#9BE58C;display:grid;place-items:center;flex:none}
+.dadr .dpin svg.i{width:28px;height:28px}
+.dadr b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.5px;line-height:1.1}
+.dadr small{display:block;color:var(--mute);font-size:14px;margin-top:4px}
+a.dadr:hover b{color:var(--azul);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.dlist{margin:0;padding:12px 28px;display:grid;align-content:center}
+.dlist>div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.dlist>div:first-child{border-top:0}
+.dlist dt{font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;font-weight:600;color:var(--mute);padding-top:2px}
+.dlist dd{margin:0;font-size:14.5px;color:var(--ink)}
+.dlist dd small{color:var(--mute)}
+.dlist .lnk{background:none;border:0;padding:0;cursor:pointer;margin-right:12px}
+.dlist .lnk svg.i{width:16px;height:16px}
+.ntabs{display:flex;gap:6px;background:#EFEBE3;border-radius:999px;padding:4px;width:max-content;max-width:100%;overflow-x:auto;margin-bottom:18px;scrollbar-width:none}
+.ntabs::-webkit-scrollbar{display:none}
+.ntabs button{border:0;background:transparent;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:600;color:var(--mute);cursor:pointer;white-space:nowrap;transition:background .25s,color .25s}
+.ntabs button.on{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.nrail{grid-auto-columns:290px;transition:opacity .16s}
+.nv{display:flex;flex-direction:column;background:#fff;border-radius:20px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);transition:transform .45s var(--ease),box-shadow .3s;user-select:none;min-height:100%}
+.nv:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.nvi{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--cream)}
+.nvi img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.nv:hover .nvi img{transform:scale(1.04)}
+.nvt{position:absolute;inset:0;display:grid;place-items:center;color:var(--azul)}.nvt svg.i{width:44px;height:44px;stroke-width:1.1}
+.nvb{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.92);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;padding:4px 10px}
+.nvd{display:flex;flex-direction:column;gap:8px;padding:14px 16px 16px;flex:1}
+.nvm{display:flex;gap:10px;align-items:center}
+.nvm .mono{width:34px;height:34px;font-size:11px}
+.nvm b{display:block;font-size:13px;color:var(--ink);line-height:1.2}
+.nvm small{display:block;font-size:12px;color:var(--mute)}
+.nv h3{font-family:var(--serif);font-weight:400;font-size:19px;letter-spacing:-.2px;line-height:1.2}
+.nv .bn{font-size:12.5px;font-weight:600;color:var(--verde-osc)}
+.nva{background:var(--paper);min-height:220px}
+.nva .nvd{padding:18px}
+.nvsrc{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--azul);letter-spacing:.2px}
+.nvsrc svg.i{width:16px;height:16px}
+.nnote{font-size:12.5px;color:var(--mute);margin:4px 0 0}
+.cuota{max-width:430px;margin-top:18px}
+.cuh{display:flex;gap:12px;align-items:center}
+.cuh .ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--verde-bg);color:var(--verde-osc);flex:none}
+.cuh b{display:block;color:var(--ink);font-size:16px}.cuh small{color:var(--mute);font-size:13px}
+.cum{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+.cum b{color:var(--ink);font-size:15px}
+.cuota .actions .btn{flex:1;justify-content:center}
+.bk{display:grid;gap:6px}
+.bkr{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border:0;background:#F6F3EC;border-radius:12px;padding:10px 14px;cursor:pointer;color:var(--mute);transition:background .2s}
+.bkr:hover{background:#EFEBE3}.bkr:active{transform:scale(.99)}
+.bkr small{display:block;font-size:11.5px;color:var(--mute)}.bkr b{display:block;font-size:14.5px;color:var(--ink);font-weight:600}
+.mvit{display:grid;grid-template-columns:1.1fr 1fr;gap:20px 28px;margin-bottom:30px;align-items:end}
+.mvk{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 20px}
+.mvk>div:first-child{grid-column:1/-1}
+.mvk b{display:block;font-family:var(--serif);font-weight:300;font-size:34px;line-height:1;color:var(--ink);letter-spacing:-1px;margin-top:4px}
+.mvk>div:first-child b{font-size:52px}
+.mvl{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mute);font-weight:600}
+.mvl svg.i{width:15px;height:15px;color:var(--azul)}
+.mvc{margin:0}.mvc figcaption{font-size:12.5px;color:var(--mute);font-weight:600;margin-bottom:8px}
+.bars{display:grid;grid-template-columns:repeat(8,1fr);gap:2px;height:170px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:0}
+.bw{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;cursor:default}
+.bw i{display:block;width:62%;max-width:26px;background:color-mix(in srgb,var(--azul-2) 45%,#fff);border-radius:4px 4px 0 0;transition:background .2s}
+.bw:last-child i{background:var(--azul-2)}
+.bw:hover i{background:var(--navy)}
+.bv{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:4px;min-height:16px}
+.bl{position:absolute;bottom:-20px;font-size:10.5px;color:var(--mute);white-space:nowrap}
+.mvc{padding-bottom:20px}
+@media (max-width:860px){
+  .dcard{grid-template-columns:1fr;margin:-14px 0 40px}
+  .dmain{padding:22px 18px}.dlist{padding:6px 18px 12px}
+  .dlist>div{grid-template-columns:1fr;gap:2px}
+  .dmain .actions .btn{flex:1;justify-content:center}
+  .nrail{grid-auto-columns:80%}
+  .mvit{grid-template-columns:1fr}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   [data-r]{opacity:1;transform:none}
@@ -768,6 +851,18 @@ footer.f{background:linear-gradient(126deg,#3DAE2B -3%,#133095 57%)}
   .mmp{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){.chs,.chs .im img,.mm,.mmp.cur,.drw,.lrow{transition:none!important;animation:none!important}}
+/* ideas 20-11 con tarjetas CCS: radio 15, sombra suave, hover -5px, degradado de marca */
+.nv,.dcard,.mvit,.cuota,.bkr{border-radius:var(--rc)!important}
+.nv,.dcard,.back{box-shadow:var(--shc)!important}
+.nv{transition:transform .2s ease}.nv:hover{transform:translateY(-5px);box-shadow:var(--shc)!important}
+.nv h3{font-weight:700;font-size:16.5px;letter-spacing:-.01em}
+.nvb{background:var(--grad);color:#fff}
+.ntabs{background:#EEF3FB}.ntabs button.on{color:#2257C9}
+.dmain{background:linear-gradient(135deg,#EEF3FB,#fff 70%)}
+.dadr .dpin{background:var(--grad);color:#fff;border-radius:15px}
+.dadr b{font-weight:700;letter-spacing:-.02em}
+.mvk b{font-weight:700;letter-spacing:-.02em}
+.back{border:0}
 
 /* ================= APP: Mi espacio de socio (misma identidad del estilo) ================= */
 #hdr,header.h,.hx,footer.f,.demobar,nav.bn,.mm-ov,.drw,.drw-ov,.appframe{display:none!important}
@@ -775,6 +870,11 @@ body{padding:calc(70px + env(safe-area-inset-top)) 0 calc(100px + env(safe-area-
 body.home main,main{margin-top:0!important}
 .apbar{position:fixed;top:0;left:0;right:0;z-index:70;height:calc(58px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0 16px;display:flex;align-items:center;gap:6px;background:color-mix(in srgb,var(--paper,#fff) 88%,transparent);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.06)}
 .apbar img{height:34px;width:auto}
+.apbar #apB{display:none;margin-left:-6px}
+body.sub .apbar #apB{display:grid}
+body.sub .apbar img{height:28px}
+.app .nrail{grid-auto-columns:80%;padding:4px 16px 14px;margin:0 -16px}
+.app .ntabs{margin-bottom:12px}
 .apbar .sp{flex:1}
 .apbar button{width:40px;height:40px;border-radius:50%;border:0;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;position:relative}
 .apbar button:active{transform:scale(.9)}
@@ -913,7 +1013,10 @@ const P={
  camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
  card:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/>',
  cap:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
- mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>'
+ mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+ back:'<path d="M15 6l-6 6 6 6"/>', nav:'<path d="M3 11 21 3l-8 18-2-8z"/>', copy:'<rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>',
+ bank:'<path d="M3 10h18L12 4z"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>', link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+ news:'<path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 17h3"/>', chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'
 };
 const I=k=>`<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${P[k]}</svg>`;
 const AR=`<span class="ar">${I('arr')}</span>`;
@@ -939,8 +1042,21 @@ const EMP={
  madonna:{n:'Restaurante Madonna',r:'Gastronomía',slug:'madonna-pizza',logo:'img/l_madonna.jpg'},
  pampa:{n:'Restaurante La Pampa',r:'Gastronomía',slug:'madonna-pizza'},
  corralero:{n:'El Corralero',r:'Gastronomía',slug:'el-corralero',logo:'img/l_corralero.jpg'},
- ejemplo:{n:'Empresa de Ejemplo SpA',r:'Servicios',slug:'',ejemplo:true}
+ ejemplo:{n:'Empresa de Ejemplo SpA',r:'Servicios',slug:'',ejemplo:true},
+ ej_resto:{n:'Restaurante de Ejemplo',r:'Gastronomía',slug:'',ejemplo:true},
+ ej_tur:{n:'Turismo de Ejemplo',r:'Hotelería y turismo',slug:'',ejemplo:true}
 };
+/* direcciones PÚBLICAS tomadas de las fichas de camaratemuco.cl (20-11-2026); las demás quedan "por confirmar" */
+const DIR={diagnopro:'Las Heras 453',pascual:'Las Rosas 0554',dellmaggio:'Manuel Bulnes 489',super:'San Martín 0118',alemana:'Manuel Montt 850, local 104',topp:'Senador Estébanez 580',massmann:'Manuel Bulnes 965, Galería Massmann',hotelrp:'Diego Portales 779',rdproject:'Hochstetter 560, of. 801',dijar:'Av. Caupolicán 110, local 3',lazo:'Diego Portales 669, local 2',mitta:'Longitudinal Sur 2715',nicolas:'General Mackenna 420',madonna:'Thiers 898',corralero:'Vicuña Mackenna 811'};
+Object.entries(DIR).forEach(([k,d])=>{if(EMP[k])EMP[k].dir=d});
+/* titulares de la región y economía: solo título + medio + enlace a la fuente (RSS públicos, captura 20-11-2026) */
+const ARA=[
+ {t:'Cámara de Comercio de La Araucanía advierte riesgos de desabastecimiento por paralización del transporte de carga',s:'Radio Universal',f:'12 nov',u:'https://news.google.com/rss/articles/CBMizgFBVV95cUxNWXZlSF93X1JnNE41bVBhcWwzeHZmRExmUHJtS0cwbTZESGg1OEJ6ODV0T0FtV2lheHo5eHlLUlVIMGpLVlNjWmpkRlNHbHFiUDVqNC1vU3REWnBPYk9sRzNKZzFFdzROd2dROUJIcWp6QVdELWViQ0V6U0FFR3BySDh6cm9FR2N1M0hHZG5fN0pmR3hlbFF0ZmF2RlRDSXhTUzJYZEFtMTE0SU45YlNPbmZJLTdHYXdYa18xN3gxNGlMVUV1alY3dzRTemphUQ?oc=5'},
+ {t:'Ventas del comercio regional siguen debilitadas en septiembre con caídas en Biobío y La Araucanía',s:'G5noticias',f:'16 nov',u:'https://news.google.com/rss/articles/CBMi-gFBVV95cUxQc2gtVldwMVkwaGZ0V0Vycy1vc0poYTZZU2FWcTJCMWtOY1pSNFU1M1lKT2ZVMTRES0NJU0xHRnp5RWtQR1k1SUV6Q29YeGdmMzh6RzRpTWdPT0h3Mi1pbXRwaHpGYURTOG9zeEFldno3VXZCUjN2cWtQZGUtSWdLWDctVmpDZ0hYdjctQWNibllTdDJUbDY3TmRYVnlSRFdZMEMzbVJXUnZHSGt0bDFxejhjOVUwdmlITXVzd0ZDNDNsaUxCV3lWY3BEOTlDUjBHOVVTUThvOXE5ZEx3ZmQzNm1wUGxMYVVyYXZNM0lGdnJna1BINGVsQkZ3?oc=5'},
+ {t:'CChC proyecta un mejor 2027 para la construcción y llama a acelerar la inversión pública en La Araucanía',s:'TemucoDiario.cl',f:'17 nov',u:'https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTXJjVThDYWpNel9fQkRzXzdXSW4ybjFGUjJEOWNtelVUcWJtRzdLanRBSm9WT1JpRWM5RmxncUFSYzU2WHVsTy11WEtCZnEyM2VLT3NIaFRjTFhqdWIybHlyUF9Ycl9CckNHb09GMkJhYVRJdGtKc2NyMWNpNUVJWGEtcFZMTEpNemJobTB2Y1dLbVZRdFNQN1lsTWhZUFlkbThoLXdyZWowbUdyejJvV191dWlwM2VCRXRZb1lXTTRvaG9vYlExZERsbTJ0TVNCcy1aM05Haw?oc=5'},
+ {t:'Dólar supera los $1.020 en sesión volátil y alcanza nuevo máximo desde 2022',s:'Diario Financiero',f:'20 nov',u:'https://www.df.cl/mercados/bolsa-monedas/dolar-hoy-ctefc'},
+ {t:'En Temuco lanzan plataforma para denunciar a comercio irregular',s:'TemucoDiario.cl',f:'09 nov',u:'https://news.google.com/rss/articles/CBMioAFBVV95cUxORHZ3eV85QkRqbXQyam5XcVZuaU5CNjIxV21QblpMNUYzS1Q3N3l2UFR4OVN4OXBnMnEtZEc0TnFkTkgxTXRHMDRRXzk5M3RyQ1JMWkZvMVRQN3BYemsyc0hpVVZGa1lZWm9wYkhfQjNfTkc0R2hoZlVWXzFiNDJFbVhLZThSeDF6VjJWR3B5OTAtUmg5ckxlaXc5TFpQYlVx?oc=5'}
+];
 const CONV=[
  {id:1,e:'diagnopro',d:'10% dcto. resonancia magnética'},{id:2,e:'diagnopro',d:'15% dcto. scanner / TAC'},
  {id:3,e:'pascual',d:'10% de descuento'},{id:4,e:'dellmaggio',d:'10% de descuento'},
@@ -980,12 +1096,19 @@ const DEF={rol:'visitante',favs:[],dest:[14,13,16,9,22],ban:{b1:true,b2:true,b3:
  pubs:[
   {id:'p1',emp:'ejemplo',tipo:'Producto',t:'Canasta de productos locales de La Araucanía',d:'Mermeladas, miel y café tostado en Temuco. Ideal para regalos corporativos.',ben:'10% para socios CCT',est:'publicada',ic:'store',bg:'#E7F3E3'},
   {id:'p2',emp:'ejemplo',tipo:'Servicio',t:'Asesoría para postular a fondos Sercotec',d:'Acompañamiento en la formulación y rendición de proyectos para pymes.',ben:'Primera sesión sin costo para socios',est:'publicada',ic:'folder',bg:'#E8ECF8'},
-  {id:'p3',emp:'ejemplo',tipo:'Novedad',t:'Taller de vitrina digital para pymes',d:'Aprende a fotografiar tus productos y a escribir tu ficha.',ben:'',est:'revision',ic:'camera',bg:'#F1ECE2'}
- ],fichaPend:true};
-let S;
-try{S=Object.assign(structuredClone(DEF),JSON.parse(localStorage.getItem('cct-vitrina-ed')||'{}'))}catch(_){S=structuredClone(DEF)}
+  {id:'p3',emp:'ejemplo',tipo:'Novedad',t:'Taller de vitrina digital para pymes',d:'Aprende a fotografiar tus productos y a escribir tu ficha.',ben:'',est:'revision',ic:'camera',bg:'#F1ECE2'},
+  {id:'p4',emp:'ej_resto',tipo:'Promoción',t:'Menú de Navidad para empresas',d:'Cena navideña para equipos de 10 a 40 personas, del 1 al 23 de diciembre. Incluye pan de pascua para llevar.',ben:'10% para socios CCT',est:'publicada',foto:'img/n_navidad.jpg',dias:1},
+  {id:'p5',emp:'ej_tur',tipo:'Producto',t:'Fin de semana en Pucón',d:'2 noches con traslado desde Temuco y excursión a la base del volcán Villarrica.',ben:'15% para socios CCT',est:'publicada',foto:'img/n_pucon.jpg',dias:2},
+  {id:'p6',emp:'ej_resto',tipo:'Novedad',t:'Nuevo menú ejecutivo de temporada',d:'Empanadas de horno, plato de fondo y postre, de lunes a viernes.',ben:'',est:'publicada',foto:'img/n_empanadas.jpg',dias:4},
+  {id:'p7',emp:'ej_resto',tipo:'Novedad',t:'Ahora abrimos los domingos',d:'Café de especialidad y pastelería de 10:00 a 14:00 hrs.',ben:'Café gratis con tu credencial',est:'publicada',foto:'img/n_cafe.jpg',dias:6}
+ ],fichaPend:true,met:{vis:128,wa:23,tel:9,map:14,web:6},dv:2};
+let S,RAW={};
+try{RAW=JSON.parse(localStorage.getItem('cct-vitrina-ed')||'{}')||{}}catch(_){}
+S=Object.assign(structuredClone(DEF),RAW);
 const save=()=>{try{localStorage.setItem('cct-vitrina-ed',JSON.stringify(S))}catch(_){}}
-const UI={hIx:0,f:{q:'',rub:'',ver:'todo',sort:'rel'},admTab:'cola'};
+/* demo ya usada en este navegador: suma las publicaciones de ejemplo nuevas sin borrar lo hecho */
+if(RAW.pubs&&RAW.dv!==2){DEF.pubs.forEach(p=>{if(!S.pubs.some(x=>x.id===p.id))S.pubs.push(structuredClone(p))});S.dv=2;save()}
+const UI={hIx:0,f:{q:'',rub:'',ver:'todo',sort:'rel'},nt:'soc'};
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* aplica en memoria lo que la Cámara editó en el panel (demo: guardado en este navegador) */
 function applyData(){
@@ -1020,10 +1143,24 @@ function closeSheet(){$('#sheet').classList.remove('on');$('#ov').classList.remo
 $('#ov').onclick=closeSheet;
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSheet();$('#appframe').classList.remove('on')}});
 function go(h){location.hash=h}
+/* botón Volver: pila propia de navegación (las pestañas internas también son un paso) */
+const NAV=[location.hash||'#/'];
+addEventListener('hashchange',()=>{const h=location.hash||'#/';if(NAV.length>1&&NAV[NAV.length-2]===h)NAV.pop();else if(NAV[NAV.length-1]!==h)NAV.push(h)});
+function goBack(){if(NAV.length>1)history.back();else go('#/')}
+function addBack(seg){if(!seg[0])return;const pg=document.querySelector('#view .pg');if(pg&&!pg.querySelector(':scope>.back'))pg.insertAdjacentHTML('afterbegin',`<button class="back" onclick="goBack()">${I('back')} Volver</button>`)}
+const HQ=()=>Object.fromEntries(new URLSearchParams((location.hash||'').split('?')[1]||''));
+/* dirección y Google Maps */
+const mapsUrl=k=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(EMP[k].dir+', '+(EMP[k].com||'Temuco')+', Chile');
+/* métricas de "Mi vitrina": se cuenta el evento, nunca quién (en la demo solo para la Empresa de Ejemplo) */
+function track(k,ev){if(k!=='ejemplo'||!S.met)return;S.met[ev]=(S.met[ev]||0)+1;save()}
+function hace(p){const d=p.ts?Math.floor((Date.now()-p.ts)/864e5):(p.dias??7);return d<=0?'Hoy':d===1?'Hace 1 día':`Hace ${d} días`}
+function copiar(t,msg){const ok=()=>toast(msg||'Copiado');try{navigator.clipboard.writeText(t).then(ok,()=>{fbCopy(t);ok()})}catch(_){fbCopy(t);ok()}}
+function fbCopy(t){const a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(_){}a.remove()}
 function toggleFav(id,ev){if(ev){ev.preventDefault();ev.stopPropagation()}const i=S.favs.indexOf(id);if(i>=0){S.favs.splice(i,1);toast('Quitado de favoritos')}else{S.favs.push(id);toast('Guardado en favoritos')}save();render(true)}
 function openWA(msg){window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener');toast('Abriendo WhatsApp con el mensaje listo')}
 function contacto(tipo,k){
   const n=k?EMP[k].n:'la Cámara';
+  if(k)track(k,tipo);
   if(tipo==='wa'){openWA(`Hola ${n}, los encontré en la Vitrina de la Cámara de Comercio de Temuco y quiero más información.`);return}
   sheet('Llamar',`<p>En la versión final se llama al teléfono que <b>${esc(n)}</b> publique en su ficha.</p><p class="muted" style="font-size:13.5px">Prototipo: aún no se usan teléfonos reales de las empresas. El contacto va directo a la empresa; la Cámara no guarda los datos del visitante.</p>`,`<button class="btn n" onclick="closeSheet()">Entendido</button>`);
 }
@@ -1051,17 +1188,36 @@ function bc(c,tone,big){
 function ec(k){
   const E=EMP[k],n=convOf(k).length;
   return `<a class="ec" href="#/e/${k}" draggable="false" data-r>${wlogo(k)}
-    <div><h3>${esc(E.n)}</h3><div class="meta">${esc(E.r)} · Temuco</div></div>
+    <div><h3>${esc(E.n)}</h3><div class="meta">${esc(E.r)}${E.ejemplo?' · <span class="tag dot">Ejemplo</span>':''}</div><div class="eadr">${I('pin')} ${E.dir?esc(E.dir)+', '+esc(E.com||'Temuco'):'Dirección por confirmar'}</div></div>
     <div class="ft"><span class="ver">${I('shield')} Socio verificado</span><span>${n} beneficio${n>1?'s':''} ${I('arr').replace('class="i"','class="i" style="width:15px;height:15px;vertical-align:-3px"')}</span></div></a>`;
 }
 function pc(p){
   const k=p.emp||'ejemplo',E=EMP[k];
   return `<div class="pc" data-r>${p.foto?`<div style="height:190px;overflow:hidden"><img src="${p.foto}" alt="" style="width:100%;height:100%;object-fit:cover"></div>`:`<div class="tone" style="background:${p.bg||'#F1ECE2'}">${I(p.ic||'store')}</div>`}<div class="bd">
-  <span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${esc(p.tipo)}</span>
+  <span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${esc(p.tipo)}</span>${p.est==='publicada'?` <span class="tag" style="margin-left:8px">${hace(p)}</span>`:''}
   <h3>${esc(p.t)}</h3><p>${esc(p.d)}</p>${p.ben?`<div class="bn">${esc(p.ben)}</div>`:''}
   <p style="margin-top:12px"><a href="#/e/${k}" class="lnk" style="font-size:13px">${esc(E.n)}</a></p>
   ${p.est==='publicada'?`<div style="margin-top:12px"><button class="btn v sm" onclick="cotizar('${p.id}')">${I('wa')} Pedir cotización</button></div>`:''}</div></div>`;
 }
+/* Novedades: 1 bloque, 3 pestañas (socios · Cámara · región) para no saturar el inicio */
+const NT=[['soc','De los socios'],['cam','La Cámara'],['ara','Región y economía']];
+function nvSoc(p){const k=p.emp||'ejemplo',E=EMP[k];
+  return `<a class="nv" href="#/e/${k}" draggable="false"><div class="nvi">${p.foto?`<img src="${p.foto}" alt="" loading="lazy">`:`<span class="nvt" style="background:${p.bg||'#F1ECE2'}">${I(p.ic||'store')}</span>`}<span class="nvb">${esc(p.tipo)}</span></div>
+  <div class="nvd"><span class="nvm">${mono(k)}<span><b>${esc(E.n)}</b><small>${hace(p)} · <span class="tag dot" style="font-size:10px">Ejemplo</span></small></span></span><h3>${esc(p.t)}</h3>${p.ben?`<span class="bn">${esc(p.ben)}</span>`:''}</div></a>`}
+function nvCam(n){return `<a class="nv" href="#/eventos" draggable="false"><div class="nvi"><img src="${n.img}" alt="" loading="lazy"><span class="nvb">Cámara</span></div><div class="nvd"><span class="nvm"><span><b>Cámara de Comercio Temuco</b><small>${esc(n.f)} · <span class="tag dot" style="font-size:10px">Ejemplo</span></small></span></span><h3>${esc(n.t)}</h3></div></a>`}
+function nvAra(a){return `<a class="nv nva" href="${a.u}" target="_blank" rel="noopener" draggable="false"><div class="nvd"><span class="nvsrc">${I('news')} ${esc(a.s)} · ${esc(a.f)}</span><h3>${esc(a.t)}</h3><span class="lnk" style="font-size:13px;margin-top:auto">Leer en ${esc(a.s)} ${I('arrne')}</span></div></a>`}
+function nvCards(t){
+  if(t==='cam')return NEWS.map(nvCam).join('');
+  if(t==='ara')return ARA.map(nvAra).join('');
+  const ps=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')).sort((a,b)=>(a.ts?(Date.now()-a.ts)/864e5:(a.dias??7))-(b.ts?(Date.now()-b.ts)/864e5:(b.dias??7)));
+  return ps.map(nvSoc).join('')||'<p class="muted">Aún no hay publicaciones.</p>';
+}
+function novBlock(){const t=UI.nt||'soc';
+  return `<div class="ntabs" role="tablist" aria-label="Novedades">${NT.map(([v,l])=>`<button role="tab" aria-selected="${t===v}" class="${t===v?'on':''}" onclick="setNT('${v}')">${l}</button>`).join('')}</div>
+  <div class="rail nrail" id="nrail">${nvCards(t)}</div>
+  <p class="nnote" id="nnote">${t==='ara'?'Solo el titular y el enlace a la fuente original; no se reproduce el contenido. En la versión final se actualiza solo desde los RSS públicos de cada medio. Captura del 20-11-2026.':t==='cam'?'Las publica la Cámara desde su panel.':'Las publica cada socio desde “Mi empresa”; la Cámara las revisa antes de mostrarlas.'}</p>`}
+function setNT(t){UI.nt=t;document.querySelectorAll('.ntabs button').forEach((b,i)=>{const on=NT[i][0]===t;b.classList.toggle('on',on);b.setAttribute('aria-selected',on)});
+  const r=$('#nrail');if(!r)return;r.style.opacity=0;setTimeout(()=>{r.innerHTML=nvCards(t);r.scrollLeft=0;r.style.opacity=1;const n=$('#nnote');if(n)n.outerHTML=novBlock().match(/<p class="nnote"[\s\S]*<\/p>/)[0]},160)}
 function evRow(e){return `<div class="ev" data-r><div class="dt"><b>${e.d}</b><span>${e.m}</span></div><div><span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${esc(e.k)}</span><h3>${esc(e.t)}</h3><span class="pl">${I('pin')} ${esc(e.l)}</span></div></div>`}
 
 /* ===================== Inicio ===================== */
@@ -1103,6 +1259,11 @@ function vInicio(){
     <div class="bento">${dest.map((c,i)=>bc(c,i?TONES[i]:'t-navy',i===0)).join('')}</div>
   </div></section>
 
+  <section class="s" id="novedades"><div class="wrap">
+    <div class="sh" data-r><div><div class="kick">Novedades</div><h2>Lo nuevo <em>en el círculo de socios</em></h2></div><a class="lnk" href="#/promociones">Ver publicaciones ${AR}</a></div>
+    <div data-r>${novBlock()}</div>
+  </div></section>
+
   <section class="s"><div class="wrap">
     <div class="sh" data-r><div><div class="kick">Rubros</div><h2>Encuentra empresas <em>por lo que necesitas</em></h2></div><a class="lnk" href="#/explorar">Explorar todo ${AR}</a></div>
     <div class="rlist" data-r>${rubs.map(([r,n])=>`<button class="rl" onclick="UI.f={q:'',rub:'${r}',ver:'todo',sort:'rel'};go('#/explorar')"><span>${esc(r)}</span><sup>${n}</sup></button>`).join('')}</div>
@@ -1123,7 +1284,7 @@ function vInicio(){
     <div class="kick" style="color:#9BE58C" data-r>Más de 100 años</div>
     <h2 data-r>¿Tienes una empresa en La Araucanía? <em>Súmate a la Cámara.</em></h2>
     <p data-r>Aparece en la vitrina con sello de empresa verificada, publica tus productos y accede a los beneficios de los socios.</p>
-    <div class="acts" data-r><a class="btn v" href="#/hazte-socio">Hazte socio ${AR}</a><a class="btn ow" href="#/cuenta" onclick="setRol('socio','emp')">Ya soy socio: publicar mi empresa</a></div>
+    <div class="acts" data-r><a class="btn v" href="#/hazte-socio">Hazte socio ${AR}</a><a class="btn ow" href="#/cuenta?t=emp" onclick="event.preventDefault();setRol('socio','emp')">Ya soy socio: publicar mi empresa</a></div>
   </div></section>
 
   <div class="wrap"><div class="news" data-r><div><h3>Recibe los nuevos beneficios</h3><p>Te avisamos cuando se sumen comercios y descuentos. Sin spam.</p></div>
@@ -1210,9 +1371,25 @@ function vBeneficio(id){
 function vEmpresa(k){
   const E=EMP[k];if(!E)return notFound();
   const cs=convOf(k),on=S.favs.includes('e'+k);
+  if(UI.lastVis!==location.hash){UI.lastVis=location.hash;track(k,'vis')}
+  const adr=E.dir?`${esc(E.dir)}, ${esc(E.com||'Temuco')}`:'';
   return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<a href="#/empresas">Empresas</a>${I('chev')}<span>${esc(E.n)}</span></nav>
-  <div class="eh">${wlogo(k,'big')}<div><div class="kick">${esc(E.r)}${E.alt?' · '+esc(E.alt):''}</div><h1>${esc(E.n)}</h1><p class="muted" style="margin:8px 0 0;display:flex;gap:14px;align-items:center"><span class="ver">${I('shield')} Socio verificado CCT</span> Temuco</p></div>
-    <div class="actions"><button class="btn v" onclick="contacto('wa','${k}')">${I('wa')} WhatsApp</button><button class="btn o" onclick="contacto('tel','${k}')">${I('phone')} Llamar</button><a class="ibtn" href="${fichaUrl(k)}" target="_blank" rel="noopener" aria-label="Ficha web">${I('globe')}</a><button class="ibtn fav ${on?'on':''}" aria-label="Favorito" onclick="toggleFav('e${k}')">${I('heart')}</button></div></div>
+  <div class="eh">${wlogo(k,'big')}<div><div class="kick">${esc(E.r)}${E.alt?' · '+esc(E.alt):''}</div><h1>${esc(E.n)}</h1><p class="muted" style="margin:8px 0 0;display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span class="ver">${I('shield')} Socio verificado CCT</span>${adr?`<a class="ehadr" href="${mapsUrl(k)}" target="_blank" rel="noopener" onclick="track('${k}','map')">${I('pin')} ${adr}</a>`:'Temuco'}</p></div>
+    <div class="actions"><button class="btn v" onclick="contacto('wa','${k}')">${I('wa')} WhatsApp</button><button class="btn o" onclick="contacto('tel','${k}')">${I('phone')} Llamar</button><a class="ibtn" href="${fichaUrl(k)}" target="_blank" rel="noopener" aria-label="Ficha web" onclick="track('${k}','web')">${I('globe')}</a><button class="ibtn fav ${on?'on':''}" aria-label="Favorito" onclick="toggleFav('e${k}')">${I('heart')}</button></div></div>
+  <div class="dcard" data-r>
+    <div class="dmain"><div class="kick">Dirección</div>
+      ${adr?`<a class="dadr" href="${mapsUrl(k)}" target="_blank" rel="noopener" onclick="track('${k}','map')"><span class="dpin">${I('pin')}</span><span><b>${esc(E.dir)}</b><small>${esc(E.com||'Temuco')} · La Araucanía</small></span></a>
+      <div class="actions" style="margin-top:16px"><a class="btn v" href="${mapsUrl(k)}" target="_blank" rel="noopener" onclick="track('${k}','map')">${I('nav')} Cómo llegar</a><button class="btn g" onclick="copiar(EMP['${k}'].dir+', '+(EMP['${k}'].com||'Temuco'),'Dirección copiada')">${I('copy')} Copiar dirección</button></div>
+      <p class="muted" style="font-size:12.5px;margin:12px 0 0">Abre Google Maps con la ruta desde donde estás.</p>`
+      :`<div class="dadr" style="cursor:default"><span class="dpin">${I('pin')}</span><span><b>Por confirmar</b><small>La empresa aún no publica su dirección</small></span></div>`}
+    </div>
+    <dl class="dlist">
+      <div><dt>Rubro</dt><dd>${esc(E.r)}${E.alt?'<br><small>'+esc(E.alt)+'</small>':''}</dd></div>
+      <div><dt>Contacto</dt><dd><button class="lnk" onclick="contacto('wa','${k}')">${I('wa')} WhatsApp</button> <button class="lnk" onclick="contacto('tel','${k}')">${I('phone')} Llamar</button></dd></div>
+      <div><dt>Beneficios para socios</dt><dd>${cs.length?`${cs.length} convenio${cs.length>1?'s':''} · hasta ${Math.max(...cs.map(c=>c.pct))}%`:'Sin convenios por ahora'}</dd></div>
+      <div><dt>Más información</dt><dd><a class="lnk" href="${fichaUrl(k)}" target="_blank" rel="noopener" onclick="track('${k}','web')">${E.slug?'Ficha en camaratemuco.cl':'camaratemuco.cl'} ${I('arrne')}</a></dd></div>
+    </dl>
+  </div>
   ${E.foto?`<div class="dt-img" style="aspect-ratio:21/8;max-height:none;margin:-10px 0 44px"><img src="${E.foto}" alt="${esc(E.n)}"></div>`:''}
   <div class="sh"><div><div class="kick">Beneficios para socios</div><h2>${cs.length?`${cs.length} beneficio${cs.length>1?'s':''} <em>para socios</em>`:'Sin convenios <em>por ahora</em>'}</h2></div></div>
   ${cs.length?`<div class="grid g3 cgrid">${cs.map((c,i)=>bc(c,TONES[i])).join('')}</div>`:''}
@@ -1247,7 +1424,9 @@ const NEWS=[
 ];
 function vEventos(){return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Noticias y agenda</span></nav>${ph('Noticias <em>y agenda</em>','Noticias institucionales y actividades de la Cámara · contenido de ejemplo, lo publica la Cámara desde su panel')}
   <div class="grid g3" style="margin-bottom:56px">${NEWS.map((n,i)=>`<article class="pc" data-r style="--d:${i}"><div style="aspect-ratio:16/10;overflow:hidden"><img src="${n.img}" alt="" style="width:100%;height:100%;object-fit:cover"></div><div class="bd"><span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${n.f}</span><h3>${esc(n.t)}</h3><p>${esc(n.d)}</p></div></article>`).join('')}</div>
-  <div class="sh"><div><div class="kick">Agenda</div><h2>Próximas <em>actividades</em></h2></div></div>${EVT.map(evRow).join('')}</div>`}
+  <div class="sh"><div><div class="kick">Agenda</div><h2>Próximas <em>actividades</em></h2></div></div>${EVT.map(evRow).join('')}
+  <section class="s" style="padding-top:64px"><div class="sh"><div><div class="kick">Región y economía</div><h2>Titulares <em>de la semana</em></h2><p>Enlaces a la nota original en cada medio.</p></div></div>
+  <div class="grid g3">${ARA.map(nvAra).join('')}</div></section></div>`}
 function vPromos(){
   const t=UI.pt||'',list=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')&&(!t||p.tipo===t));
   return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Promociones</span></nav>${ph('Promociones <em>y productos</em>','Lo que publican las empresas socias, revisado por la Cámara. Pide tu cotización directo por WhatsApp.')}
@@ -1280,13 +1459,13 @@ function vAyuda(){
 }
 
 /* ===================== Cuenta / roles ===================== */
-function vCuenta(){
+function vCuenta(force){
   if(S.rol==='camara')return vAdmin();
   if(S.rol!=='socio')return `<div class="wrap pg" style="max-width:700px"><div class="panel" style="text-align:center;padding:44px 28px">
     <span style="color:var(--azul);display:inline-grid">${I('user')}</span><h2 style="font-family:var(--serif);font-weight:400;font-size:36px;margin:10px 0">Ingreso <em style="color:var(--azul)">socios</em></h2><p class="muted">Espacio privado para empresas socias: credencial digital, beneficios y la vitrina de tu empresa. La Cámara administra socios, convenios y publicaciones. En esta demo el ingreso es simulado.</p>
     <div class="actions" style="justify-content:center;margin-top:20px"><button class="btn v" onclick="setRol('socio')">Entrar como socio</button><button class="btn g" onclick="setRol('camara')">Entrar como Cámara</button></div></div></div>`;
-  const tab=UI.ctab||'cred';
-  const tabs=`<div class="tabs">${[['cred','Mi credencial'],['emp','Mi empresa']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="UI.ctab='${v}';render(true)">${l}</button>`).join('')}</div>`;
+  const tab=force||(HQ().t==='emp'?'emp':'cred');
+  const tabs=`<div class="tabs">${[['cred','Mi credencial'],['emp','Mi empresa']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="go('#/cuenta?t=${v}')">${l}</button>`).join('')}</div>`;
   const head=`<nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Mi espacio</span></nav>${ph('Mi <em>espacio de socio</em>','Credencial, beneficios y la vitrina de tu empresa.')}${tabs}`;
   if(tab==='emp')return vMiEmpresa(head);
   setTimeout(drawQR,0);
@@ -1294,11 +1473,23 @@ function vCuenta(){
   <div class="two"><div>
     <div class="cred" data-r><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
       <div class="bd"><div class="qr" id="qr"></div><div><h3>Empresa de Ejemplo SpA</h3><small>Socio N° 0000 · desde 2019</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>
-    <p class="muted" style="font-size:13px;max-width:430px;margin-top:14px">Muéstrala en el comercio para obtener tu beneficio; el QR permite verificar que el socio está activo. Datos de ejemplo.</p></div>
+    <p class="muted" style="font-size:13px;max-width:430px;margin-top:14px">Muéstrala en el comercio para obtener tu beneficio; el QR permite verificar que el socio está activo. Datos de ejemplo.</p>
+    ${cuotaHTML()}</div>
   <div><div class="kick" style="margin-top:12px">Beneficios usados</div>
     ${[[16,'12 nov'],[13,'28 oct']].map(([id,f])=>{const c=C(id);return `<a class="ev" href="#/b/${id}" style="grid-template-columns:72px 1fr auto;align-items:center"><span class="dt"><b style="font-size:40px">${c.pct}<small style="font-size:.45em">%</small></b></span><span><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b><br><span class="muted" style="font-size:13.5px">${esc(c.d)} · ${f}</span> <span class="tag dot" style="margin-left:6px">Ejemplo</span></span>${I('chev')}</a>`}).join('')}
     <div class="actions" style="margin-top:22px"><a class="btn n" href="#/beneficios">Ver todos los beneficios ${AR}</a><button class="btn g" onclick="setRol('visitante')">Salir</button></div></div></div></div>`;
 }
+/* Cuota de socio: link de pago externo de la Cámara o transferencia con "copiar datos" (sin pasarela integrada) */
+const BANCO=[['Titular','Cámara de Comercio, Servicios y Turismo de Temuco A.G.'],['RUT','00.000.000-0'],['Banco','Banco de ejemplo'],['Tipo de cuenta','Cuenta corriente'],['N° de cuenta','00-000-00000-0'],['Correo para el comprobante','administracion@camaratemuco.cl'],['Asunto','Cuota socio N° 0000']];
+function cuotaHTML(){return `<div class="panel cuota" data-r><div class="cuh"><span class="ic">${I('card')}</span><span><b>Cuota de socio</b><small>Al día hasta noviembre 2026 · <span class="tag dot" style="font-size:10px">Ejemplo</span></small></span></div>
+  <div class="cum"><span>Próxima cuota</span><b>Diciembre 2026</b></div>
+  <div class="actions" style="margin-top:14px"><button class="btn v" onclick="pagarLink()">${I('link')} Pagar en línea</button><button class="btn o" onclick="transferir()">${I('bank')} Transferir</button></div></div>`}
+function pagarLink(){sheet('Pagar en línea',`<p>Se abre el <b>link de pago de la Cámara</b> (Webpay, Flow o Khipu, el que la Cámara ya use) con tu cuota cargada.</p><p class="muted" style="font-size:13.5px">Demo: no hay cobro real. En la versión final el link lo entrega la Cámara; la app no guarda datos de tarjetas.</p>`,`<button class="btn g" onclick="closeSheet()">Cancelar</button><button class="btn v" onclick="closeSheet();toast('Pago simulado: en la versión final abre el link de la Cámara')">${I('link')} Ir al pago</button>`)}
+function copiarBanco(){copiar(BANCO.map(([a,b])=>a+': '+b).join('\n'),'Datos copiados')}
+function transferir(){
+  sheet('Transferir la cuota',`<p class="muted" style="margin-top:0;font-size:14px">Copia los datos en la app de tu banco. Toca cada dato para copiarlo.</p><div class="bk">${BANCO.map(([a,b],i)=>`<button class="bkr" onclick="copiar(BANCO[${i}][1],'${a} copiado')"><span><small>${a}</small><b>${esc(b)}</b></span>${I('copy')}</button>`).join('')}</div>
+  <p class="muted" style="font-size:12.5px">Datos bancarios de ejemplo: los reales los entrega la Cámara. Después de transferir, envía el comprobante al correo indicado.</p>`,
+  `<button class="btn g" onclick="closeSheet()">Cerrar</button><button class="btn n" onclick="copiarBanco()">${I('copy')} Copiar todos</button>`)}
 function drawQR(){const el=$('#qr');if(!el)return;el.innerHTML='';if(window.QRCode)new QRCode(el,{text:'https://www.camaratemuco.cl/?demo=credencial-ejemplo',width:112,height:112,colorDark:'#0E2470',colorLight:'#ffffff'});else el.innerHTML=`<div style="width:112px;height:112px;display:grid;place-items:center;color:#0E2470">${I('qr')}</div>`}
 function vMiEmpresa(head){
   const est={publicada:'<span class="tag v dot">Publicada</span>',revision:'<span class="tag dot">En revisión</span>',rechazada:'<span class="tag r dot">Rechazada</span>'};
@@ -1307,10 +1498,24 @@ function vMiEmpresa(head){
   <div class="eh"><span class="av" style="background:var(--verde)">EE</span><div><div class="kick">Servicios · Temuco · perfil comercial</div><h1>Empresa de Ejemplo SpA</h1><p style="margin:8px 0 0">${S.fichaPend?'<span class="tag dot">Cambios de ficha en revisión</span>':'<span class="tag v dot">Ficha aprobada</span>'} <a class="lnk" href="#/e/ejemplo" style="margin-left:10px;font-size:13px">Ver mi ficha pública ${AR}</a></p></div>
     <div class="actions"><button class="btn v" onclick="nuevaPub()">Nueva publicación ${AR}</button><button class="btn o" onclick="editarFicha()">Editar perfil</button></div></div>
   <div class="kpis"><div class="kpi"><b>${mine.filter(p=>p.est==='publicada').length}</b><span>Publicadas</span></div><div class="kpi"><b>${mine.filter(p=>p.est==='revision').length}</b><span>En revisión</span></div><div class="kpi"><b>${mine.filter(p=>p.est==='rechazada').length}</b><span>Rechazadas</span></div><div class="kpi"><b>${CV().length}</b><span>Beneficios disponibles para ti</span></div></div>
+  ${miVitrina()}
   <div class="kick">Mis publicaciones</div>
-  <table class="tbl"><thead><tr><th>Publicación</th><th>Tipo</th><th>Beneficio socio</th><th>Estado</th></tr></thead><tbody>
-  ${mine.map(p=>`<tr><td><b style="color:var(--ink)">${esc(p.t)}</b>${p.foto?' <span class="tag v">con foto</span>':''}${p.est==='rechazada'&&p.mot?`<br><small class="muted">Motivo: ${esc(p.mot)}</small>`:''}</td><td>${esc(p.tipo)}</td><td>${esc(p.ben||'—')}</td><td>${est[p.est]}</td></tr>`).join('')}
+  <table class="tbl"><thead><tr><th>Publicación</th><th>Tipo</th><th>Beneficio socio</th><th>Vistas</th><th>Estado</th></tr></thead><tbody>
+  ${mine.map((p,i)=>`<tr><td><b style="color:var(--ink)">${esc(p.t)}</b>${p.foto?' <span class="tag v">con foto</span>':''}${p.est==='rechazada'&&p.mot?`<br><small class="muted">Motivo: ${esc(p.mot)}</small>`:''}</td><td>${esc(p.tipo)}</td><td>${esc(p.ben||'—')}</td><td>${p.est==='publicada'?[64,41,18,12][i%4]:'—'}</td><td>${est[p.est]}</td></tr>`).join('')}
   </tbody></table></div>`;
+}
+/* "Mi vitrina": cuántos vieron la ficha y tocaron contacto. Se cuentan eventos, nunca quién (Ley 21.719) */
+function miVitrina(){
+  const m=S.met||DEF.met,extra=Math.max(0,m.vis-DEF.met.vis);
+  const W=[18,22,19,27,24,31,29,34+extra],mx=Math.max(...W),lab=['8 sem','','','','','','','Esta sem.'];
+  const K=[['Visitas a tu ficha',m.vis,'chart'],['Toques en WhatsApp',m.wa,'wa'],['Llamadas',m.tel,'phone'],['Cómo llegar',m.map,'pin'],['Sitio web',m.web,'globe']];
+  return `<div class="kick">Mi vitrina · últimos 30 días</div>
+  <div class="mvit panel" data-r>
+    <div class="mvk">${K.map(([l,v,ic])=>`<div><span class="mvl">${I(ic)} ${l}</span><b>${v.toLocaleString('es-CL')}</b></div>`).join('')}</div>
+    <figure class="mvc" aria-label="Visitas a tu ficha por semana, últimas 8 semanas"><figcaption>Visitas a tu ficha por semana</figcaption>
+      <div class="bars">${W.map((v,i)=>`<div class="bw" title="${i===7?'Esta semana':'Hace '+(7-i)+' sem.'}: ${v} visitas"><span class="bv">${i===7?v:''}</span><i style="height:${Math.round(v/mx*100)}%"></i><span class="bl">${lab[i]}</span></div>`).join('')}</div></figure>
+    <p class="muted" style="font-size:12.5px;margin:12px 0 0;grid-column:1/-1">Datos de ejemplo. En la demo, entrar a la ficha de la Empresa de Ejemplo o tocar sus botones suma aquí. Se cuenta el toque, nunca quién lo hizo.</p>
+  </div>`;
 }
 function nuevaPub(){
   sheet('Nueva publicación',`<form id="np" onsubmit="event.preventDefault();guardarPub(this)">
@@ -1340,11 +1545,11 @@ function vAdmin(){
   if(S.rol!=='camara')return `<div class="wrap pg"><div class="panel" style="text-align:center"><h2 style="font-family:var(--serif);font-weight:400">Administración</h2><p class="muted">Solo para la Cámara.</p><button class="btn n" onclick="setRol('camara')">Ver como Cámara</button></div></div>`;
   const pend=S.pubs.filter(p=>p.est==='revision');
   const cola=[...(S.fichaPend?[{k:'ficha',t:'Cambios en el perfil de Empresa de Ejemplo SpA',tipo:'Perfil'}]:[]),...pend.map(p=>({k:p.id,t:p.t,tipo:p.tipo,foto:p.foto}))];
-  const tab=UI.admTab;
+  const tab=['cola','soc','conv','dest','ban'].includes(HQ().t)?HQ().t:'cola';
   const keys=Object.keys(EMP).sort((a,b)=>EMP[a].n.localeCompare(EMP[b].n));
   return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Administración</span></nav>${ph('Panel <em>de la Cámara</em>','Socios, convenios, publicaciones y contenido de la vitrina')}
   <div class="kpis"><div class="kpi"><b>${EK().length}</b><span>Socios visibles en la vitrina</span></div><div class="kpi"><b>${CV().length}</b><span>Convenios activos</span></div><div class="kpi"><b style="color:${cola.length?'#B7791F':'var(--verde-osc)'}">${cola.length}</b><span>Por revisar</span></div><div class="kpi"><b>${(S.susp||[]).length}</b><span>Socios suspendidos</span></div></div>
-  <div class="tabs">${[['cola',`Por revisar (${cola.length})`],['soc','Socios'],['conv','Convenios'],['dest','Destacados'],['ban','Portadas']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="UI.admTab='${v}';render(true)">${l}</button>`).join('')}</div>
+  <div class="tabs">${[['cola',`Por revisar (${cola.length})`],['soc','Socios'],['conv','Convenios'],['dest','Destacados'],['ban','Portadas']].map(([v,l])=>`<button class="${tab===v?'on':''}" onclick="go((location.hash||'#/').split('?')[0]+'?t=${v}')">${l}</button>`).join('')}</div>
   ${tab==='cola'?(cola.length?`<table class="tbl"><thead><tr><th>Solicitud</th><th>Tipo</th><th>Empresa</th><th></th></tr></thead><tbody>${cola.map(c=>`<tr><td>${c.foto?`<img src="${c.foto}" alt="" style="width:54px;height:40px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:8px">`:''}<b style="color:var(--ink)">${esc(c.t)}</b></td><td><span class="tag">${esc(c.tipo)}</span></td><td>Empresa de Ejemplo SpA</td><td><div class="acts"><button class="btn v sm" onclick="aprobar('${c.k}')">${I('check')} Aprobar</button><button class="btn g sm" onclick="rechazar('${c.k}')">Rechazar</button></div></td></tr>`).join('')}</tbody></table>`
      :`<div class="empty panel">${I('check')}<h3>Todo revisado</h3><p>Entra como Socio → Mi empresa, crea una publicación y vuelve aquí para aprobarla.</p></div>`):''}
   ${tab==='soc'?`<div class="actions" style="margin:0 0 16px"><button class="btn n sm" onclick="socioForm()">+ Nuevo socio</button><span class="muted" style="font-size:13px">Al suspender un socio desaparece de la vitrina junto con sus convenios. En la versión final: importación de correos por planilla.</span></div>
@@ -1434,7 +1639,8 @@ function countIn(root){if(!root)return;root.querySelectorAll('[data-count]:not([
   if(RM){el.textContent=fmt(to);return}
   const step=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(to*e);if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)})}
 function countAll(){countIn(document)}
-function dragRail(){const r=$('#rail');if(!r)return;let x0,s0,down=false,moved=false;
+function dragRail(){document.querySelectorAll('.rail').forEach(dragOne)}
+function dragOne(r){if(r.dataset.dg)return;r.dataset.dg=1;let x0,s0,down=false,moved=false;
   r.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=r.scrollLeft;r.classList.add('drag')});
   window.addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-x0;if(Math.abs(dx)>4)moved=true;r.scrollLeft=s0-dx});
   window.addEventListener('pointerup',()=>{if(!down)return;down=false;r.classList.remove('drag')});
@@ -1444,7 +1650,7 @@ function onScroll(){hdr.classList.toggle('sc',scrollY>40);const b=$('#bandBg');i
 addEventListener('scroll',onScroll,{passive:true});
 
 /* ===================== Rol, navegación, router ===================== */
-function setRol(r,tab){if(r==='comercio'){r='socio';tab='emp'}if(tab)UI.ctab=tab;S.rol=r;save();$('#rolSel').value=r;const dst=r==='visitante'?null:'#/cuenta';if(dst&&location.hash!==dst)go(dst);else render(true);toast('Viendo la demo como: '+{visitante:'Visitante',socio:'Socio',camara:'Cámara'}[r])}
+function setRol(r,tab){if(r==='comercio'){r='socio';tab='emp'}S.rol=r;save();$('#rolSel').value=r;const dst=r==='visitante'?null:'#/cuenta'+(tab&&tab!=='cred'?'?t='+tab:'');if(dst&&location.hash!==dst)go(dst);else render(true);toast('Viendo la demo como: '+{visitante:'Visitante',socio:'Socio',camara:'Cámara'}[r])}
 $('#rolSel').onchange=e=>setRol(e.target.value);
 $('#mRol').innerHTML=I('swap');
 $('#mRol').onclick=()=>sheet('Ver demo como',`<div class="grid" style="gap:6px">${[['visitante','Visitante','Vitrina pública: empresas, promociones, beneficios'],['socio','Socio','Credencial, beneficios y Mi empresa (perfil y publicaciones)'],['camara','Cámara (admin)','Socios, convenios, publicaciones y portadas']].map(([v,t,s])=>`<button class="opt ${S.rol===v?'on':''}" style="padding:14px" onclick="closeSheet();setRol('${v}')"><span><b>${t}</b><br><small>${s}</small></span></button>`).join('')}</div>`);
@@ -1520,9 +1726,9 @@ function paintNav(){
 }
 function draw(){
   const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
-  const routes={'':vInicio,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>{UI.ctab='emp';return vCuenta()},admin:vAdmin,promociones:vPromos};
+  const routes={'':vInicio,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
   document.body.classList.toggle('home',!seg[0]);
-  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(routes[seg[0]||'']||notFound)();
+  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(routes[seg[0]||'']||notFound)();addBack(seg);
   closeMM();paintNav();onScroll();animateIn();dragRail();paintInd();ccsInit();
 }
 let lastPath=(location.hash||'#/').split('?')[0];
@@ -1540,7 +1746,7 @@ loadInd();
 document.querySelectorAll('footer [data-r]').forEach(e=>e.classList.add('in'));
 </script>
 
-<header class="apbar" aria-label="Barra de la app"><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio Temuco"><span class="sp"></span>
+<header class="apbar" aria-label="Barra de la app"><button aria-label="Volver" onclick="goBack()" id="apB"></button><img src="img/CamaraComercioAraucania-01.png" alt="Cámara de Comercio Temuco"><span class="sp"></span>
   <button aria-label="Buscar" onclick="go('#/explorar')" id="apS"></button>
   <button aria-label="Notificaciones" onclick="notifs()" id="apN"></button>
   <button aria-label="Ver la demo como" onclick="$('#mRol').click()" id="apR"></button></header>
@@ -1549,7 +1755,7 @@ document.querySelectorAll('footer [data-r]').forEach(e=>e.classList.add('in'));
 /* ===== APP: estructura centrada en "Mi espacio de socio" ===== */
 $('#apS').innerHTML=I('search');$('#apN').innerHTML=I('cal').replace('<path','<path')+'';
 $('#apN').innerHTML='<svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><span class="dot"></span>';
-$('#apR').innerHTML=I('swap');
+$('#apR').innerHTML=I('swap');$('#apB').innerHTML=I('back');
 function credHTML(){return `<div class="cred" data-r onclick="go('#/qr')" role="button" aria-label="Ver mi credencial"><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
   <div class="bd"><div class="qr" id="qr"></div><div><h3>Empresa de Ejemplo SpA</h3><small>Socio N° 0000 · desde 2019</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>`}
 const usados=()=>[[16,'12 nov'],[13,'28 oct']].map(([id,f])=>{const c=C(id);return `<a class="ev" href="#/b/${id}" style="grid-template-columns:62px 1fr auto;align-items:center"><span class="dt"><b style="font-size:34px">${c.pct}<small style="font-size:.45em">%</small></b></span><span><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b><br><span class="muted" style="font-size:13px">${esc(c.d)} · ${f}</span> <span class="tag dot" style="margin-left:4px">Ejemplo</span></span>${I('chev')}</a>`}).join('');
@@ -1560,15 +1766,15 @@ function vAppHome(){
   const dest=[...S.dest.map(C).filter(c=>c&&CV().includes(c)),...CV().filter(c=>!S.dest.includes(c.id)).sort((a,b)=>b.pct-a.pct)].slice(0,8);
   const pubs=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')).slice(0,6);
   if(socio)setTimeout(drawQR,0);
-  const Q=[[ 'qr','Mostrar credencial',"go('#/qr')",''],['card','Beneficios',"go('#/beneficios')",'v'],['store','Mi empresa',"UI.ctab='emp';go('#/cuenta')",''],['camera','Publicar',"UI.ctab='emp';go('#/cuenta');setTimeout(nuevaPub,350)",'v'],['build','Directorio',"go('#/empresas')",''],['cal','Agenda',"go('#/eventos')",'v']];
+  const Q=[[ 'qr','Mostrar credencial',"go('#/qr')",''],['card','Beneficios',"go('#/beneficios')",'v'],['store','Mi empresa',"go('#/cuenta?t=emp')",''],['camera','Publicar',"go('#/cuenta?t=emp');setTimeout(nuevaPub,350)",'v'],['bank','Pagar cuota',"pagarCuota()",''],['build','Directorio',"go('#/empresas')",'v'],['cal','Agenda',"go('#/eventos')",'']];
   const ind=(IND||IND_FALLBACK).v;
   return `<div class="wrap pg app">
    ${socio?`<div class="hi" data-r><small>Hola,</small><h1>Empresa de Ejemplo SpA</h1></div>${credHTML()}<div class="credhint">${I('qr')} Toca la credencial para mostrar tu QR en el comercio</div>`:ingresar()}
-   <div class="qgrid">${Q.filter(q=>socio||!['Mi empresa','Publicar','Mostrar credencial'].includes(q[1])).map(([ic,t,on,cl])=>`<button class="qt" data-r onclick="${on}"><span class="ic ${cl}">${I(ic)}</span>${t}</button>`).join('')}</div>
+   <div class="qgrid">${Q.filter(q=>socio?q[1]!=='Agenda':!['Mi empresa','Publicar','Mostrar credencial','Pagar cuota'].includes(q[1])).map(([ic,t,on,cl])=>`<button class="qt" data-r onclick="${on}"><span class="ic ${cl}">${I(ic)}</span>${t}</button>`).join('')}</div>
    <div class="ash"><h2>Beneficios para ti</h2><a href="#/beneficios">Ver los ${CV().length}</a></div>
    <div class="hrow">${dest.map((c,i)=>bc(c,i?TONES[i%TONES.length]:'t-navy',false)).join('')}</div>
-   <div class="ash"><h2>Promociones de socios</h2><a href="#/promociones">Ver todas</a></div>
-   <div class="hrow pubs">${pubs.map(pc).join('')||'<p class="muted">Aún no hay publicaciones.</p>'}</div>
+   <div class="ash"><h2>Novedades</h2><a href="#/promociones">Ver todas</a></div>
+   ${novBlock()}
    ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Directorio</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
    <div class="ash"><h2>Próximo evento</h2><a href="#/eventos">Agenda</a></div>${evRow(EVT[0])}
    <div class="ash"><h2>Indicadores</h2><a href="https://mindicador.cl" target="_blank" rel="noopener">mindicador.cl</a></div>
@@ -1586,7 +1792,7 @@ function vMas(){
   const it=(ic,t,s,on)=>`<a href="#" onclick="event.preventDefault();${on}"><span class="ic">${I(ic)}</span><span>${t}<small>${s}</small></span><span class="ch">${I('chev')}</span></a>`;
   const socio=S.rol==='socio',cam=S.rol==='camara';
   return `<div class="wrap pg app"><div class="hi"><small>${socio?'Empresa de Ejemplo SpA':cam?'Cámara de Comercio':'Visitante'}</small><h1>Más</h1></div><div class="menu">
-   ${socio?it('store','Mi empresa','Perfil comercial y publicaciones',"UI.ctab='emp';go('#/cuenta')")+it('qr','Mi credencial','Tu QR de socio',"go('#/qr')"):''}
+   ${socio?it('store','Mi empresa','Perfil, publicaciones y estadísticas',"go('#/cuenta?t=emp')")+it('qr','Mi credencial','Tu QR de socio',"go('#/qr')")+it('bank','Pagar cuota','Link de pago o transferencia',"pagarCuota()"):''}
    ${cam?it('cog','Panel de la Cámara','Socios, convenios y publicaciones',"go('#/admin')"):''}
    ${it('search','Explorar','Buscar empresas y beneficios',"go('#/explorar')")}
    ${it('build','Directorio de empresas','Empresas socias por rubro',"go('#/empresas')")}
@@ -1599,6 +1805,7 @@ function vMas(){
    ${S.rol!=='visitante'?it('x','Salir','Volver a visitante',"setRol('visitante');go('#/')"):''}
   </div></div>`;
 }
+function pagarCuota(){sheet('Cuota de socio',cuotaHTML().replace('panel cuota','cuota').replace(' data-r',''),`<button class="btn g" onclick="closeSheet()">Cerrar</button>`)}
 function notifs(){sheet('Notificaciones',`<div class="ntf">
   <div><span class="ic">${I('check')}</span><span><b>Tu publicación fue aprobada</b><small>“Canasta de productos locales” ya se ve en la vitrina · Ejemplo</small></span></div>
   <div><span class="ic">${I('card')}</span><span><b>Nuevo convenio en Salud</b><small>Revisa los beneficios para socios · Ejemplo</small></span></div>
@@ -1610,8 +1817,8 @@ paintNav=function(){
 };
 draw=function(){
   const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
-  const R={'':vAppHome,qr:vQR,mas:vMas,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>{UI.ctab='emp';return vCuenta()},admin:vAdmin,promociones:vPromos};
-  document.body.classList.remove('home');
+  const R={'':vAppHome,qr:vQR,mas:vMas,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
+  document.body.classList.remove('home');document.body.classList.toggle('sub',!!seg[0]);
   $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(R[seg[0]||'']||notFound)();
   paintNav();animateIn();if(typeof dragRail==='function')dragRail();paintInd();
 };

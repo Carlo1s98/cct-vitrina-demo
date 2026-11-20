@@ -1,0 +1,5 @@
+Fotos de ejemplo (Wikimedia Commons) para el carrusel de novedades de la demo:
+n_navidad.jpg | Pan de pascua tradicional de Navidad.jpg | Carlosbayer | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Pan_de_pascua_tradicional_de_Navidad.jpg
+n_pucon.jpg | Volcán Villarrica. Pucón. - panoramio.jpg | Adolto Toloza | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_Villarrica._Puc%C3%B3n._-_panoramio.jpg
+n_empanadas.jpg | Empanada de pino.jpg | J B from Champaign, IL, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Empanada_de_pino.jpg
+n_cafe.jpg | Chai Latte and Latte - The Mad Hatter.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Chai_Latte_and_Latte_-_The_Mad_Hatter.jpg
