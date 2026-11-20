@@ -546,6 +546,7 @@ a.dadr:hover b{color:var(--azul);text-decoration:underline;text-underline-offset
 .nv h3{font-family:var(--serif);font-weight:400;font-size:19px;letter-spacing:-.2px;line-height:1.2}
 .nv .bn{font-size:12.5px;font-weight:600;color:var(--verde-osc)}
 .nva{background:var(--paper);min-height:220px}
+.nva.nvai{background:#fff}
 .nva .nvd{padding:18px}
 .nvsrc{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--azul);letter-spacing:.2px}
 .nvsrc svg.i{width:16px;height:16px}
@@ -1051,11 +1052,11 @@ const DIR={diagnopro:'Las Heras 453',pascual:'Las Rosas 0554',dellmaggio:'Manuel
 Object.entries(DIR).forEach(([k,d])=>{if(EMP[k])EMP[k].dir=d});
 /* titulares de la región y economía: solo título + medio + enlace a la fuente (RSS públicos, captura 20-11-2026) */
 const ARA=[
- {t:'Cámara de Comercio de La Araucanía advierte riesgos de desabastecimiento por paralización del transporte de carga',s:'Radio Universal',f:'12 nov',u:'https://news.google.com/rss/articles/CBMizgFBVV95cUxNWXZlSF93X1JnNE41bVBhcWwzeHZmRExmUHJtS0cwbTZESGg1OEJ6ODV0T0FtV2lheHo5eHlLUlVIMGpLVlNjWmpkRlNHbHFiUDVqNC1vU3REWnBPYk9sRzNKZzFFdzROd2dROUJIcWp6QVdELWViQ0V6U0FFR3BySDh6cm9FR2N1M0hHZG5fN0pmR3hlbFF0ZmF2RlRDSXhTUzJYZEFtMTE0SU45YlNPbmZJLTdHYXdYa18xN3gxNGlMVUV1alY3dzRTemphUQ?oc=5'},
- {t:'Ventas del comercio regional siguen debilitadas en septiembre con caídas en Biobío y La Araucanía',s:'G5noticias',f:'16 nov',u:'https://news.google.com/rss/articles/CBMi-gFBVV95cUxQc2gtVldwMVkwaGZ0V0Vycy1vc0poYTZZU2FWcTJCMWtOY1pSNFU1M1lKT2ZVMTRES0NJU0xHRnp5RWtQR1k1SUV6Q29YeGdmMzh6RzRpTWdPT0h3Mi1pbXRwaHpGYURTOG9zeEFldno3VXZCUjN2cWtQZGUtSWdLWDctVmpDZ0hYdjctQWNibllTdDJUbDY3TmRYVnlSRFdZMEMzbVJXUnZHSGt0bDFxejhjOVUwdmlITXVzd0ZDNDNsaUxCV3lWY3BEOTlDUjBHOVVTUThvOXE5ZEx3ZmQzNm1wUGxMYVVyYXZNM0lGdnJna1BINGVsQkZ3?oc=5'},
- {t:'CChC proyecta un mejor 2027 para la construcción y llama a acelerar la inversión pública en La Araucanía',s:'TemucoDiario.cl',f:'17 nov',u:'https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTXJjVThDYWpNel9fQkRzXzdXSW4ybjFGUjJEOWNtelVUcWJtRzdLanRBSm9WT1JpRWM5RmxncUFSYzU2WHVsTy11WEtCZnEyM2VLT3NIaFRjTFhqdWIybHlyUF9Ycl9CckNHb09GMkJhYVRJdGtKc2NyMWNpNUVJWGEtcFZMTEpNemJobTB2Y1dLbVZRdFNQN1lsTWhZUFlkbThoLXdyZWowbUdyejJvV191dWlwM2VCRXRZb1lXTTRvaG9vYlExZERsbTJ0TVNCcy1aM05Haw?oc=5'},
- {t:'Dólar supera los $1.020 en sesión volátil y alcanza nuevo máximo desde 2022',s:'Diario Financiero',f:'20 nov',u:'https://www.df.cl/mercados/bolsa-monedas/dolar-hoy-ctefc'},
- {t:'En Temuco lanzan plataforma para denunciar a comercio irregular',s:'TemucoDiario.cl',f:'09 nov',u:'https://news.google.com/rss/articles/CBMioAFBVV95cUxORHZ3eV85QkRqbXQyam5XcVZuaU5CNjIxV21QblpMNUYzS1Q3N3l2UFR4OVN4OXBnMnEtZEc0TnFkTkgxTXRHMDRRXzk5M3RyQ1JMWkZvMVRQN3BYemsyc0hpVVZGa1lZWm9wYkhfQjNfTkc0R2hoZlVWXzFiNDJFbVhLZThSeDF6VjJWR3B5OTAtUmg5ckxlaXc5TFpQYlVx?oc=5'}
+ {t:'Cámara de Comercio de La Araucanía advierte riesgos de desabastecimiento por paralización del transporte de carga',s:'Radio Universal',f:'12 nov',u:'https://www.radiouniversal.cl/comercio-de-la-araucania-advierte-riesgos-de-desabastecimiento-por-paralizacion-del-transporte-de-carga',img:'https://www.radiouniversal.cl/site-media/images/Gustavo_Valenzuela_PresidenteCamara.jpg'},
+ {t:'Ventas del comercio regional siguen debilitadas en septiembre con caídas en Biobío y La Araucanía',s:'G5noticias',f:'16 nov',u:'https://g5noticias.cl/2026/11/16/ventas-del-comercio-regional-siguen-debilitadas-en-septiembre-con-caidas-en-biobio-y-la-araucania-y-un-avance-marginal-en-valparaiso/',img:'https://g5noticias.cl/wp-content/uploads/2025/11/53453_Ventasonline-1.png'},
+ {t:'CChC proyecta un mejor 2027 para la construcción y llama a acelerar la inversión pública en La Araucanía',s:'TemucoDiario.cl',f:'17 nov',u:'https://temucodiario.cl/2026/11/17/cchc-proyecta-un-mejor-2027-para-la-construccion-y-llama-a-acelerar-la-inversion-publica-en-la-araucania/',img:'https://temucodiario.cl/wp-content/uploads/2026/11/Contexto-2-780x470.jpeg'},
+ {t:'En Temuco lanzan plataforma para denunciar a comercio irregular',s:'TemucoDiario.cl',f:'09 nov',u:'https://temucodiario.cl/2026/11/09/en-temuco-lanzan-plataforma-para-denunciar-a-comercio-irregular/',img:'https://temucodiario.cl/wp-content/uploads/2026/11/DSC01014.JPG-780x470.jpeg'},
+ {t:'Dólar supera los $1.020 en sesión volátil y alcanza nuevo máximo desde 2022',s:'Diario Financiero',f:'20 nov',u:'https://www.df.cl/mercados/bolsa-monedas/dolar-hoy-ctefc',img:'https://www.df.cl/noticias/site/artic/20261120/imag/foto_0000003420261120080807/Aton_1210124.jpg'}
 ];
 const CONV=[
  {id:1,e:'diagnopro',d:'10% dcto. resonancia magnética'},{id:2,e:'diagnopro',d:'15% dcto. scanner / TAC'},
@@ -1205,7 +1206,7 @@ function nvSoc(p){const k=p.emp||'ejemplo',E=EMP[k];
   return `<a class="nv" href="#/e/${k}" draggable="false"><div class="nvi">${p.foto?`<img src="${p.foto}" alt="" loading="lazy">`:`<span class="nvt" style="background:${p.bg||'#F1ECE2'}">${I(p.ic||'store')}</span>`}<span class="nvb">${esc(p.tipo)}</span></div>
   <div class="nvd"><span class="nvm">${mono(k)}<span><b>${esc(E.n)}</b><small>${hace(p)} · <span class="tag dot" style="font-size:10px">Ejemplo</span></small></span></span><h3>${esc(p.t)}</h3>${p.ben?`<span class="bn">${esc(p.ben)}</span>`:''}</div></a>`}
 function nvCam(n){return `<a class="nv" href="#/eventos" draggable="false"><div class="nvi"><img src="${n.img}" alt="" loading="lazy"><span class="nvb">Cámara</span></div><div class="nvd"><span class="nvm"><span><b>Cámara de Comercio Temuco</b><small>${esc(n.f)} · <span class="tag dot" style="font-size:10px">Ejemplo</span></small></span></span><h3>${esc(n.t)}</h3></div></a>`}
-function nvAra(a){return `<a class="nv nva" href="${a.u}" target="_blank" rel="noopener" draggable="false"><div class="nvd"><span class="nvsrc">${I('news')} ${esc(a.s)} · ${esc(a.f)}</span><h3>${esc(a.t)}</h3><span class="lnk" style="font-size:13px;margin-top:auto">Leer en ${esc(a.s)} ${I('arrne')}</span></div></a>`}
+function nvAra(a){return `<a class="nv nva${a.img?' nvai':''}" href="${a.u}" target="_blank" rel="noopener" draggable="false">${a.img?`<div class="nvi"><img src="${a.img}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"><span class="nvb">${esc(a.s)}</span></div>`:''}<div class="nvd"><span class="nvsrc">${I('news')} ${esc(a.s)} · ${esc(a.f)}</span><h3>${esc(a.t)}</h3><span class="lnk" style="font-size:13px;margin-top:auto">Leer en ${esc(a.s)} ${I('arrne')}</span></div></a>`}
 function nvCards(t){
   if(t==='cam')return NEWS.map(nvCam).join('');
   if(t==='ara')return ARA.map(nvAra).join('');
