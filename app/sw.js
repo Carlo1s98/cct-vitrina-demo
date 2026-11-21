@@ -1,5 +1,5 @@
 /* Service worker mínimo: deja la app usable sin conexión (demo) */
-const C = 'vitrina-demo-v11';
+const C = 'vitrina-demo-v12';
 const SHELL = ['./', './index.html', './editorial.html', './moderna.html', './qrcode.min.js', './prev_editorial.jpg', './prev_moderna.jpg', './icon-192.png', './img/CamaraComercioAraucania-01.png', './img/logo-camara-2025-blanco.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(C).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== C).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
