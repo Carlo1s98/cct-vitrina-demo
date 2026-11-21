@@ -1104,6 +1104,15 @@ div.app{padding-top:8px!important}
 .hrow>*{scroll-snap-align:start}
 .hrow .bc{height:212px}
 .hrow.pubs{grid-auto-columns:80%}
+/* 21-11: servicios de la Cámara en el inicio + logo Sercotec al final */
+.hrow.svcs{grid-auto-columns:58%}
+.svcard{display:block;border-radius:16px;overflow:hidden;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);color:inherit;text-decoration:none}
+.svcard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.svcard span{display:block;padding:10px 12px 12px}
+.svcard b{display:block;color:var(--ink);font-size:14.5px;line-height:1.25}
+.svcard small{display:block;color:var(--mute);font-size:12.5px;line-height:1.35;margin-top:3px}
+.apoyo{display:flex;flex-direction:column;align-items:center;gap:6px;margin:24px 0 6px;font-size:11.5px;color:var(--mute)}
+.apoyo img{height:46px;width:auto;background:#fff;border-radius:8px;padding:4px 10px}
 .app .ev{grid-template-columns:70px 1fr}
 .miniind{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .miniind div{background:var(--card,#fff);border-radius:var(--rc,14px);padding:10px 12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -12px rgba(14,36,112,.3)}
@@ -2028,15 +2037,21 @@ function vAppHome(){
    <div class="qgrid">${Q.filter(q=>socio?q[1]!=='Agenda':!['Mi empresa','Publicar','Mostrar credencial','Pagar cuota'].includes(q[1])).map(([ic,t,on,cl])=>`<button class="qt" data-r onclick="${on}"><span class="ic ${cl}">${I(ic)}</span>${t}</button>`).join('')}</div>
    <div class="ash"><h2>Beneficios para ti</h2><a href="#/beneficios">Ver los ${CV().length}</a></div>
    <div class="hrow">${dest.map((c,i)=>bc(c,i?TONES[i%TONES.length]:'t-navy',false)).join('')}</div>
+   ${socio?'':svcBlock()}
    <div class="ash"><h2>Novedades</h2><a href="#/promociones">Ver todas</a></div>
    ${novBlock()}
-   ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Ver todas</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
-   <div class="ash"><h2>Próximo evento</h2><a href="#/eventos">Agenda</a></div>${evRow(EVT[0])}
    <div class="ash"><h2>Indicadores</h2><a href="https://mindicador.cl" target="_blank" rel="noopener">mindicador.cl</a></div>
    <div class="miniind"><div><span>UF</span><b>$${nf(ind.uf[0],2)}</b></div><div><span>Dólar</span><b>$${nf(ind.dolar[0],2)}</b></div><div><span>UTM</span><b>$${nf(ind.utm[0],0)}</b></div></div>
-   ${soporteHTML()}
+   ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Ver todas</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
+   <div class="ash"><h2>Próximo evento</h2><a href="#/eventos">Agenda</a></div>${evRow(EVT[0])}
+   ${socio?svcBlock():''}
+   ${soporteHTML()}${apoyoHTML()}
   </div>`;
 }
+/* 21-11: servicios de la Cámara (visitante: tras los beneficios; socio: al final) y logo Sercotec */
+function svcBlock(){return `<div class="ash"><h2>Servicios de la Cámara</h2><a href="#/servicios">Ver todos</a></div>
+   <div class="hrow svcs">${SERV.map(s=>`<a class="svcard" href="${s.u}" target="_blank" rel="noopener"><img src="${s.img}" alt="" loading="lazy"><span><b>${esc(s.t)}</b><small>${esc(s.s)}</small></span></a>`).join('')}</div>`}
+const apoyoHTML=()=>`<div class="apoyo">Proyecto apoyado por<img src="img/logo-sercotec.png" alt="SERCOTEC"></div>`;
 function vQR(){
   if(S.rol!=='socio')return `<div class="wrap pg app">${ingresar()}</div>`;
   setTimeout(drawQR,0);
@@ -2061,7 +2076,7 @@ function vMas(){
    ${it('swap','Ver la demo como…','Visitante, Socio o Cámara',"$('#mRol').click()")}
    ${it('sliders','Cambiar estilo','Editorial o Moderna',"location.href='index.html?elegir=1'")}
    ${S.rol!=='visitante'?it('x','Salir','Volver a visitante',"setRol('visitante');go('#/')"):''}
-  </div>${soporteHTML()}</div>`;
+  </div>${soporteHTML()}${apoyoHTML()}</div>`;
 }
 function pagarCuota(){sheet('Cuota de socio',cuotaHTML().replace('panel cuota','cuota').replace(' data-r',''),`<button class="btn g" onclick="closeSheet()">Cerrar</button>`)}
 function notifs(){sheet('Notificaciones',`<div class="ntf">
@@ -2069,8 +2084,10 @@ function notifs(){sheet('Notificaciones',`<div class="ntf">
   <div><span class="ic">${I('card')}</span><span><b>Nuevo convenio en Salud</b><small>Revisa los beneficios para socios · Ejemplo</small></span></div>
   <div><span class="ic">${I('cal')}</span><span><b>Desayuno empresarial de socios</b><small>3 de diciembre · Sede Cámara · Ejemplo</small></span></div></div>`,`<button class="btn n" onclick="closeSheet()">Entendido</button>`)}
 paintNav=function(){
-  const r=(location.hash||'#/').split('?')[0],cam=S.rol==='camara';
-  const T=[['#/',cam?'Admin':'Mi espacio',cam?'cog':'home'],['#/beneficios','Beneficios','card'],['#/validar','','scan'],['#/promociones','Promos','store'],['#/mas','Más','grid']];
+  const r=(location.hash||'#/').split('?')[0],cam=S.rol==='camara',soc=S.rol==='socio';
+  // 21-11: en modo socio sin lupa y con Agenda en vez de Beneficios (a beneficios ya se llega por el inicio y los accesos)
+  $('#apS').style.display=soc?'none':'';
+  const T=[['#/',cam?'Admin':'Mi espacio',cam?'cog':'home'],soc?['#/eventos','Agenda','cal']:['#/beneficios','Beneficios','card'],['#/validar','','scan'],['#/promociones','Promos','store'],['#/mas','Más','grid']];
   $('#tabbar').innerHTML=T.map(([u,l,ic],i)=>i===2?`<a href="${u}" class="fab ${r===u?'on':''}" aria-label="Validar socio"><span class="b">${I(ic)}</span></a>`:`<a href="${u}" class="${r===u||(u==='#/'&&/^#\/(cuenta|admin)$/.test(r))?'on':''}">${I(ic)}<span>${l}</span></a>`).join('');
 };
 draw=function(){
