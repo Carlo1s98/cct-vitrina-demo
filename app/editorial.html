@@ -289,6 +289,10 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 .ph p{color:var(--mute);margin:12px 0 0;max-width:600px}
 .grid{display:grid;gap:16px}
 .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+/* 21-11 (0.4.3): agenda primero; noticias de la Cámara al final y en tarjetas chicas (baja rotación) */
+.nwsm{grid-template-columns:repeat(4,1fr);gap:14px}.nwsm .pc{border-radius:14px}.nwsm .pc .bd{padding:10px 12px 12px}.nwsm .pc h3{font-size:15px;line-height:1.25;margin:6px 0 0}.nwsm .tag{font-size:10.5px}
+.evind{margin:36px 0 0;padding:4px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (max-width:860px){.nwsm{grid-template-columns:repeat(2,1fr);gap:10px}}
 .cgrid{grid-auto-rows:236px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
 .chip{border:1px solid var(--inpbd);background:transparent;border-radius:999px;padding:8px 16px;font-size:13.5px;cursor:pointer;font-weight:500;color:var(--ink);transition:all .25s var(--ease)}
@@ -343,7 +347,16 @@ footer.f .fgrid svg.i{width:16px;height:16px;opacity:.8}
 .cred .t2{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 0}
 .cred .t2 img{height:34px}
 .cred .bd{padding:22px;display:flex;gap:18px;align-items:center}
-.cred .qr{background:var(--card);padding:9px;border-radius:12px;flex:none}
+.cred .qr{background:#fff;padding:9px;border-radius:12px;flex:none}
+/* 0.4.3 QR vivo */
+.cred .qr.flip{animation:qrflip .45s ease}@keyframes qrflip{from{opacity:.25;transform:scale(.96)}to{opacity:1;transform:none}}
+.qrlive{padding:0 22px 18px}.qrlive span{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;margin-bottom:7px}
+.qrlive b{font-variant-numeric:tabular-nums;font-size:15px;letter-spacing:.5px;color:#fff}.qrlive em{font-style:normal;opacity:.8;font-variant-numeric:tabular-nums}
+.qrlive i{display:block;height:4px;border-radius:4px;background:#9BE58C;transform-origin:left;transition:transform 1s linear}
+.cred::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.16) 50%,transparent 65%);background-size:250% 100%;animation:credsh 4.5s linear infinite;pointer-events:none}
+@keyframes credsh{from{background-position:130% 0}to{background-position:-130% 0}}
+.cred .stt::before{animation:pulso 1.6s ease-in-out infinite}@keyframes pulso{50%{box-shadow:0 0 0 7px rgba(155,229,140,0)}}
+@media (prefers-reduced-motion:reduce){.cred::after,.cred .stt::before,.cred .qr.flip{animation:none}}
 .cred .qr img,.cred .qr canvas{width:112px!important;height:112px!important}
 .cred h3{color:#fff;font-family:var(--serif);font-weight:400;font-size:22px}
 .cred small{opacity:.8;display:block;font-size:12.5px}
@@ -825,7 +838,7 @@ div.app{padding-top:8px!important}
 .menu small{display:block;font-weight:400;color:var(--mute);font-size:12.5px}
 .menu .ch{margin-left:auto;color:var(--mute)}
 .qrpage{text-align:left}
-.qrpage .cred .qr img,.qrpage .cred .qr canvas{width:150px!important;height:150px!important}
+.qrpage .cred .qr img,.qrpage .cred .qr canvas{width:170px!important;height:170px!important}
 .ntf{display:grid;gap:10px}
 .ntf div{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:14px;background:var(--cream,#F4F6FA)}
 .ntf .ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--card,#fff);color:var(--azul);flex:none}
@@ -1331,11 +1344,13 @@ const NEWS=[
  {t:'Encuentro de socios en la sede',d:'Jornada de vinculación entre empresas socias y la directiva de la Cámara.',img:'img/p_socios.jpg',f:'05 nov'},
  {t:'Nuevos beneficios para socios',d:'La Cámara suma convenios en salud, hotelería y gastronomía para sus empresas asociadas.',img:'img/p_evento.jpg',f:'28 oct'}
 ];
-function vEventos(){return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Noticias y agenda</span></nav>${ph('Noticias <em>y agenda</em>','Noticias institucionales y actividades de la Cámara · contenido de ejemplo, lo publica la Cámara desde su panel')}
-  <div class="grid g3" style="margin-bottom:56px">${NEWS.map((n,i)=>`<article class="pc" data-r style="--d:${i}"><div style="aspect-ratio:16/10;overflow:hidden"><img src="${n.img}" alt="" style="width:100%;height:100%;object-fit:cover"></div><div class="bd"><span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${n.f}</span><h3>${esc(n.t)}</h3><p>${esc(n.d)}</p></div></article>`).join('')}</div>
+function vEventos(){return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Agenda y noticias</span></nav>${ph('Agenda <em>y noticias</em>','Actividades, indicadores, titulares de la semana y noticias de la Cámara · contenido de ejemplo, lo publica la Cámara desde su panel')}
   <div class="sh"><div><div class="kick">Agenda</div><h2>Próximas <em>actividades</em></h2></div></div>${EVT.map(evRow).join('')}
-  <section class="s" style="padding-top:64px"><div class="sh"><div><div class="kick">Región y economía</div><h2>Titulares <em>de la semana</em></h2><p>Enlaces a la nota original en cada medio.</p></div></div>
-  <div class="grid g3">${ARA.map(nvAra).join('')}</div></section></div>`}
+  <section class="evind" aria-label="Indicadores económicos"><div class="indh"><span class="kick">Indicadores económicos</span><span class="indd" id="indDate"></span></div><div class="indg" id="indGrid"></div><div class="indsrc" id="indSrc"></div></section>
+  <section class="s" style="padding-top:48px"><div class="sh"><div><div class="kick">Región y economía</div><h2>Titulares <em>de la semana</em></h2><p>Enlaces a la nota original en cada medio.</p></div></div>
+  <div class="grid g3">${ARA.map(nvAra).join('')}</div></section>
+  <section class="s" style="padding-top:48px"><div class="sh"><div><div class="kick">La Cámara</div><h2>Fotos <em>y noticias</em></h2></div></div>
+  <div class="grid nwsm">${NEWS.map((n,i)=>`<article class="pc" data-r style="--d:${i}"><div style="aspect-ratio:4/3;overflow:hidden"><img src="${n.img}" alt="" style="width:100%;height:100%;object-fit:cover"></div><div class="bd"><span class="tag dot">Ejemplo</span> <span class="tag" style="margin-left:8px">${n.f}</span><h3>${esc(n.t)}</h3></div></article>`).join('')}</div></section></div>`}
 function vPromos(){
   const t=UI.pt||'',list=S.pubs.filter(p=>p.est==='publicada'&&vis(p.emp||'ejemplo')&&(!t||p.tipo===t));
   return `<div class="wrap pg"><nav class="crumb"><a href="#/">Inicio</a>${I('chev')}<span>Promociones</span></nav>${ph('Promociones <em>y productos</em>','Lo que publican las empresas socias, revisado por la Cámara. Pide tu cotización directo por WhatsApp.')}
@@ -1428,7 +1443,7 @@ function vCuenta(force){
   return `<div class="wrap pg">${head}
   <div class="two"><div>
     <div class="cred" data-r><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
-      <div class="bd"><div class="qr" id="qr"></div><div><h3>Cámara de Comercio Temuco</h3><small>Socio N° 0001 · perfil de demostración</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>
+      <div class="bd"><div class="qr" id="qr"></div><div><h3>Cámara de Comercio Temuco</h3><small>Socio N° 0001 · perfil de demostración</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div><div class="qrlive" aria-live="off"><span><b class="qrclk"></b><em class="qrleft"></em></span><i></i></div></div>
     <p class="muted" style="font-size:13px;max-width:430px;margin-top:14px">Muéstrala en el comercio para obtener tu beneficio; el QR permite verificar que el socio está activo. Datos de ejemplo.</p>
     ${cuotaHTML()}</div>
   <div><div class="kick" style="margin-top:12px">Beneficios usados</div>
@@ -1446,7 +1461,34 @@ function transferir(){
   sheet('Transferir la cuota',`<p class="muted" style="margin-top:0;font-size:14px">Copia los datos en la app de tu banco. Toca cada dato para copiarlo.</p><div class="bk">${BANCO.map(([a,b],i)=>`<button class="bkr" onclick="copiar(BANCO[${i}][1],'${a} copiado')"><span><small>${a}</small><b>${esc(b)}</b></span>${I('copy')}</button>`).join('')}</div>
   <p class="muted" style="font-size:12.5px">Datos bancarios de ejemplo: los reales los entrega la Cámara. Después de transferir, envía el comprobante al correo indicado.</p>`,
   `<button class="btn g" onclick="closeSheet()">Cerrar</button><button class="btn n" onclick="copiarBanco()">${I('copy')} Copiar todos</button>`)}
-function drawQR(){const el=$('#qr');if(!el)return;el.innerHTML='';if(window.QRCode)new QRCode(el,{text:'https://www.camaratemuco.cl/?demo=credencial-ejemplo',width:112,height:112,colorDark:'#0E2470',colorLight:'#ffffff'});else el.innerHTML=`<div style="width:112px;height:112px;display:grid;place-items:center;color:#0E2470">${I('qr')}</div>`}
+/* 21-11 (0.4.3): QR vivo de la credencial. Cambia cada 30 s; al escanearlo con cualquier cámara abre /v/<código> en la demo publicada.
+   Demo: código calculado en el teléfono (sin servidor ni datos reales). Producción = token opaco revocable (P5, R4). */
+const QR_PER=30000,QR_BASE='https://carlo1s98.github.io/cct-vitrina-demo/app/';let QRW=null;
+function qrChk(w){let h=2166136261;for(const c of 'cct-demo-0001:'+w){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return (h>>>0).toString(36).slice(0,5)}
+const qrTok=w=>'0001-'+w.toString(36)+'-'+qrChk(w);
+const qrUrl=w=>QR_BASE+(/moderna/.test(location.pathname)?'moderna':'editorial')+'.html#/v/'+qrTok(w);
+function drawQR(){const el=$('#qr');if(!el)return;const w=Math.floor(Date.now()/QR_PER);QRW=w;el.innerHTML='';
+  if(window.QRCode)new QRCode(el,{text:qrUrl(w),width:150,height:150,colorDark:'#0B1B55',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+  else el.innerHTML=`<div style="width:112px;height:112px;display:grid;place-items:center;color:#0E2470">${I('qr')}</div>`;
+  el.classList.remove('flip');void el.offsetWidth;el.classList.add('flip');qrTick()}
+function qrTick(){if(!$('#qr'))return;const now=Date.now();if(Math.floor(now/QR_PER)!==QRW){drawQR();return}
+  const rest=QR_PER-now%QR_PER;
+  document.querySelectorAll('.qrlive').forEach(x=>{x.querySelector('i').style.transform=`scaleX(${rest/QR_PER})`;
+    x.querySelector('.qrclk').textContent=new Date(now).toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+    x.querySelector('.qrleft').textContent=`Código nuevo en ${Math.ceil(rest/1000)} s`})}
+setInterval(qrTick,1000);
+function vVerif(t){
+  const m=/^0001-([0-9a-z]+)-([0-9a-z]+)$/.exec(t||''),now=Math.floor(Date.now()/QR_PER),hora=new Date().toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+  let st='no',w=null;if(m){w=parseInt(m[1],36);if(qrChk(w)===m[2])st=(w<=now&&now-w<=1)?'ok':'old'}
+  const hace=w==null?'':(()=>{const sg=Math.max(0,(now-w)*30);return sg<120?sg+' s':sg<7200?Math.round(sg/60)+' min':Math.round(sg/3600)+' h'})();
+  const box=st==='ok'?`<div class="st ok">${I('check')} Socio activo<small>Verificado ${hora}</small></div>
+     <dl><dt>Socio</dt><dd>Cámara de Comercio Temuco <span class="tag dot">Ejemplo</span></dd><dt>N° de socio</dt><dd>0001 · perfil de demostración</dd><dt>Credencial</dt><dd>Vigente hasta 31-12-2026</dd></dl>
+     <p style="padding:0 18px 16px;margin:6px 0 0">Puedes aplicar el beneficio para socios.</p>`
+   :st==='old'?`<div class="st no">${I('x')} QR vencido<small>Generado hace ${hace}</small></div>
+     <p style="padding:14px 18px 16px;margin:0">El código de la credencial cambia cada 30 segundos y este ya no vale: <b>puede ser una captura de pantalla</b>. Pide al socio que abra su credencial en la app y vuelve a escanear.</p>`
+   :`<div class="st no">${I('x')} QR no válido<small>${hora}</small></div><p style="padding:14px 18px 16px;margin:0">Este código no corresponde a una credencial de la Cámara. <b>No apliques el beneficio.</b></p>`;
+  return `<div class="wrap pg app" style="max-width:640px"><div class="hi"><small>Cámara de Comercio Temuco</small><h1>Verificación de socio</h1></div><div class="vres" data-r>${box}</div>
+   <p class="muted" style="font-size:12.5px;margin-top:16px">Demo: la verificación se simula en este teléfono, sin servidor ni datos reales. En la versión final el QR lleva un código único que la Cámara puede revocar.</p></div>`}
 function vMiEmpresa(head){
   const est={publicada:'<span class="tag v dot">Publicada</span>',revision:'<span class="tag dot">En revisión</span>',rechazada:'<span class="tag r dot">Rechazada</span>'};
   const mine=S.pubs.filter(p=>(p.emp||'ejemplo')==='ejemplo');
@@ -1684,7 +1726,7 @@ function draw(){
   const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
   const routes={'':vInicio,ingresar:vLogin,directorio:vDirectorio,validar:vValidar,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
   document.body.classList.toggle('home',!seg[0]);
-  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(routes[seg[0]||'']||notFound)();addBack(seg);
+  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):seg[0]==='v'?vVerif(seg[1]):(routes[seg[0]||'']||notFound)();addBack(seg);
   closeMM();paintNav();onScroll();animateIn();dragRail();paintInd();
 }
 let lastPath=(location.hash||'#/').split('?')[0];
@@ -1714,7 +1756,7 @@ $('#apS').innerHTML=I('search');$('#apN').innerHTML=I('cal').replace('<path','<p
 $('#apN').innerHTML='<svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><span class="dot"></span>';
 $('#apR').innerHTML=I('swap');pintarTema();$('#apB').innerHTML=I('back');
 function credHTML(){return `<div class="cred" data-r onclick="go('#/qr')" role="button" aria-label="Ver mi credencial"><div class="t2"><img src="img/logo-camara-2025-blanco.png" alt="Cámara Temuco"><span style="font-size:11px;letter-spacing:1.6px;opacity:.8">CREDENCIAL DIGITAL</span></div>
-  <div class="bd"><div class="qr" id="qr"></div><div><h3>Cámara de Comercio Temuco</h3><small>Socio N° 0001 · perfil de demostración</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div></div>`}
+  <div class="bd"><div class="qr" id="qr"></div><div><h3>Cámara de Comercio Temuco</h3><small>Socio N° 0001 · perfil de demostración</small><small>Válida hasta 31-12-2026</small><span class="stt">Socio activo</span></div></div><div class="qrlive" aria-live="off"><span><b class="qrclk"></b><em class="qrleft"></em></span><i></i></div></div>`}
 const usados=()=>[[16,'12 nov'],[13,'28 oct']].map(([id,f])=>{const c=C(id);return `<a class="ev" href="#/b/${id}" style="grid-template-columns:62px 1fr auto;align-items:center"><span class="dt"><b style="font-size:34px">${c.pct}<small style="font-size:.45em">%</small></b></span><span><b style="color:var(--ink)">${esc(EMP[c.e].n)}</b><br><span class="muted" style="font-size:13px">${esc(c.d)} · ${f}</span> <span class="tag dot" style="margin-left:4px">Ejemplo</span></span>${I('chev')}</a>`}).join('');
 function ingresar(){return `<div class="panel" data-r style="text-align:center;padding:26px 20px"><span style="color:var(--azul);display:inline-grid">${I('qr')}</span><h2 style="font-size:22px;margin:8px 0 6px">Mi espacio de socio</h2><p class="muted" style="margin:0 0 16px">Tu credencial digital, tus beneficios y la vitrina de tu empresa, en un solo lugar.</p><div class="actions" style="justify-content:center"><button class="btn v" onclick="go('#/ingresar')">Ingresar como socio</button><a class="btn o" href="#/hazte-socio">Hazte socio</a></div></div>`}
 function vAppHome(){
@@ -1728,19 +1770,19 @@ function vAppHome(){
   return `<div class="wrap pg app">
    ${socio?`<div class="hi" data-r><small>Hola,</small><h1>Cámara de Comercio Temuco</h1></div>${credHTML()}<div class="credhint">${I('qr')} Toca la credencial para mostrar tu QR en el comercio</div>`:ingresar()}
    <div class="qgrid">${Q.filter(q=>socio?q[1]!=='Agenda':!['Mi empresa','Publicar','Mostrar credencial','Pagar cuota'].includes(q[1])).map(([ic,t,on,cl])=>`<button class="qt" data-r onclick="${on}"><span class="ic ${cl}">${I(ic)}</span>${t}</button>`).join('')}</div>
+   ${socio?novHTML():''}
    <div class="ash"><h2>Beneficios para ti</h2><a href="#/beneficios">Ver los ${CV().length}</a></div>
    <div class="hrow">${dest.map((c,i)=>bc(c,i?TONES[i%TONES.length]:'t-navy',false)).join('')}</div>
-   ${socio?'':svcBlock()}
-   <div class="ash"><h2>Novedades</h2><a href="#/promociones">Ver todas</a></div>
-   ${novBlock()}
-   <div class="ash"><h2>Indicadores</h2><a href="https://mindicador.cl" target="_blank" rel="noopener">mindicador.cl</a></div>
-   <div class="miniind"><div><span>UF</span><b>$${nf(ind.uf[0],2)}</b></div><div><span>Dólar</span><b>$${nf(ind.dolar[0],2)}</b></div><div><span>UTM</span><b>$${nf(ind.utm[0],0)}</b></div></div>
-   ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Ver todas</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
+   ${socio?`<div class="ash"><h2>Beneficios usados</h2></div>${usados()}`:svcBlock()+novHTML()+`<div class="ash"><h2>Empresas socias</h2><a href="#/empresas">Ver todas</a></div><div class="hrow">${EK().filter(k=>!EMP[k].ejemplo).map(ec).join('')}</div>`}
    <div class="ash"><h2>Próximo evento</h2><a href="#/eventos">Agenda</a></div>${evRow(EVT[0])}
    ${socio?svcBlock():''}
+   <div class="ash"><h2>Indicadores</h2><a href="https://mindicador.cl" target="_blank" rel="noopener">mindicador.cl</a></div>
+   <div class="miniind"><div><span>UF</span><b>$${nf(ind.uf[0],2)}</b></div><div><span>Dólar</span><b>$${nf(ind.dolar[0],2)}</b></div><div><span>UTM</span><b>$${nf(ind.utm[0],0)}</b></div></div>
    ${soporteHTML()}${apoyoHTML()}
   </div>`;
 }
+/* 0.4.3: socio = Novedades → Beneficios para ti → usados → evento → Servicios → Indicadores; visitante = Beneficios → Servicios → Novedades → socias → evento → Indicadores */
+const novHTML=()=>`<div class="ash"><h2>Novedades</h2><a href="#/promociones">Ver todas</a></div>${novBlock()}`;
 /* 21-11: servicios de la Cámara (visitante: tras los beneficios; socio: al final) y logo Sercotec */
 function svcBlock(){return `<div class="ash"><h2>Servicios de la Cámara</h2><a href="#/servicios">Ver todos</a></div>
    <div class="hrow svcs">${SERV.map(s=>`<a class="svcard" href="${s.u}" target="_blank" rel="noopener"><img src="${s.img}" alt="" loading="lazy"><span><b>${esc(s.t)}</b><small>${esc(s.s)}</small></span></a>`).join('')}</div>`}
@@ -1764,7 +1806,7 @@ function vMas(){
    ${socio||cam?it('scan','Validar socio','Escanear la credencial de otro socio',"go('#/validar')"):''}
    ${it('heart','Favoritos','Guardados en este teléfono',"go('#/favoritos')")}
    ${it('folder','Servicios de la Cámara','Boletín, OTEC, Auditorium y más',"go('#/servicios')")}
-   ${it('cal','Noticias y agenda','Actividades de la Cámara',"go('#/eventos')")}
+   ${it('cal','Agenda y noticias','Actividades, indicadores y titulares',"go('#/eventos')")}
    ${socio||cam?'':it('user','Hazte socio','Postula a la Cámara',"go('#/hazte-socio')")}
    ${it('swap','Ver la demo como…','Visitante, Socio o Cámara',"$('#mRol').click()")}
    ${it('sliders','Cambiar estilo','Editorial o Moderna',"location.href='index.html?elegir=1'")}
@@ -1778,8 +1820,8 @@ function notifs(){sheet('Notificaciones',`<div class="ntf">
   <div><span class="ic">${I('cal')}</span><span><b>Desayuno empresarial de socios</b><small>3 de diciembre · Sede Cámara · Ejemplo</small></span></div></div>`,`<button class="btn n" onclick="closeSheet()">Entendido</button>`)}
 paintNav=function(){
   const r=(location.hash||'#/').split('?')[0],cam=S.rol==='camara',soc=S.rol==='socio';
-  // 21-11: en modo socio sin lupa y con Agenda en vez de Beneficios (a beneficios ya se llega por el inicio y los accesos)
-  $('#apS').style.display=soc?'none':'';
+  // 0.4.3: lupa solo en admin; en modo socio y con Agenda en vez de Beneficios (a beneficios ya se llega por el inicio y los accesos)
+  $('#apS').style.display=cam?'':'none';
   const T=[['#/',cam?'Admin':'Mi espacio',cam?'cog':'home'],soc?['#/eventos','Agenda','cal']:['#/beneficios','Beneficios','card'],['#/validar','','scan'],['#/promociones','Promos','store'],['#/mas','Más','grid']];
   $('#tabbar').innerHTML=T.map(([u,l,ic],i)=>i===2?`<a href="${u}" class="fab ${r===u?'on':''}" aria-label="Validar socio"><span class="b">${I(ic)}</span></a>`:`<a href="${u}" class="${r===u||(u==='#/'&&/^#\/(cuenta|admin)$/.test(r))?'on':''}">${I(ic)}<span>${l}</span></a>`).join('');
 };
@@ -1787,7 +1829,7 @@ draw=function(){
   const [path]=(location.hash||'#/').slice(1).split('?'),seg=path.split('/').filter(Boolean);
   const R={'':vAppHome,ingresar:vLogin,directorio:vDirectorio,validar:vValidar,qr:vQR,mas:vMas,explorar:vExplorar,empresas:vEmpresas,beneficios:vBeneficios,servicios:vServicios,eventos:vEventos,favoritos:vFavoritos,'hazte-socio':vHazteSocio,ayuda:vAyuda,cuenta:vCuenta,'mi-vitrina':()=>vCuenta('emp'),admin:vAdmin,promociones:vPromos};
   document.body.classList.remove('home');document.body.classList.toggle('sub',!!seg[0]);
-  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):(R[seg[0]||'']||notFound)();
+  $('#view').innerHTML=seg[0]==='b'?vBeneficio(seg[1]):seg[0]==='e'?vEmpresa(seg[1]):seg[0]==='v'?vVerif(seg[1]):(R[seg[0]||'']||notFound)();
   paintNav();animateIn();if(typeof dragRail==='function')dragRail();paintInd();
 };
 setRol=(function(o){return function(r,tab){o(r,tab);if(location.hash==='#/cuenta'&&!tab&&r!=='camara'){go('#/')}}})(setRol);
